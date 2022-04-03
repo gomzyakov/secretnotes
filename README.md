@@ -21,7 +21,7 @@ sudo apt install software-properties-common
 sudo apt update
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install php8.0-common php8.0-cli -y
+sudo apt install php8.0-common php8.0-cli php8.0-mysql -y
 ```
 
 Если необходимо, доустанавливаем PHP-расширения на виртуалке:
@@ -79,13 +79,16 @@ php -r "file_exists('.env') || copy('.env.example', '.env');"
 
 composer install
 
+chmod -R 777 storage bootstrap/cache
+
 php artisan key:generate
 
 
-chmod -R 777 storage bootstrap/cache
+Вносим корректные реквизиты в `.env` файл:
 
+Создаём БД `secretnotes` через phpMyAdmin 
 
-
+php artisan migrate:fresh --seed
 
 
 
