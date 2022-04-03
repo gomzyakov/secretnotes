@@ -8,9 +8,16 @@ on:
 
 jobs:
   laravel-tests:
-
     runs-on: ubuntu-latest
-
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE:
+        ports:
+          - 33306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
       - name: Copy .env
@@ -32,7 +39,7 @@ jobs:
         run: vendor/bin/phpunit
 
 
-  build:
+  build_frontend:
 
     runs-on: ubuntu-latest
 
@@ -49,19 +56,19 @@ jobs:
       - name: Compile assets for production
         run: npm run production
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Deployment
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          username: ${{ secrets.SSH_USERNAME }}
-          script: |
-            cd /var/www/html/
-            git checkout -f
-            git pull origin master
+#  deploy:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      - name: Deployment
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.SSH_HOST }}
+#          key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          username: ${{ secrets.SSH_USERNAME }}
+#          script: |
+#            cd /var/www/html/
+#            git checkout -f
+#            git pull origin master
