@@ -60,7 +60,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
+          # TODO composer install --allow-root --no-interaction
           script: |
             cd /var/www/web/sites/secretnotes.ru
             git pull origin main
-            composer install --allow-root --no-interaction

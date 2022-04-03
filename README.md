@@ -7,6 +7,29 @@
 
 Создаём VDS-виртуалку, например в [NetAngels](https://panel.netangels.ru).
 
+
+Заходим по SSH и проверяем версию PHP (`php -v). Если необходимо, обновляемся до PHP 8:
+
+```bash
+sudo apt update
+sudo apt install software-properties-common
+sudo apt update
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.0-common php8.0-cli -y
+```
+
+Если необходимо, доустанавливаем PHP-расширения на виртуалке:
+
+```bash
+sudo apt install php8.0-xml
+sudo apt install php8.0-curl
+```
+
+
+
+
+
 Вручную [устанавливаем](https://getcomposer.org/download/) Composer:
 
 ```bash
