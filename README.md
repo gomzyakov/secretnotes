@@ -92,3 +92,23 @@ php artisan migrate:fresh --seed
 
 
 
+## Front
+
+На виртуалке:
+
+
+cd ~
+curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
+
+При вводе `node -v` видим:
+v16.6.1
+
+sudo apt install npm
+
+
+После этого билдим непосредственно фронтовые зависимости:
+
+npm install
+npm run production
