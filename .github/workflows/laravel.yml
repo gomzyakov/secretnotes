@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  laravel-tests:
+  laravel_tests:
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -28,21 +28,12 @@ jobs:
         run: php artisan key:generate
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-      - name: Create Database
-        run: |
-          mkdir -p database
-          touch database/database.sqlite
-      - name: Execute tests (Unit and Feature tests) via PHPUnit
-        env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: database/database.sqlite
+      - name: Run tests via PHPUnit
         run: vendor/bin/phpunit
-
+        # TODO Split Unit and Feature tests
 
   build_frontend:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -56,19 +47,20 @@ jobs:
       - name: Compile assets for production
         run: npm run production
 
-#  deploy:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
-#      - name: Deployment
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          username: ${{ secrets.SSH_USERNAME }}
-#          script: |
-#            cd /var/www/html/
-#            git checkout -f
-#            git pull origin master
+  deploy:
+    runs-on: ubuntu-latest
+    # TODO Manual action
+    needs: laravel_tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
+          # TODO composer install --allow-root --no-interaction
+          script: |
+            cd /var/www/web/sites/secretnotes.ru
+            git pull origin main
