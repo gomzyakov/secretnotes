@@ -60,6 +60,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            cd /var/www/html/
+            cd /var/www/web/sites/secretnotes.ru
             git checkout -f
             git pull origin master
