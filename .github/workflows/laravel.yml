@@ -61,5 +61,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /var/www/web/sites/secretnotes.ru
-            git checkout -f
-            git pull origin master
+            git checkout -f main
+            git pull origin main
+            composer install
