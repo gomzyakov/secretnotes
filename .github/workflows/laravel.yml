@@ -49,6 +49,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    # TODO Manual action
     needs: laravel_tests
     steps:
       - name: Checkout
@@ -61,6 +62,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /var/www/web/sites/secretnotes.ru
-            git checkout -f main
             git pull origin main
-            composer install
+            composer install --allow-root --no-interaction
