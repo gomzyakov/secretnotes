@@ -56,19 +56,19 @@ jobs:
       - name: Compile assets for production
         run: npm run production
 
-#  deploy:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
-#      - name: Deployment
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          username: ${{ secrets.SSH_USERNAME }}
-#          script: |
-#            cd /var/www/html/
-#            git checkout -f
-#            git pull origin master
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
+          script: |
+            cd /var/www/html/
+            git checkout -f
+            git pull origin master
