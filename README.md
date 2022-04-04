@@ -21,7 +21,7 @@ sudo apt install software-properties-common
 sudo apt update
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install php8.0-common php8.0-cli php8.0-mysql -y
+sudo apt install php8.0-common php8.0-cli php8.0-mysql php8.0-mbstring -y
 ```
 
 Если необходимо, доустанавливаем PHP-расширения на виртуалке:
