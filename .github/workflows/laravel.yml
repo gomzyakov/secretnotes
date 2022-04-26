@@ -47,9 +47,9 @@ jobs:
       - name: Compile assets for production
         run: npm run production
 
+  # TODO Запускать только на релизах
   deploy:
     runs-on: ubuntu-latest
-    # TODO Manual action
     needs: laravel_tests
     steps:
       - name: Checkout
@@ -66,3 +66,4 @@ jobs:
             whoami
             cd /var/www/web/sites/secretnotes.ru
             git pull origin main
+            git show --summary
