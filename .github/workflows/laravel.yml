@@ -5,6 +5,14 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+#      tags:
+#        description: 'Test scenario tags'
 
 jobs:
   laravel_tests:
@@ -46,6 +54,13 @@ jobs:
         run: npm install
       - name: Compile assets for production
         run: npm run production
+
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Log level: ${{ github.event.inputs.logLevel }}"
+          echo "Tags: ${{ github.event.inputs.tags }}"
 
   deploy:
     runs-on: ubuntu-latest
