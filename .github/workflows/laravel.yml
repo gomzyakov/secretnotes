@@ -47,9 +47,9 @@ jobs:
       - name: Compile assets for production
         run: npm run production
 
+  # TODO Запускать только на релизах
   deploy:
     runs-on: ubuntu-latest
-    # TODO Manual action
     needs: laravel_tests
     steps:
       - name: Checkout
@@ -58,9 +58,14 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          username: ${{ secrets.SSH_USERNAME }}
+          # key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: web
+          password: ${{ secrets.SSH_PASSWORD }}
           # TODO composer install --allow-root --no-interaction
           script: |
+            whoami
             cd /var/www/web/sites/secretnotes.ru
+            git reset --hard HEAD
+            git clean -f -d
             git pull origin main
+            git show --summary
