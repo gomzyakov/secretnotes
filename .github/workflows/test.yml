@@ -1,4 +1,4 @@
-name: Laravel
+name: test
 
 on:
   push:
@@ -46,26 +46,3 @@ jobs:
         run: npm install
       - name: Compile assets for production
         run: npm run production
-
-  # TODO Запускать только на релизах
-  deploy:
-    runs-on: ubuntu-latest
-    needs: laravel_tests
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Deployment
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: web
-          password: ${{ secrets.SSH_PASSWORD }}
-          # TODO composer install --allow-root --no-interaction
-          script: |
-            whoami
-            cd /var/www/web/sites/secretnotes.ru
-            git reset --hard HEAD
-            git clean -f -d
-            git pull origin main
-            git show --summary
-            composer -V
