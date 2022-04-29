@@ -61,7 +61,6 @@ jobs:
           # key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: web
           password: ${{ secrets.SSH_PASSWORD }}
-          # TODO composer install --allow-root --no-interaction
           script: |
             whoami
             cd /var/www/web/sites/secretnotes.ru
@@ -69,3 +68,4 @@ jobs:
             git clean -f -d
             git pull origin main
             git show --summary
+            composer install --allow-root --no-interaction
