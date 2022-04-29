@@ -21,7 +21,7 @@ sudo apt install software-properties-common
 sudo apt update
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install php8.0-common php8.0-cli -y
+sudo apt install php8.0-common php8.0-cli php8.0-mysql php8.0-mbstring -y
 ```
 
 Если необходимо, доустанавливаем PHP-расширения на виртуалке:
@@ -79,13 +79,36 @@ php -r "file_exists('.env') || copy('.env.example', '.env');"
 
 composer install
 
+chmod -R 777 storage bootstrap/cache
+
 php artisan key:generate
 
 
-chmod -R 777 storage bootstrap/cache
+Вносим корректные реквизиты в `.env` файл:
+
+Создаём БД `secretnotes` через phpMyAdmin 
+
+php artisan migrate:fresh --seed
 
 
 
+## Front
+
+На виртуалке:
 
 
+cd ~
+curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
 
+При вводе `node -v` видим:
+v16.6.1
+
+sudo apt install npm
+
+
+После этого билдим непосредственно фронтовые зависимости:
+
+npm install
+npm run production
