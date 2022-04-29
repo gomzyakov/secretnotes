@@ -14,7 +14,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE:
+          MYSQL_DATABASE: secretnotes
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -58,9 +58,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          # key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: web
           password: ${{ secrets.SSH_PASSWORD }}
+          # TODO composer install --allow-root --no-interaction
           script: |
             whoami
             cd /var/www/web/sites/secretnotes.ru
@@ -68,4 +68,4 @@ jobs:
             git clean -f -d
             git pull origin main
             git show --summary
-            composer install --allow-root --no-interaction
+            composer -V
