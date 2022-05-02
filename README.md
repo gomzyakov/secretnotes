@@ -8,6 +8,11 @@
 - Вручную готовим VDS
 - Задаем секретки в репозитории на GitHub
 
+### Local development
+
+Чтобы удалить всё ранее установленное:
+sail down --rmi all -v
+
 ### Prepare VDS
 
 Создаём VDS-виртуалку, например в [NetAngels](https://panel.netangels.ru).
