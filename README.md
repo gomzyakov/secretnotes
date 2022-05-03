@@ -10,6 +10,11 @@
 
 ### Local development
 
+Чтобы собрать фронт (CSS, JS):
+sail npm run dev
+
+npm run watch
+
 Чтобы удалить всё ранее установленное:
 sail down --rmi all -v
 
