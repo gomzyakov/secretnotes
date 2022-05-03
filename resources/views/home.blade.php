@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap" rel="stylesheet">
 
-    <title>PandoreNote - Notes chiffrées</title>
+    <title>SecretNotes - Секретные заметки</title>
 </head>
 
 <style>
@@ -105,14 +105,10 @@
     <div id="menu" class="absolute left-0 hidden h-screen font-extrabold font-outfit w-44">
         <div class="w-full h-screen font-extrabold text-center font-outfit">
             <h2 class="ml-8 text-3xl mt-36">
-                <a href="{{ route('new.note') }}">Créer une note</a>
+                <a href="{{ route('new.note') }}">Создать заметку</a>
             </h2>
             <h4 class="ml-8 text-xl mt-36">
-                <a href="{{ route('about') }}">À propos de PandoreNote</a>
-            </h4>
-            <h4 class="ml-8 text-xl mt-36">
-                <a href="https://github.com/Coroxx/PandoreNote" target="_blank" rel="noopener noreferrer">Github -
-                    2.0</a>
+                <a href="{{ route('about') }}">О SecretNotes</a>
             </h4>
 
         </div>
@@ -128,30 +124,9 @@
 
         </header>
         <main class="text-white">
-            <div class="relative w-full m-auto mt-8 md:mt-20 lg:w-7/12 md:w-9/12">
-                <div class="ml-4 md:ml-0">
-                    <img src="{{ asset('assets/bloc.png') }}" class="relative w-24 float-2 lg:w-32 md:w-28" alt=""
-                        style="z-index :30;">
-                </div>
-                <img src="{{ asset('assets/cube-1.png') }}" class="absolute z-20 float-1 md:w-32 w-28 top-12 right-4 "
-                    alt="">
-            </div>
-            <div class="relative w-full md:-mt-12 -ml-14 md:ml-0 md:w-8/12 lg:w-9/12 lg:m-auto">
-                <img src="{{ asset('assets/iphone.png') }}" class="w-96" alt="">
-                <img src="{{ asset('assets/rond.png') }}"
-                    class="absolute z-20 w-24 float-1 sm:left-40 left-36 bottom-14" alt="">
-            </div>
-            <div class="w-1/2 md:w-1/3 content left-3/4 top-3/4">
-                <div class="relative w-full">
-                    <img src="{{ asset('assets/mac.png') }}" class="z-20 ml-auto">
-                    <img src="{{ asset('assets/cube-2.png') }}" class="absolute bottom-0 z-40 w-1/3 float-2 right-12">
-                </div>
-            </div>
-
             <div class="content md:left-1/2 left-2/3 md:top-1/2 top-5/12">
                 <a href="{{ route('new.note') }}">
-                    <img src="{{ asset('assets/logo.png') }}" class="z-0 lg:w-44 md:w-40 w-36" alt=""
-                        class="m-auto">
+                    Новая заметка
                 </a>
             </div>
         </main>

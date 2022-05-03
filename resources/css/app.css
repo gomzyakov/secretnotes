@@ -13,11 +13,6 @@
     }
 }
 
-.temp {
-    background: #1C1C1C;
-}
-
-
 .fadeIn {
     animation: fadeIn 1s ease-in forwards;
 }
