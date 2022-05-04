@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="PandoreNote, des notes chiffrées et autodestructrice">
+    <meta name="description" content="SecretNotes - зашифрованные и самоуничтожающиеся заметки">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap" rel="stylesheet">
 
-    <title>PandoreNote - Notes chiffrées</title>
+    <title>SecretNotes - Секретные заметки</title>
 </head>
 
 <style>
@@ -40,8 +40,7 @@
 
                     <div class="mt-1 text-center md:text-lg md:text-left">
                         <h3 class="font-outfit md:ml-0.5 -ml-4">
-                            Notes chiffrées et autodestructrice <img src="{{ asset('assets/lock.png') }}"
-                                class="inline w-5 h-5 -mt-1.5 ml-1" alt="leaficon">
+                            Зашифрованные и самоуничтожающиеся заметки
                         </h3>
                     </div>
                 </div>
