@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('assets/logo-full.png') }}" type="image/x-icon">
-    <meta name="description" content="PandoreNote, des notes chiffrées et autodestructrice">
+    <meta name="description" content="SecretNotes - зашифрованные и самоуничтожающиеся заметки">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
