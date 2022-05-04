@@ -8,6 +8,16 @@
 - Вручную готовим VDS
 - Задаем секретки в репозитории на GitHub
 
+### Local development
+
+Чтобы собрать фронт (CSS, JS):
+sail npm run dev
+
+npm run watch
+
+Чтобы удалить всё ранее установленное:
+sail down --rmi all -v
+
 ### Prepare VDS
 
 Создаём VDS-виртуалку, например в [NetAngels](https://panel.netangels.ru).
