@@ -41,18 +41,19 @@ class NoteController extends Controller
 
         $hashids = new Hashids('', 5);
 
+        // TODO To request
         $request->validate(
             [
                 'text' => 'string|required|max:20000',
                 'encrypt_password' => 'string|min:6|max:100|nullable',
             ],
             [
-                'text.required' => 'Ce champ est obligatoire',
-                'text.string' => 'Le texte est vide ou une une erreur est survenue',
-                'text.max' => 'La limite est de 20 000 caractères.',
-                'encrypt_password.string' => 'Désolé une erreur est survenue',
-                'encrypt_password.min' => 'Le mot de passe doit faire au moins 6 caractères',
-                'encrypt_password.max' => 'Le mot de passe ne peux pas faire plus de 100 caractères, mollo l\'asticot !'
+                'text.required' => 'Это поле обязательно к заполнению',
+                'text.string' => 'Текст пуст или произошла ошибка',
+                'text.max' => 'Ограничение составляет 20 000 символов',
+                'encrypt_password.string' => 'К сожалению, произошла ошибка',
+                'encrypt_password.min' => 'Пароль должен быть не менее 6 символов',
+                'encrypt_password.max' => 'Пароль не может превышать 100 символов'
             ]
         );
 
