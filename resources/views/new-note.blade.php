@@ -51,7 +51,7 @@
                         </p>
                     </div>
                 @endif
-                <textarea name="text" id="text" placeholder="Écrivez ici"
+                <textarea name="text" id="text" placeholder="Напишите здесь"
                     class="w-9/12 p-4 rounded-lg resize-none font-outfit focus:outline-none h-80"
                     style="background-color : #282828"></textarea>
                 @error('text')
