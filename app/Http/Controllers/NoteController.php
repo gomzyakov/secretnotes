@@ -7,6 +7,8 @@ use App\Models\Note;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Hashids\Hashids;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 
 class NoteController extends Controller
 {
@@ -80,7 +82,7 @@ class NoteController extends Controller
         $request->encrypt_password ? $password = \Hash::make($request->encrypt_password) : $password = 'none';
 
         $note = Note::create([
-            'text' => $request->text, // TODO In past \Crypt::encryptString
+            'text' => Crypt::encryptString($request->text),
             'expiration_date' => $expiration_date,
             'password' => $password,
             'slug' => '',
@@ -131,12 +133,12 @@ class NoteController extends Controller
 
         if ($note->password !== "none") {
             if (Hash::check(request()->decrypt_password, $note->password)) {
-                $note->text = \Crypt::decryptString($note->text);
+                $note->text = Crypt::decryptString($note->text);
             } else {
                 return back()->withErrors(['bad_password' => 'Mot de passe incorrect']);
             }
         } else {
-            // $note->text = $note->text; // TODO \Crypt::decryptString
+            $note->text = Crypt::decryptString($note->text);
         }
 
         $note->delete();
