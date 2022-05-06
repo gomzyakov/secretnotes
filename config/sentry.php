@@ -2,8 +2,6 @@
 
 return [
 
-    // sail artisan sentry:publish --dsn=https://d89f62c9dea64990b72d21676767aa3c@o1233384.ingest.sentry.io/6382169
-    // 'dsn' => env('SENTRY_LARAVEL_DSN', env('SENTRY_DSN')),
     'dsn' => env('SENTRY_LARAVEL_DSN', 'https://d89f62c9dea64990b72d21676767aa3c@o1233384.ingest.sentry.io/6382169'),
 
     // capture release as git sha
