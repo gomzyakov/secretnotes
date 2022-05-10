@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  laravel_tests:
+  phpunit:
     runs-on: ubuntu-latest
     services:
       mysql:
@@ -33,7 +33,7 @@ jobs:
         # TODO Split Unit and Feature tests
 
   # TODO PHPStan
-  build_frontend:
+  phpstan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
