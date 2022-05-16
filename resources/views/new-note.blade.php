@@ -16,6 +16,8 @@
     <title>SecretNotes - Секретные заметки</title>
 </head>
 
+{{-- TODO --}}
+
 <style>
     *::-webkit-scrollbar {
         display: none;
