@@ -30,7 +30,11 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
       - name: Run tests via PHPUnit
         run: vendor/bin/phpunit
-        # TODO Split Unit and Feature tests
+      - uses: codecov/codecov-action@v1 # Docs: <https://github.com/codecov/codecov-action>
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml
+          fail_ci_if_error: false
 
   build_frontend:
     runs-on: ubuntu-latest
