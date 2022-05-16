@@ -30,23 +30,15 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
       - name: Run tests via PHPUnit
         run: vendor/bin/phpunit
-      - uses: codecov/codecov-action@v1 # Docs: <https://github.com/codecov/codecov-action>
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/clover.xml
-          fail_ci_if_error: false
-
-  build_frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: '12'
-          check-latest: true
-      - name: Install NPM dependencies
-        run: npm install
-      - name: Compile assets for production
-        run: npm run production
+          directory: ./coverage/reports/
+          env_vars: OS,PYTHON
+          fail_ci_if_error: true
+          files: ./coverage1.xml,./coverage2.xml
+          flags: unittests
+          name: codecov-umbrella
+          path_to_write_report: ./coverage/codecov_report.txt
+          verbose: true
