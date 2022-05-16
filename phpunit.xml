@@ -16,12 +16,6 @@
             <directory suffix=".php">./app</directory>
         </include>
     </coverage>
-    <logging>
-        <log type="coverage-html" target="./coverage/html"/>
-        <log type="coverage-xml" target="./coverage/xml"/>
-        <log type="coverage-clover" target="./coverage/clover.xml"/>
-        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-    </logging>
     <php>
         <env name="APP_ENV" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
