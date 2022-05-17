@@ -37,6 +37,7 @@ jobs:
         run: |
           vendor/bin/phpunit
 
+      # TODO Run only on releases?
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
         env:
