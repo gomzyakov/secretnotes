@@ -1,5 +1,7 @@
 # SecretNotes
 
+[![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
+
 ## Deployment
 
 Несколько шагов:
