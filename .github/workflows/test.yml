@@ -48,15 +48,13 @@ jobs:
           args: tests --coverage-clover ./coverage.xml
 
       - name: Upload coverage to Codecov
-        run: |
-          cat ./coverage.xml
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -t ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
           fail_ci_if_error: true
+          flags: unittests
+          name: codecov-umbrella
+          path_to_write_report: ./coverage/codecov_report.txt
+          verbose: true
+          env_vars: PHP
