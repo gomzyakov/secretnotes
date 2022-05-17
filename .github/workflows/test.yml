@@ -35,8 +35,7 @@ jobs:
 
       - name: Run tests via PHPUnit
         run: |
-          vendor/bin/phpunit --coverage-clover ./coverage.xml
-          cat ./coverage.xml
+          vendor/bin/phpunit
 
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
@@ -50,13 +49,14 @@ jobs:
 
       - name: Upload coverage to Codecov
         run: |
+          cat ./coverage.xml
           curl -Os https://uploader.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov -t ${{ secrets.CODECOV_TOKEN }}
 
-#      - name: Upload coverage to Codecov
-#        uses: codecov/codecov-action@v2
-#        with:
-#          token: ${{ secrets.CODECOV_TOKEN }}
-#          files: ./coverage.xml
-#          fail_ci_if_error: true
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: true
