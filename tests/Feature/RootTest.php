@@ -14,10 +14,10 @@ class RootTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_404_page()
+    public function test_fallback_page()
     {
         $response = $this->get('/xxx');
 
-        $response->assertStatus(404);
+        $response->assertStatus(302);
     }
 }
