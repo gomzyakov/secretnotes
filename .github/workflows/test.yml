@@ -49,7 +49,10 @@ jobs:
           vendor/bin/phpunit --coverage-clover=coverage.xml
           cat ./coverage.xml
 
-      - name: Upload coverage to Codecov
+      - name: Show coverage.xml
+        run: cat ./coverage.xml
+
+      - name: Upload coverage.xml to Codecov
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -57,7 +60,6 @@ jobs:
           fail_ci_if_error: true
           flags: unittests
           name: codecov-umbrella
-          #path_to_write_report: ./codecov_report.txt
           verbose: true
           env_vars: PHP
 
