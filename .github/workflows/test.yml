@@ -34,8 +34,10 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
 
       - name: Run tests via PHPUnit
+        with:
+          coverage: xdebug
         run: |
-          vendor/bin/phpunit
+          vendor/bin/phpunit --coverage-clover ./coverage.xml
 
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
