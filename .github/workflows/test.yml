@@ -27,6 +27,9 @@ jobs:
       - name: Install PHP extensions
         run: sudo apt-get install -y php-phpdbg
 
+      - name: Check phpdbg version
+        run: phpdbg -V
+
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
@@ -40,8 +43,10 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
 
       - name: Run tests via PHPUnit
+        env:
+          XDEBUG_MODE: coverage
         run: |
-          vendor/bin/phpunit --coverage-clover ./coverage.xml
+          vendor/bin/phpunit --coverage-clover=coverage.xml
           cat ./coverage.xml
 
       - name: PHPUnit Tests
