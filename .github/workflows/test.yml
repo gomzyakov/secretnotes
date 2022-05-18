@@ -35,9 +35,10 @@ jobs:
 
       - name: Run tests via PHPUnit
         with:
-          coverage: xdebug
-        run: |
+          php_extensions: xdebug
+        run:
           vendor/bin/phpunit --coverage-clover ./coverage.xml
+          cat ./coverage.xml
 
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
