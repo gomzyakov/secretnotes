@@ -34,8 +34,6 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
 
       - name: Run tests via PHPUnit
-        with:
-          php_extensions: xdebug
         run:
           vendor/bin/phpunit --coverage-clover ./coverage.xml
           cat ./coverage.xml
