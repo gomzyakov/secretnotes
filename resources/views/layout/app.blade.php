@@ -12,6 +12,7 @@
     <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
     {{-- TODO <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">--}}
     <link rel="icon" href="{{ asset('favicon/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/logo-full.png') }}" type="image/x-icon">
     {{-- TODO <meta name="theme-color" content="#7952b3">--}}
 
     <!-- Bootstrap CSS -->
@@ -26,6 +27,8 @@
     <meta name="description" content="SecretNotes - зашифрованные и самоуничтожающиеся заметки">
 </head>
 <body>
+
+@include('layout.navbar')
 
 @yield('content')
 
