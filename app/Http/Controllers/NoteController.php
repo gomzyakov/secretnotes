@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Note;
-use Illuminate\Http\Response;
-use Illuminate\Support\Str;
 use Hashids\Hashids;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 
 class NoteController extends Controller
 {
@@ -40,7 +39,6 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-
         $hashids = new Hashids('', 5);
 
         // TODO To request
@@ -55,7 +53,7 @@ class NoteController extends Controller
                 'text.max' => 'Ограничение составляет 20 000 символов',
                 'encrypt_password.string' => 'К сожалению, произошла ошибка',
                 'encrypt_password.min' => 'Пароль должен быть не менее 6 символов',
-                'encrypt_password.max' => 'Пароль не может превышать 100 символов'
+                'encrypt_password.max' => 'Пароль не может превышать 100 символов',
             ]
         );
 
@@ -78,7 +76,6 @@ class NoteController extends Controller
             $expiration_date = null;
         }
 
-
         $request->encrypt_password ? $password = \Hash::make($request->encrypt_password) : $password = 'none';
 
         $note = Note::create([
@@ -90,7 +87,6 @@ class NoteController extends Controller
 
         $note->slug = $hashids->encode($note->id);
         $note->save();
-
 
         return back()->with(['success' => route('note.display', $note->slug)]);
     }
@@ -107,22 +103,22 @@ class NoteController extends Controller
 
         if ($note->expiration_date ?? '' && $note->expiration_date < now()) {
             $note->delete();
+
             return view('password-note');
         }
 
-        $note->password ?? '' === "none" ? $password = false :  $password = true;
+        $note->password ?? '' === 'none' ? $password = false : $password = true;
 
         return view('password-note', compact('note', 'password'));
     }
 
-
     public function decrypt($slug)
     {
         request()->validate([
-            'decrypt_password' => 'string|max:100'
+            'decrypt_password' => 'string|max:100',
         ], [
             'decrypt_password.string' => 'Le champ est vide ou une erreur est survenue',
-            'decrypt_password.max' => 'Le mot de passe ne peut pas faire plus de 100 caractères'
+            'decrypt_password.max' => 'Le mot de passe ne peut pas faire plus de 100 caractères',
         ]);
 
         $note = Note::where('slug', $slug)->firstOr(
@@ -131,7 +127,7 @@ class NoteController extends Controller
             }
         );
 
-        if ($note->password !== "none") {
+        if ($note->password !== 'none') {
             if (Hash::check(request()->decrypt_password, $note->password)) {
                 $note->text = Crypt::decryptString($note->text);
             } else {
