@@ -6,7 +6,7 @@ use PhpCsFixer\Finder;
 $rules = [
     'array_syntax' => ['syntax' => 'short'],
     'binary_operator_spaces' => [
-        'default' => 'single_space',
+        'default' => 'align_single_space_minimal',
         'operators' => ['=>' => null]
     ],
     'blank_line_after_namespace' => true,
@@ -152,4 +152,4 @@ return (new Config())
     ->setFinder($finder)
     ->setRules($rules)
     //->setRiskyAllowed(true)
-    ->setUsingCache(true);
+    ->setUsingCache(false);
