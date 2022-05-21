@@ -1,6 +1,5 @@
 <?php
 
-
 return [
     'home' => 'Home',
     'today_requests' => 'Total Requests today',
@@ -20,5 +19,5 @@ return [
     'most_present_countries' => 'COUNTRIES (LAST 7 DAYS)',
     'footer_bio' => 'A powerfull and elegant Google Analytics alternative who respects your privacy',
     'footer_bio2' => 'Made with ❤️ by Coroxx',
-    'different_ip' => 'Different IP'
+    'different_ip' => 'Different IP',
 ];
