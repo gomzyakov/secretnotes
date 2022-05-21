@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Hashids\Hashids;
+use Illuminate\Contracts\View\Factory as ViewFactory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
@@ -24,11 +26,11 @@ class NoteController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return ViewFactory|View
      */
-    public function create()
+    public function create(): View|ViewFactory
     {
-        return view('new-note');
+        return view('note.new');
     }
 
     /**
