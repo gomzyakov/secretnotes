@@ -8,7 +8,7 @@
 
         <div class="row justify-content-center">
             <div class="col-8">
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-secondary" role="alert">
                     Заметка предназначена для одноразового использования и зашифрована в нашей базе данных.
                 </div>
             </div>
@@ -17,17 +17,16 @@
         <form action="{{ route('note.create') }}" method="POST">
             @csrf
 
-            @if (session('success'))
-                <div class="pb-2 ml-2 text-green-500">
-                    <p class="font-extrabold font-outfit">
-                        Успешно! Вот ссылка на заметку : {{ session('success') }}
-                    </p>
-                </div>
-            @endif
-
             {{-- note.form.text --}}
             <div class="row mt-2 mb-4">
                 <div class="col-md-8 mx-auto">
+
+                    @if (session('success'))
+                        <div class="alert alert-success" role="alert">
+                            Успешно! Вот ссылка на заметку : {{ session('success') }}
+                        </div>
+                    @endif
+
                     <div class="form-floating">
                         <textarea class="form-control"
                                   name="text"
