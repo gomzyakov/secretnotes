@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Hashids\Hashids;
+use Illuminate\Contracts\View\Factory as ViewFactory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
@@ -14,27 +16,32 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return ViewFactory|View
      */
-    public function index()
+    public function index(): View|ViewFactory
     {
-        return view('home');
+        return view('home', [
+            'active_navbar_item' => 'home',
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return ViewFactory|View
      */
-    public function create()
+    public function create(): View|ViewFactory
     {
-        return view('new-note');
+        return view('note.new', [
+            'hide_footer' => true,
+            'active_navbar_item' => 'new.note',
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return Response
      */
     public function store(Request $request)
@@ -94,7 +101,7 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function show($slug)
@@ -140,39 +147,5 @@ class NoteController extends Controller
         $note->delete();
 
         return view('show-note', compact('note'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

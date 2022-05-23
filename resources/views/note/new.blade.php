@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Секретные заметки')
+@section('title', 'Создать секретную заметку')
 
 @section('content')
 
@@ -11,6 +11,7 @@
         <form action="{{ route('note.create') }}" method="POST">
             @csrf
 
+            {{-- note.form.text --}}
             <div class="row mt-2 mb-4">
                 <div class="col-md-8 mx-auto">
 
@@ -21,13 +22,11 @@
                     @endif
 
                     @include('note.layout.textarea')
-
-                    <div id="textareaHelp" class="form-text">
-                        Вы можете создать секретную заметку с <a href="{{ route('note.create') }}">дополнительными настройками</a>.
-                    </div>
-
                 </div>
             </div>
+            {{-- / note.form.text --}}
+
+            @include('note.layout.row-params')
 
             <div class="row my-5 justify-content-center">
                 <div class="col-8">
@@ -40,8 +39,5 @@
         </form>
 
     </div>
-
-    @include('home.layout.cases')
-    @include('home.layout.features')
 
 @endsection
