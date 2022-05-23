@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [NoteController::class, 'index'])->name('home');
 
+// TODO Move to controller
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        'active_navbar_item' => 'about',
+    ]);
 })->name('about');
 
 Route::get('/new-note', [NoteController::class, 'create'])->name('new.note');

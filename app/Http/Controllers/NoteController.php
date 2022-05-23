@@ -16,11 +16,13 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return ViewFactory|View
      */
-    public function index()
+    public function index(): View|ViewFactory
     {
-        return view('home');
+        return view('home', [
+            'active_navbar_item' => 'home',
+        ]);
     }
 
     /**
@@ -30,13 +32,16 @@ class NoteController extends Controller
      */
     public function create(): View|ViewFactory
     {
-        return view('note.new');
+        return view('note.new', [
+            'hide_footer' => true,
+            'active_navbar_item' => 'new.note',
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return Response
      */
     public function store(Request $request)
@@ -96,7 +101,7 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function show($slug)
@@ -147,7 +152,7 @@ class NoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function edit($id)
@@ -158,8 +163,8 @@ class NoteController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return Response
      */
     public function update(Request $request, $id)
@@ -170,7 +175,7 @@ class NoteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function destroy($id)

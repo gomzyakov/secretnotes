@@ -32,13 +32,8 @@
 
 @yield('content')
 
-@yield('footer')
-
+@include('layout.footer')
 @include('layout.footer-js')
 
 </body>
 </html>
-
-@section('footer')
-    @include('layout.footer')
-@endsection
