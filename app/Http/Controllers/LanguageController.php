@@ -11,6 +11,7 @@ class LanguageController extends Controller
 {
     /**
      * @param $lang
+     *
      * @return RedirectResponse
      */
     public function switchLang($lang): RedirectResponse
