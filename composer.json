@@ -43,7 +43,6 @@
         "cs-check": "@php ./vendor/bin/php-cs-fixer fix --dry-run --config=.php-cs-fixer.dist.php",
         "test": [
             "@cs-check",
-            "@phpstan",
             "@phpunit"
         ],
         "post-autoload-dump": [
