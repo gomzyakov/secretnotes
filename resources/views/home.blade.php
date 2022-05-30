@@ -6,26 +6,16 @@
 
     <div class="container">
 
-        @include('note.layout.text-intro')
-
         <form action="{{ route('note.create') }}" method="POST">
             @csrf
 
+            @include('note.layout.row-textarea')
+
             <div class="row mt-2 mb-4">
                 <div class="col-md-8 mx-auto">
-
-                    @if (session('success'))
-                        <div class="alert alert-success" role="alert">
-                            Успешно! Вот ссылка на заметку : {{ session('success') }}
-                        </div>
-                    @endif
-
-                    @include('note.layout.textarea')
-
                     <div id="textareaHelp" class="form-text">
                         Вы можете создать секретную заметку с <a href="{{ route('note.create') }}">дополнительными настройками</a>.
                     </div>
-
                 </div>
             </div>
 
