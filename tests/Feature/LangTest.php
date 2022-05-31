@@ -30,13 +30,9 @@ class LangTest extends TestCase
      */
     public function test_missing_parameter()
     {
-        $current_locale = Session::get('locale');
-
         $response = $this->get('/lang');
 
-        $response->assertStatus(302);
-
-        $this->assertSame($current_locale, Session::get('locale'));
+        $response->assertStatus(404);
     }
 
     /**
@@ -46,9 +42,10 @@ class LangTest extends TestCase
     {
         $current_locale = Session::get('locale');
 
-        $response = $this->get('/lang/foo');
+        $response = $this->get('/lang/' . $this->faker->text(5));
 
         $response->assertStatus(302);
+        $response->assertRedirect(route('home'));
 
         $this->assertSame($current_locale, Session::get('locale'));
     }

@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\App;
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('new.note') }}" class="nav-link {{ $active_navbar_item === 'new.note' ? 'active' : '' }}">
+                <a href="{{ route('page.note.new') }}" class="nav-link {{ $active_navbar_item === 'new.note' ? 'active' : '' }}">
                     {{ __('navbar.new_note') }}
                 </a>
             </li>

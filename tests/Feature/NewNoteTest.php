@@ -8,7 +8,7 @@ class NewNoteTest extends TestCase
 {
     public function test_the_application_returns_a_successful_response()
     {
-        $response = $this->get(route('new.note'));
+        $response = $this->get(route('page.note.new'));
 
         $response->assertStatus(200);
 

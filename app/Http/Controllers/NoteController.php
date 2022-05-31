@@ -6,8 +6,8 @@ use App\Models\Note;
 use Hashids\Hashids;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
@@ -30,7 +30,7 @@ class NoteController extends Controller
      *
      * @return ViewFactory|View
      */
-    public function create(): View|ViewFactory
+    public function showCreatePage(): View|ViewFactory
     {
         return view('note.new', [
             'hide_footer' => true,
@@ -39,12 +39,13 @@ class NoteController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created note in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return Response
+     *
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function create(Request $request): RedirectResponse
     {
         $hashids = new Hashids('', 5);
 
@@ -95,16 +96,17 @@ class NoteController extends Controller
         $note->slug = $hashids->encode($note->id);
         $note->save();
 
-        return back()->with(['success' => route('note.display', $note->slug)]);
+        return back()->with(['success' => route('note.showLink', $note->slug)]);
     }
 
     /**
      * Display the specified resource.
      *
      * @param int $id
-     * @return Response
+     *
+     * @return ViewFactory|View
      */
-    public function show($slug)
+    public function showLink($slug): View|ViewFactory
     {
         $note = Note::where('slug', $slug)->first();
 
