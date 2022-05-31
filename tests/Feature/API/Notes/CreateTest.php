@@ -52,4 +52,5 @@ class CreateTest extends TestCase
     }
 
     // TODO Тест на текст 65К+ символов
+    // TODO test_too_short_password
 }

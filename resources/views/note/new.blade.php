@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <form action="{{ route('api.note.create') }}" method="POST">
+        <form id="create_note_form" method="POST">
             @csrf
 
             @include('note.layout.row-textarea')
@@ -15,7 +15,9 @@
             <div class="row my-5 justify-content-center">
                 <div class="col-8">
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-lg btn-primary">Создать</button>
+                        <button id="create_note_form__submit_btn" type="submit" class="btn btn-lg btn-primary">
+                            Создать
+                        </button>
                     </div>
                 </div>
             </div>
@@ -25,3 +27,7 @@
     </div>
 
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/note/create.js')}}"></script>
+@endpush
