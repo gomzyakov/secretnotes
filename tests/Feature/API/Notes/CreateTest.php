@@ -14,19 +14,16 @@ class CreateTest extends TestCase
             'text' => $text = $this->faker->text(),
         ]));
 
-        $encrypted_text = Crypt::encryptString($text);
-        $response->assertStatus(302);
+        $response->assertStatus(200);
 
-        dump($response->content());
+        $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
 
-        $this->assertDatabaseHas('notes', [
-            'text' => $encrypted_text,
-        ]);
+        $note = Note::where('slug', $response->json('slug'))->first();
+
+        $this->assertInstanceOf(Note::class, $note);
+        $this->assertSame($text, Crypt::decryptString($note->text));
     }
 
-    /**
-     * @group xxx
-     */
     public function test_create_with_full_params()
     {
         $response = $this->postJson(route('api.note.create', [
@@ -35,32 +32,24 @@ class CreateTest extends TestCase
             'expiration_date'=>'1_week',
         ]));
 
-        $encrypted_text = Crypt::encryptString($text);
-
         $response->assertStatus(200);
-
-        dump($encrypted_text);
-        $slug = $response->json('slug');
-        dump($slug);
-
-        $note = Note::where('slug', $slug)->first();
-
-        $this->assertInstanceOf(Note::class, $note);
 
         $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
 
+        $note = Note::where('slug', $response->json('slug'))->first();
+
+        $this->assertInstanceOf(Note::class, $note);
         $this->assertSame($text, Crypt::decryptString($note->text));
     }
 
-//    public function test_empty_note()
-//    {
-//        $response = $this->post(route('api.note.create'));
-//
-//        $response->assertStatus(302);
-//        dump($response->content());
-//
-//        //$response->assertSee('екст пуст или произошла ошиб');
-//    }
+    public function test_empty_note()
+    {
+        $response = $this->postJson(route('api.note.create'));
+
+        $response->assertStatus(422);
+
+        $this->assertSame('validation.required', $response->json('message'));
+    }
 
     // TODO Тест на текст 65К+ символов
 }
