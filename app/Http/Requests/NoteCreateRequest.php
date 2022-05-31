@@ -8,6 +8,10 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class NoteCreateRequest extends FormRequest
 {
+    const FIELD_TEXT            = 'text';
+    const FIELD_PASSWORD        = 'encrypt_password';
+    const FIELD_EXPIRATION_DATE = 'expiration_date';
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -16,17 +20,37 @@ class NoteCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'page' => 'int|min:1',
+            self::FIELD_TEXT => 'string|required|max:20000',
+            self::FIELD_PASSWORD => 'string|min:6|max:100|nullable',
+            self::FIELD_EXPIRATION_DATE => 'string|nullable',
         ];
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPage(): int
+    public function getText(): string
     {
-        $page = (int) $this->get('page');
+        return $this->get(self::FIELD_TEXT);
+    }
 
-        return $page ?? 1;
+    /**
+     * @return string|null
+     */
+    public function getPassword(): ?string
+    {
+        return $this->get(self::FIELD_PASSWORD) && strlen($this->get(self::FIELD_PASSWORD))
+            ? $this->get(self::FIELD_PASSWORD)
+            : null;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getExpirationDate(): ?string
+    {
+        return in_array($this->get(self::FIELD_EXPIRATION_DATE), ['1_hour', '1_day', '1_week', '1_month'])
+            ? $this->get(self::FIELD_EXPIRATION_DATE)
+            : null;
     }
 }

@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <form action="{{ route('note.create') }}" method="POST">
+        <form action="{{ route('api.note.create') }}" method="POST">
             @csrf
 
             @include('note.layout.row-textarea')

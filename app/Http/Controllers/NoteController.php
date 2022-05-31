@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
-use Hashids\Hashids;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
@@ -36,67 +33,6 @@ class NoteController extends Controller
             'hide_footer' => true,
             'active_navbar_item' => 'new.note',
         ]);
-    }
-
-    /**
-     * Store a newly created note in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return RedirectResponse
-     */
-    public function create(Request $request): RedirectResponse
-    {
-        $hashids = new Hashids('', 5);
-
-        // TODO To request
-        $request->validate(
-            [
-                'text' => 'string|required|max:20000',
-                'encrypt_password' => 'string|min:6|max:100|nullable',
-            ],
-            [
-                'text.required' => 'Это поле обязательно к заполнению',
-                'text.string' => 'Текст пуст или произошла ошибка',
-                'text.max' => 'Ограничение составляет 20 000 символов',
-                'encrypt_password.string' => 'К сожалению, произошла ошибка',
-                'encrypt_password.min' => 'Пароль должен быть не менее 6 символов',
-                'encrypt_password.max' => 'Пароль не может превышать 100 символов',
-            ]
-        );
-
-        if ($request->expiration_date !== 'never') {
-            switch ($request->expiration_date) {
-                case '1_hour':
-                    $expiration_date = date_format(now()->addHours(1), 'Y-m-d H:i:s');
-                    break;
-                case '1_day':
-                    $expiration_date = date_format(now()->addDays(1), 'Y-m-d H:i:s');
-                    break;
-                case '1_month':
-                    $expiration_date = date_format(now()->addMonths(1), 'Y-m-d H:i:s');
-                    break;
-                case '1_week':
-                    $expiration_date = date_format(now()->addWeeks(1), 'Y-m-d H:i:s');
-                    break;
-            }
-        } else {
-            $expiration_date = null;
-        }
-
-        $request->encrypt_password ? $password = \Hash::make($request->encrypt_password) : $password = 'none';
-
-        $note = Note::create([
-            'text' => Crypt::encryptString($request->text),
-            'expiration_date' => $expiration_date,
-            'password' => $password,
-            'slug' => '',
-        ]);
-
-        $note->slug = $hashids->encode($note->id);
-        $note->save();
-
-        return back()->with(['success' => route('note.showLink', $note->slug)]);
     }
 
     /**

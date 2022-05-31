@@ -27,5 +27,6 @@ class MakeNotesPasswordNullable extends Migration
     {
         Schema::table('notes', function (Blueprint $table) {
             $table->string('password')->nullable(false)->change();
-        });    }
+        });
+    }
 }

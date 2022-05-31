@@ -14,7 +14,4 @@ Route::get('/about', [PageController::class, 'showAboutPage'])->name('about');
 
 Route::get('/lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switch');
 
-// TODO To API
-Route::post('/new-note', [NoteController::class, 'create'])->name('note.create');
-
 Route::post('/note/{slug}', [NoteController::class, 'decrypt'])->name('note.decrypt');
