@@ -18,8 +18,8 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_DATABASE: $MYSQL_DATABASE
-          MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+          MYSQL_DATABASE: secretnotes
+          MYSQL_ROOT_PASSWORD: password
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -28,17 +28,17 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Install PHP extensions
-        run: sudo apt-get install -y php-phpdbg
-
-      - name: Check phpdbg version
-        run: phpdbg -V
-
       - name: Set up MySQL
         run: |
           sudo /etc/init.d/mysql start
           mysql -e 'CREATE DATABASE ${{ env.MYSQL_DATABASE }};' -uroot -p${{ env.MYSQL_ROOT_PASSWORD }}
           mysql -e 'SHOW DATABASES;' -uroot -p${{ env.MYSQL_ROOT_PASSWORD }}
+
+      - name: Install PHP extensions
+        run: sudo apt-get install -y php-phpdbg
+
+      - name: Check phpdbg version
+        run: phpdbg -V
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
