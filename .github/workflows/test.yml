@@ -8,7 +8,6 @@ on:
 
 env:
   MYSQL_DATABASE: secretnotes
-  MYSQL_USER: root
   MYSQL_ROOT_PASSWORD: password
 
 jobs:
@@ -19,9 +18,8 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_DATABASE: secretnotes
-          MYSQL_USER: root
-          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: $MYSQL_DATABASE
+          MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
