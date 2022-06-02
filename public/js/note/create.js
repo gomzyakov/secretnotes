@@ -20,7 +20,6 @@ $('#create_note_form').submit(function (e) {
             console.log("\nDONE: " + JSON.stringify(data, undefined, 2));
 
             if (data.url_show_note_link) {
-                console.log("\nOOOKKKK");
                 location.href = data.url_show_note_link;
             }
         })

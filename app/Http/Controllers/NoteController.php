@@ -36,13 +36,26 @@ class NoteController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param int $id
+     * Страница показывающая ссылку на.
+     * @param string $slug
      *
      * @return ViewFactory|View
      */
-    public function showLink($slug): View|ViewFactory
+    public function showLink(string $slug): View|ViewFactory
+    {
+        return view('note.show-link', [
+            'hide_footer' => true,
+            'note_url' => route('note.open_link', ['slug' => $slug]),
+        ]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param $slug
+     * @return ViewFactory|View
+     */
+    public function openLink($slug): View|ViewFactory
     {
         $note = Note::where('slug', $slug)->first();
 

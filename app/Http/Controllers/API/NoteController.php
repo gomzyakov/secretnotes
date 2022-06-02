@@ -56,8 +56,7 @@ class NoteController extends Controller
         $note->save();
 
         return new JsonResponse([
-            'url_show_note_link' => '/vvvvv/'.$note->slug,
-            //'note_url' => route('note.showLink', $note->slug),
+            'url_show_note_link' => route('page.note.show_link', $note->slug),
             'slug' => $note->slug,
         ], 200);
     }

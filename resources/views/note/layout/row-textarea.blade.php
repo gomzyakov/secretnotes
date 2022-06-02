@@ -4,7 +4,7 @@
 {{--        TODO Not actual--}}
         @if (session('success'))
             <div class="alert alert-success" role="alert">
-                Успешно! Вот ссылка на заметку : {{ session('success') }}
+                 {{ session('success') }}
             </div>
         @endif
 
