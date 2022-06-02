@@ -42,9 +42,6 @@ jobs:
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
 
-      - name: Run the migrations
-        run: php artisan migrate
-
       - name: Run tests via PHPUnit
         env:
           XDEBUG_MODE: coverage
