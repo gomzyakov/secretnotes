@@ -1,33 +1,18 @@
 <?php
 
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [NoteController::class, 'index'])->name('home');
 
-Route::get('/new-note', [NoteController::class, 'create'])->name('new.note');
-Route::post('/new-note', [NoteController::class, 'store'])->name('note.create');
+Route::get('/new-note', [NoteController::class, 'showCreatePage'])->name('page.note.new');
+Route::get('/note/show-link/{slug}', [NoteController::class, 'showLink'])->name('page.note.show_link');
+Route::get('/note/{slug}', [NoteController::class, 'openLink'])->name('note.open_link');
 
-Route::get('/note/{slug}', [NoteController::class, 'show'])->name('note.display');
-Route::post('/note/{slug}', [NoteController::class, 'decrypt'])->name('note.decrypt');
-
-Route::get('/about', [BlogController::class, 'showAboutPage'])->name('about');
+Route::get('/about', [PageController::class, 'showAboutPage'])->name('about');
 
 Route::get('/lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switch');
 
-Route::fallback(function () {
-    return redirect()->route('home');
-});
+Route::post('/note/{slug}', [NoteController::class, 'decrypt'])->name('note.decrypt');

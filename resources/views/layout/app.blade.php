@@ -9,7 +9,6 @@
     <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}" sizes="180x180">
     <link rel="icon" href="{{ asset('favicon/favicon-32x32.png') }}" sizes="32x32" type="image/png">
     <link rel="icon" href="{{ asset('favicon/favicon-16x16.png') }}" sizes="16x16" type="image/png">
-    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
     {{-- TODO <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">--}}
     <link rel="icon" href="{{ asset('favicon/favicon.ico') }}">
     <link rel="shortcut icon" href="{{ asset('assets/logo-full.png') }}" type="image/x-icon">
@@ -33,6 +32,8 @@
 
 @include('layout.footer')
 @include('layout.footer-js')
+
+@stack('scripts')
 
 </body>
 </html>

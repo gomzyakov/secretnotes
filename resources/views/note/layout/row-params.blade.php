@@ -3,7 +3,7 @@
         <div class="form-floating">
             <select class="form-select" name="expiration_date" id="expiration_date"
                     aria-label="select example">
-                <option value="never" selected>Никогда</option>
+                <option selected>Никогда</option>
                 <option value="1_hour">Один час</option>
                 <option value="1_day">Один день</option>
                 <option value="1_week">Одна неделя</option>

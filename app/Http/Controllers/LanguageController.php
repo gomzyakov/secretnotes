@@ -20,6 +20,6 @@ class LanguageController extends Controller
             Session::put('locale', $lang);
         }
 
-        return Redirect::back();
+        return Redirect::back(); // TODO Json
     }
 }

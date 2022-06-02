@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
 
-class BlogController extends Controller
+class PageController extends Controller
 {
     /**
      * Display `about` page.

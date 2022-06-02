@@ -5,13 +5,14 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "ext-bcmath": "*",
         "php": "^8.0.2",
+        "ext-bcmath": "*",
+        "doctrine/dbal": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
+        "hashids/hashids": "^4.1",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "hashids/hashids": "^4.1",
         "sentry/sentry-laravel": "^2.0"
     },
     "require-dev": {
