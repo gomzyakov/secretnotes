@@ -139,3 +139,7 @@ sudo apt install npm
 
 npm install
 npm run production
+
+### HTTPS
+
+Создать сертификат можно по ссылке https://panel.netangels.ru/certificates/#/order/
