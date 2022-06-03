@@ -142,4 +142,4 @@ npm run production
 
 ### HTTPS
 
-По подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
+О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
