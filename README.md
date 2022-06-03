@@ -139,3 +139,7 @@ sudo apt install npm
 
 npm install
 npm run production
+
+### HTTPS
+
+О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
