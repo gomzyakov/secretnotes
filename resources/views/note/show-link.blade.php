@@ -47,7 +47,7 @@
 
 @push('scripts')
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#copy-button').click(function (e) {
                 e.preventDefault();
 
@@ -62,7 +62,7 @@
                 navigator.clipboard.writeText(copy_input.value);
 
                 copy_input.classList.add("is-valid");
-                copy_btn.innerText='Copied!';
+                copy_btn.innerText = 'Copied!';
             });
         });
     </script>
