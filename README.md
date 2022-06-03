@@ -142,4 +142,4 @@ npm run production
 
 ### HTTPS
 
-Создать сертификат можно по ссылке https://panel.netangels.ru/certificates/#/order/
+По подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
