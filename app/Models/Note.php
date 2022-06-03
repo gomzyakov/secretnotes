@@ -2,10 +2,19 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Note extends Model
+/**
+ * @property int $id
+ * @property string $text
+ * @property string $slug
+ * @property string|null $password
+ * @property Carbon|null $expiration_date
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+class Note extends EloquentModel
 {
     use HasFactory;
 
