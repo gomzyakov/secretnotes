@@ -15,7 +15,7 @@ class PageController extends Controller
     public function showAboutPage(): ViewFactory|View
     {
         return view('about', [
-            'active_navbar_item' => 'about',
+            'foo' => 'bar', // TODO Temp
         ]);
     }
 }
