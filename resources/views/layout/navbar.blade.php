@@ -2,9 +2,7 @@
     use Illuminate\Support\Facades\App;
 @endphp
 
-
-
-<nav class="navbar bg-light">
+<nav class="navbar bg-light border-bottom">
     <div class="container justify-content-center">
         <div class="col-lg-5">
             <a class="ml-0 navbar-brand" href="{{ route('home') }}">
