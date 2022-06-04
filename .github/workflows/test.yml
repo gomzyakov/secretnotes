@@ -30,7 +30,6 @@ jobs:
 
       - name: Set up MySQL
         run: |
-          sudo /etc/init.d/mysql start
           mysql -h 127.0.0.1 -uroot -p${{ env.MYSQL_ROOT_PASSWORD }} -e 'CREATE DATABASE ${{ env.MYSQL_DATABASE }};'
           mysql -h 127.0.0.1 -uroot -p${{ env.MYSQL_ROOT_PASSWORD }} -e 'SHOW DATABASES;'
 
