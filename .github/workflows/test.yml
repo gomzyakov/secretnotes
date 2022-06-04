@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  MYSQL_DATABASE: secretnotes
-  MYSQL_ROOT_PASSWORD: password
-
 jobs:
   test:
     runs-on: ubuntu-latest
