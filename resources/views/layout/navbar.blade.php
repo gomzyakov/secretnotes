@@ -1,49 +1,41 @@
 @php
-use Illuminate\Support\Facades\App;
-    $active_navbar_item = $active_navbar_item?? null;
+    use Illuminate\Support\Facades\App;
 @endphp
 
-<div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img class="bi me-2" width="40" height="40" src="{{ asset('assets/logo.png') }}">
-            <span class="fs-4">SecretNotes</span>
-        </a>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a href="{{ route('home') }}" class="nav-link {{ $active_navbar_item === 'home' ? 'active' : '' }}" aria-current="page">
-                    {{ __('navbar.home') }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('page.note.new') }}" class="nav-link {{ $active_navbar_item === 'new.note' ? 'active' : '' }}">
-                    {{ __('navbar.new_note') }}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('about') }}" class="nav-link {{ $active_navbar_item === 'about' ? 'active' : '' }}">
-                    {{ __('navbar.about') }}
-                </a>
-            </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ Config::get('languages')[App::currentLocale()] }}
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    @foreach (Config::get('languages') as $lang => $language)
-                        @if ($lang != App::currentLocale())
-                            <li>
-                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}">
-                                    {{ $language }}
-                                </a>
-                            </li>
-                        @endif
-                    @endforeach
-                </ul>
-            </li>
-
-        </ul>
-    </header>
-</div>
+<nav class="navbar bg-light">
+    <div class="container justify-content-center">
+        <div class="col-lg-5">
+            <a class="ml-0 navbar-brand" href="{{ route('home') }}">
+                <span class="fw-light">Secret</span><span class="fw-semibold">Notes</span>
+            </a>
+            <span class="navbar-text d-none d-md-inline">Navbar text with an inline element</span>
+        </div>
+        <div class="col-3 d-none d-md-block">
+            <ul class="nav float-end">
+                <li class="nav-item text-end">
+                    <a class="nav-link text-dark" href="{{ route('page.note.new') }}">
+                        {{ __('navbar.new_note') }}
+                    </a>
+                </li>
+                <li class="nav-item dropdown text-end">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Config::get('languages')[App::currentLocale()] }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @foreach (Config::get('languages') as $lang => $language)
+                            @if ($lang != App::currentLocale())
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}">
+                                        {{ $language }}
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

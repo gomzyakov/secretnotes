@@ -31,7 +31,7 @@
 @yield('content')
 
 @include('layout.footer')
-@include('layout.footer-js')
+@include('layout.js_scripts')
 
 @stack('scripts')
 

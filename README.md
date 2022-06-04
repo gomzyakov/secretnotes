@@ -1,5 +1,6 @@
 # SecretNotes
 
+![version](https://img.shields.io/badge/release-v0.14.1-blue)
 [![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
 
 ## Deployment
@@ -138,3 +139,7 @@ sudo apt install npm
 
 npm install
 npm run production
+
+### HTTPS
+
+О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)

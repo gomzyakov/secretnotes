@@ -18,8 +18,8 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_DATABASE: secretnotes
           MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: secretnotes
         ports:
           - 33306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -51,6 +51,9 @@ jobs:
 
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
+
+      - name: Clear Configuration
+        run: php artisan config:clear
 
       - name: Run the migrations
         run: php artisan migrate
