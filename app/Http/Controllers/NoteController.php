@@ -19,7 +19,7 @@ class NoteController extends Controller
     public function index(): View|ViewFactory
     {
         return view('home', [
-            'active_navbar_item' => 'home',
+            'foo' => 'bar', // TODO Temp
         ]);
     }
 
@@ -32,7 +32,6 @@ class NoteController extends Controller
     {
         return view('note.new', [
             'hide_footer' => true,
-            'active_navbar_item' => 'new.note',
         ]);
     }
 
