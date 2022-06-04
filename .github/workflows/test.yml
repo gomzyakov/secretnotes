@@ -17,7 +17,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: secretnotes
         ports:
-          - 33306:3306
+          - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
@@ -44,6 +44,9 @@ jobs:
 
       - name: Clear Configuration
         run: php artisan config:clear
+
+      - name: Run the migrations
+        run: php artisan migrate
 
       - name: Run tests via PHPUnit
         env:
