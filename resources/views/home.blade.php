@@ -34,7 +34,6 @@
     </div>
 
     @include('home.layout.cases')
-    @include('home.layout.features')
 
 @endsection
 
