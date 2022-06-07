@@ -10,7 +10,7 @@ class PageController extends Controller
     /**
      * Display `about` page.
      *
-     * @return ViewFactory|View
+     * @return View|ViewFactory
      */
     public function showAboutPage(): ViewFactory|View
     {

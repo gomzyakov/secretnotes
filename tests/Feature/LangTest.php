@@ -5,6 +5,9 @@ namespace Tests\Feature;
 use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
+/**
+ * @covers \App\Http\Controllers\LanguageController::switchLang
+ */
 class LangTest extends TestCase
 {
     public function test_en_lang()

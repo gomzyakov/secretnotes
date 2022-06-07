@@ -4,6 +4,9 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
+/**
+ * @covers \App\Http\Controllers\NoteController::showCreatePage
+ */
 class NewNoteTest extends TestCase
 {
     public function test_the_application_returns_a_successful_response()
