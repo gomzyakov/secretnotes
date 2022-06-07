@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 
 /**
- * @coversNothing
+ * @covers \App\Http\Controllers\PageController::showAboutPage
  */
 class BlogTest extends TestCase
 {

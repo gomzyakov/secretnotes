@@ -8,6 +8,7 @@ use Hashids\Hashids;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 
 class NoteController extends Controller
 {
@@ -42,16 +43,14 @@ class NoteController extends Controller
 
                     break;
             }
-        } else {
-            $expiration_date = null;
         }
 
-        $password = $request->getPassword() ? \Hash::make($request->getPassword()) : null;
+        $password = $request->getPassword() ? Hash::make($request->getPassword()) : null;
 
         // TODO new Note
         $note = Note::create([
             'text'            => Crypt::encryptString($request->getText()),
-            'expiration_date' => $expiration_date,
+            'expiration_date' => $expiration_date ?? null,
             'password'        => $password,
             'slug'            => '',
         ]);
