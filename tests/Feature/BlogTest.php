@@ -4,6 +4,9 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
+/**
+ * @coversNothing
+ */
 class BlogTest extends TestCase
 {
     public function test_get_about_page()

@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'New note',
+    'title'       => 'New note',
     'placeholder' => 'Write your note here...',
 ];

@@ -14,7 +14,7 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return ViewFactory|View
+     * @return View|ViewFactory
      */
     public function index(): View|ViewFactory
     {
@@ -26,7 +26,7 @@ class NoteController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return ViewFactory|View
+     * @return View|ViewFactory
      */
     public function showCreatePage(): View|ViewFactory
     {
@@ -37,15 +37,16 @@ class NoteController extends Controller
 
     /**
      * Страница показывающая ссылку на.
+     *
      * @param string $slug
      *
-     * @return ViewFactory|View
+     * @return View|ViewFactory
      */
     public function showLink(string $slug): View|ViewFactory
     {
         return view('note.show-link', [
             'hide_footer' => true,
-            'note_url' => route('note.open_link', ['slug' => $slug]),
+            'note_url'    => route('note.open_link', ['slug' => $slug]),
         ]);
     }
 
@@ -53,9 +54,10 @@ class NoteController extends Controller
      * Показываем предупреждение перед расшифровкой заметки (или сообщение,
      * что заметка не существует).
      *
-     * @param string $slug
+     * @param string          $slug
      * @param NotesRepository $notes_repository
-     * @return ViewFactory|View
+     *
+     * @return View|ViewFactory
      */
     public function openLink(
         string $slug,
@@ -70,7 +72,7 @@ class NoteController extends Controller
 
         return view('note.before_watching', [
             'hide_footer' => true,
-            'note' => $note,
+            'note'        => $note,
         ]);
     }
 
@@ -106,7 +108,7 @@ class NoteController extends Controller
 
         return view('note.show', [
             'hide_footer' => true,
-            'note_text' => $note_text ?? null,
+            'note_text'   => $note_text ?? null,
         ]);
     }
 }

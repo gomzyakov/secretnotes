@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -11,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 
 class CheckLanguage
 {
-    const LOCALE_SESSION_KEY = 'locale';
+    public const LOCALE_SESSION_KEY = 'locale';
 
     /**
      * Handle an incoming request.
@@ -19,9 +18,9 @@ class CheckLanguage
      * @param Request $request
      * @param \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      *
-     * @return Response|RedirectResponse
+     * @return RedirectResponse|Response
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, \Closure $next)
     {
 //        if ($request->input('lang') !== 'my-secret-token') {
 //            return redirect('home');

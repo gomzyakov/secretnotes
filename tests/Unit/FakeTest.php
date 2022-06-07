@@ -5,6 +5,9 @@ namespace Tests\Unit;
 use App\Models\User;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class FakeTest extends TestCase
 {
     /**
@@ -14,7 +17,7 @@ class FakeTest extends TestCase
      */
     public function test_that_true_is_true()
     {
-        $user = new User;
+        $user = new User();
         $this->assertInstanceOf(User::class, $user);
     }
 }

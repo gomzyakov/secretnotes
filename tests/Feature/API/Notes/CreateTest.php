@@ -6,6 +6,9 @@ use App\Models\Note;
 use Illuminate\Support\Facades\Crypt;
 use Tests\TestCase;
 
+/**
+ * @coversNothing
+ */
 class CreateTest extends TestCase
 {
     public function test_create_with_min_params()
@@ -27,9 +30,9 @@ class CreateTest extends TestCase
     public function test_create_with_full_params()
     {
         $response = $this->postJson(route('api.note.create', [
-            'text' => $text = $this->faker->text(),
-            'encrypt_password'=>'foo_bar',
-            'expiration_date'=>'1_week',
+            'text'             => $text = $this->faker->text(),
+            'encrypt_password' => 'foo_bar',
+            'expiration_date'  => '1_week',
         ]));
 
         $response->assertStatus(200);
