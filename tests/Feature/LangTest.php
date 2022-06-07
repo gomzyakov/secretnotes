@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
 
 /**
- * @covers LanguageController::switchLang
+ * @covers \App\Http\Controllers\LanguageController::switchLang
  */
 class LangTest extends TestCase
 {
