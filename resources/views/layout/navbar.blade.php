@@ -8,7 +8,7 @@
             <a class="ml-0 navbar-brand" href="{{ route('home') }}">
                 <span class="fw-light">Secret</span><span class="fw-semibold">Notes</span>
             </a>
-            <span class="navbar-text d-none d-md-inline">Navbar text with an inline element</span>
+            <span class="navbar-text d-none d-md-inline">{{ __('navbar.text') }}</span>
         </div>
         <div class="col-3 d-none d-md-block">
             <ul class="nav float-end">
