@@ -34,11 +34,12 @@
                                 {{ __('navbar.new_note') }}
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('about') }}" class="nav-link link-secondary px-2">
-                                {{ __('navbar.about') }}
-                            </a>
-                        </li>
+
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="{{ route('about') }}" class="nav-link link-secondary px-2">--}}
+{{--                                {{ __('navbar.about') }}--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
 
                         <li class="nav-item dropdown">
                             <a class="nav-link link-secondary px-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink"
