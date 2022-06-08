@@ -3,7 +3,7 @@
         <div class="form-floating">
             <select class="form-select" name="expiration_date" id="expiration_date"
                     aria-label="select example">
-                <option selected>{{ __('note_create.expiration.title') }}</option>
+                <option selected>{{ __('note_create.expiration.never') }}</option>
                 <option value="1_hour">{{ __('note_create.expiration.1_hour') }}</option>
                 <option value="1_day">{{ __('note_create.expiration.1_day') }}</option>
                 <option value="1_week">{{ __('note_create.expiration.1_week') }}</option>
