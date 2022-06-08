@@ -21,7 +21,7 @@
           crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>@yield('title', 'Секретные заметки') - SecretNotes</title>
+    <title>@yield('title', trans('common.head_title')) &mdash; SecretNotes</title>
     <meta name="description" content="SecretNotes - зашифрованные и самоуничтожающиеся заметки">
 </head>
 <body>
