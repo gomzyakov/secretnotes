@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Создать секретную заметку')
+@section('title', trans('common.head_title'))
 
 @section('content')
 

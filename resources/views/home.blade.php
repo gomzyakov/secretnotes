@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Секретные заметки')
+@section('title', trans('common.head_title'))
 
 @section('content')
 
@@ -14,7 +14,7 @@
             <div class="row mt-2 mb-4">
                 <div class="col-md-8 mx-auto">
                     <div id="textareaHelp" class="form-text">
-                        Вы можете создать секретную заметку с <a href="{{ route('page.note.new') }}">дополнительными настройками</a>.
+                        {{ __('home.additional_settings.prefix') }} <a href="{{ route('page.note.new') }}">{{ __('home.additional_settings.link') }}</a>.
                     </div>
                 </div>
             </div>
