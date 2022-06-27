@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "369ef7d64ff3bfa90d35cd46fa20bbad",
+    "content-hash": "574a45be21d0f99609112fff127379c5",
     "packages": [
         {
             "name": "brick/math",
@@ -7504,23 +7504,23 @@
         },
         {
             "name": "gomzyakov/php-code-style",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-code-style.git",
-                "reference": "daf18e2c24e27d44904dd4875dba6823bc553863"
+                "reference": "de3da834d433d16229b88a83ed42156a0c1bb134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-code-style/zipball/daf18e2c24e27d44904dd4875dba6823bc553863",
-                "reference": "daf18e2c24e27d44904dd4875dba6823bc553863",
+                "url": "https://api.github.com/repos/gomzyakov/php-code-style/zipball/de3da834d433d16229b88a83ed42156a0c1bb134",
+                "reference": "de3da834d433d16229b88a83ed42156a0c1bb134",
                 "shasum": ""
             },
             "require": {
-                "friendsofphp/php-cs-fixer": "^3.8",
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
                 "phpstan/phpstan": "^1.0",
                 "phpunit/phpunit": "^9.5"
             },
@@ -7540,19 +7540,18 @@
                     "email": "alexander.gomzyakov@gmail.com"
                 }
             ],
-            "description": "Just preferred code style rules for `php-cs-fixer`",
+            "description": "Code style configuration for `php-cs-fixer` based on PSR-12.",
             "homepage": "https://github.com/gomzyakov/php-code-style",
             "keywords": [
                 "code-style",
                 "php",
-                "php-cs-fixer",
-                "php-cs-fixer-rules"
+                "php-cs-fixer"
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-code-style/issues",
-                "source": "https://github.com/gomzyakov/php-code-style/tree/v0.1.1"
+                "source": "https://github.com/gomzyakov/php-code-style/tree/v0.2.0"
             },
-            "time": "2022-06-07T05:00:04+00:00"
+            "time": "2022-06-23T15:19:48+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
