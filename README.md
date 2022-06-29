@@ -1,6 +1,6 @@
 # SecretNotes
 
-![version](https://img.shields.io/badge/release-v0.19.2-blue)
+![version](https://img.shields.io/badge/release-v0.20.0-blue)
 [![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
 
 ## Deployment
