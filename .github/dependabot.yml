@@ -8,5 +8,7 @@ updates:
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      # Check for updates managed by Composer once a week
-      interval: "weekly"
+      # Check for updates managed by Composer once a daily
+      interval: "daily"
+      # Check for npm updates at 9am UTC (8:00 EKB)
+      time: "03:00"
