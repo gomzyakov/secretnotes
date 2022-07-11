@@ -7504,16 +7504,16 @@
         },
         {
             "name": "gomzyakov/php-code-style",
-            "version": "v0.2.1",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-code-style.git",
-                "reference": "e1aae5628008fa6297d434be654923ceebb58ce9"
+                "reference": "e3c4b399d30b0f7748264acd506af8482af6b6df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-code-style/zipball/e1aae5628008fa6297d434be654923ceebb58ce9",
-                "reference": "e1aae5628008fa6297d434be654923ceebb58ce9",
+                "url": "https://api.github.com/repos/gomzyakov/php-code-style/zipball/e3c4b399d30b0f7748264acd506af8482af6b6df",
+                "reference": "e3c4b399d30b0f7748264acd506af8482af6b6df",
                 "shasum": ""
             },
             "require": {
@@ -7521,6 +7521,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.8",
+                "mockery/mockery": "^1.5",
                 "phpstan/phpstan": "^1.0",
                 "phpunit/phpunit": "^9.5"
             },
@@ -7549,9 +7550,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-code-style/issues",
-                "source": "https://github.com/gomzyakov/php-code-style/tree/v0.2.1"
+                "source": "https://github.com/gomzyakov/php-code-style/tree/v0.2.2"
             },
-            "time": "2022-06-27T17:17:54+00:00"
+            "time": "2022-07-09T13:28:33+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
