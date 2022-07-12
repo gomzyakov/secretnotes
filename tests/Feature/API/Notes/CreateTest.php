@@ -13,9 +13,12 @@ class CreateTest extends TestCase
 {
     public function test_create_with_min_params()
     {
-        $response = $this->postJson(route('api.note.create', [
-            'text' => $text = $this->faker->text(),
-        ]));
+        $response           = $this->postJson(route(
+            'api.note.create',
+            [
+                'text' => $text = $this->faker->text(),
+            ]
+        ));
 
         $response->assertStatus(200);
 
@@ -29,11 +32,14 @@ class CreateTest extends TestCase
 
     public function test_create_with_full_params()
     {
-        $response = $this->postJson(route('api.note.create', [
-            'text'             => $text = $this->faker->text(),
-            'encrypt_password' => 'foo_bar',
-            'expiration_date'  => '1_week',
-        ]));
+        $response = $this->postJson(route(
+            'api.note.create',
+            [
+                'text'             => $text = $this->faker->text(),
+                'encrypt_password' => 'foo_bar',
+                'expiration_date'  => '1_week',
+            ]
+        ));
 
         $response->assertStatus(200);
 
