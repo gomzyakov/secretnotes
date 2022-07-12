@@ -62,7 +62,8 @@ class NoteController extends Controller
     public function openLink(
         string $slug,
         NotesRepository $notes_repository
-    ): View|ViewFactory {
+    ): View|ViewFactory
+    {
         $note = $notes_repository->findBySlug($slug);
 
         if ($note instanceof Note && $note->expiration_date !== null && $note->expiration_date < now()) {
