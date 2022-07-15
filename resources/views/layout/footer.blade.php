@@ -7,15 +7,15 @@
                     <a class="link-dark text-decoration-none" href="{{ route('home') }}">
                         SecretNotes
                     </a>
-                    <span style="color: #aaa;">
-                        by
-                    </span>
-                    <a class="text-decoration-none"
-                       href="https://github.com/gomzyakov"
-                       target="_blank"
-                       style="color: #aaa;">
-                        Alexander Gomzyakov
-                    </a>
+{{--                    <span style="color: #aaa;">--}}
+{{--                        by--}}
+{{--                    </span>--}}
+{{--                    <a class="text-decoration-none"--}}
+{{--                       href="https://github.com/gomzyakov"--}}
+{{--                       target="_blank"--}}
+{{--                       style="color: #aaa;">--}}
+{{--                        Alexander Gomzyakov--}}
+{{--                    </a>--}}
                 </div>
                 <div class="col-md-4">
                     <ul class="nav justify-content-md-end">
