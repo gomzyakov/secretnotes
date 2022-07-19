@@ -32,17 +32,12 @@ Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ```
 
-sail artisan migrate:fresh --seed
+```
+$ sail artisan migrate:fresh --seed
+``
 
 >If needed, change DB_HOST to `mysql` (for local development)
 
-Чтобы собрать фронт (CSS, JS):
-sail npm run dev
-
-npm run watch
-
-Чтобы удалить всё ранее установленное:
-sail down --rmi all -v
 
 ### Prepare VDS
 
@@ -85,8 +80,7 @@ sudo mv composer.phar /usr/local/bin/composer
 > Далее делаем всё от пользователя `web`, не `root`!!!
 
 
-
-ssh-keygen
+## Generate SSH-keys with `ssh-keygen`
 
 В репозитории на GitHub, в разделе `Settings > Secrets > Actions` задаём значения:
 
@@ -125,21 +119,29 @@ php artisan migrate:fresh --seed
 
 На виртуалке:
 
+```
 cd ~
 curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
 sudo bash /tmp/nodesource_setup.sh
 sudo apt install nodejs
+```
 
 При вводе `node -v` видим:
+```
 v16.6.1
+```
 
-sudo apt install npm
+```
+$ sudo apt install npm
+```
 
 После этого билдим непосредственно фронтовые зависимости:
 
+```
 npm install
 npm run production
+```
 
-### HTTPS
+### Set up HTTPS
 
 О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
