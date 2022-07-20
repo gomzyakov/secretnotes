@@ -3,7 +3,10 @@
 ![version](https://img.shields.io/badge/release-v0.21.0-blue)
 [![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
 
-## Deployment
+[SecretNotes](https://secretnotes.ru) ia an open source alternative to [privnote.com](https://privnote.com)
+
+
+# Deployment
 
 Несколько шагов:
 
