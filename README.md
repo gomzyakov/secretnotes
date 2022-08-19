@@ -57,3 +57,10 @@ sail down --rmi all -v
 
 The deployment process is described in the file [DEPLOY.md](DEPLOY.md)
 
+## Support
+
+If you find any package errors, please, [make an issue](https://github.com/gomzyakov/php-code-style/issues) in current repository.
+
+## License
+
+This is open-sourced software licensed under the [MIT License](https://github.com/gomzyakov/php-code-style/blob/main/LICENSE).
