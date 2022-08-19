@@ -1,6 +1,6 @@
 # SecretNotes
 
-![version](https://img.shields.io/badge/release-v0.24.0-blue)
+![version](https://img.shields.io/badge/release-v0.25.0-blue)
 [![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
 
 [SecretNotes](https://secretnotes.ru) ia an open source alternative to [privnote.com](https://privnote.com)
