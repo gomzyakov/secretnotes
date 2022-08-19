@@ -4,12 +4,15 @@ For simplicity, we will deploy the project to VDS. The deployment process consis
 
 1. Create a VDS on your preferred hosting
 2. Manually prepare VDS
-3. Set secrets in the repository on GitHub
-4. Optional: Set up HTTPS
+3. Build frontend
+4. Set secrets in the repository on GitHub 
+5. Optional: Set up HTTPS
 
 ## 1. Create a VDS
 
 We create a VDS virtual machine, for example, in [NetAngels](https://panel.netangels.ru).
+
+
 
 ## 2. Prepare VDS
 
@@ -50,32 +53,27 @@ sudo mv composer.phar /usr/local/bin/composer
 
 >Next, we do everything from the user `web`, not `root`!!!
 
-
-
-
-/var/www/web/sites
+Go to path `/var/www/web/sites` and clone current repository (or your own fork):
 
 ```bash
 git clone git@github.com:gomzyakov/secretnotes.git secretnotes.ru
 ``````
+Then go to path `/var/www/web/sites/secretnotes.ru` and run some commands:
 
-/var/www/web/sites/secretnotes.ru
-
+```bash
 php -r "file_exists('.env') || copy('.env.example', '.env');"
-
 composer install
-
 chmod -R 777 storage bootstrap/cache
-
 php artisan key:generate
+```
 
-Вносим корректные реквизиты в `.env` файл:
+- Write the correct database requisites in the `.env` file
+- Create a `secretnotes` database via phpMyAdmin
+- `php artisan migrate:fresh --seed`
 
-Создаём БД `secretnotes` через phpMyAdmin
 
-php artisan migrate:fresh --seed
 
-## Front
+## 3. Build frontend
 
 На виртуалке:
 
@@ -87,12 +85,13 @@ sudo apt install nodejs
 ```
 
 При вводе `node -v` видим:
+
 ```
 v16.6.1
 ```
 
-```
-$ sudo apt install npm
+```bash
+sudo apt install npm
 ```
 
 После этого билдим непосредственно фронтовые зависимости:
@@ -103,11 +102,12 @@ npm run production
 ```
 
 
-## 3. Set secrets in the repository on GitHub
 
-Generate SSH-keys with `ssh-keygen`
+## 4. Set secrets in the repository on GitHub
 
-В репозитории на GitHub, в разделе `Settings > Secrets > Actions` задаём значения:
+First, generate SSH-keys with `ssh-keygen`.
+
+After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
 
 - `SSH_PRIVATE_KEY`. If you don’t have this you can run ssh-keygen in your server terminal to generate a new key, then
   run the command cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys to allow connection to the private key.
@@ -115,9 +115,11 @@ Generate SSH-keys with `ssh-keygen`
 - `SSH_USERNAME`. This is the server username, in my case it’s root . If you don’t know your username you can use the
   whoami command on your server to check.
 
-В репозитории, в разделе `Deploy keys`, задаём значение публичного ключа с виртуальной машины (получить можно
-через `cat ~/.ssh/id_rsa.pub`). Это позволит деплоиться через `git pull` с VDS.
+In the repository, in the `Deploy keys` section, set the value of the public key from the virtual machine (you can get
+via `cat ~/.ssh/id_rsa.pub`). This will allow deployment via `git pull` from VDS.
 
-## 4. Optional: Set up HTTPS
+
+
+## 5. Optional: Set up HTTPS
 
 О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
