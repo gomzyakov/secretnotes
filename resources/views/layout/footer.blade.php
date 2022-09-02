@@ -7,9 +7,9 @@
                     <a class="link-dark text-decoration-none" href="{{ route('home') }}">
                         SecretNotes
                     </a>
-{{--                    <span style="color: #aaa;">--}}
-{{--                        by--}}
-{{--                    </span>--}}
+                    <div class="text-secondary">
+                        <small>v{{ config('app.version') }}</small>
+                    </div>
 {{--                    <a class="text-decoration-none"--}}
 {{--                       href="https://github.com/gomzyakov"--}}
 {{--                       target="_blank"--}}
