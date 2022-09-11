@@ -16,8 +16,6 @@ class NoteController extends Controller
      * Store a newly created note in storage.
      *
      * @param NoteCreateRequest $request
-     *
-     * @return JsonResponse
      */
     public function create(NoteCreateRequest $request): JsonResponse
     {

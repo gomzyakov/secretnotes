@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use App\Services\NotesRepository;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
@@ -78,6 +80,8 @@ class NoteController extends Controller
 
     /**
      * @param $slug
+     *
+     * @return Application|RedirectResponse|View|ViewFactory
      */
     public function decrypt($slug)
     {
@@ -95,11 +99,11 @@ class NoteController extends Controller
 
         // TODO Simplify this block
         if ($note->password !== null) {
-            if (Hash::check(request()->decrypt_password, $note->password)) {
-                $note_text = Crypt::decryptString($note->text);
-            } else {
+            if (! Hash::check(request()->decrypt_password, $note->password)) {
                 return back()->withErrors(['bad_password' => 'Password incorrect']);
             }
+
+            $note_text = Crypt::decryptString($note->text);
         } else {
             $note_text = Crypt::decryptString($note->text);
         }
@@ -108,7 +112,7 @@ class NoteController extends Controller
 
         return view('note.show', [
             'hide_footer' => true,
-            'note_text'   => $note_text ?? null,
+            'note_text'   => $note_text,
         ]);
     }
 }
