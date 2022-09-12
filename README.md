@@ -5,6 +5,11 @@
 [SecretNotes](https://secretnotes.ru) ia an open source alternative to [privnote.com](https://privnote.com)
 
 
+TODO 
+- About
+- Screenshot
+- Quick init
+
 ## Running the project locally
 
 When you pull this project to another computer that has no PHP or Composer installed, you cant run `sail` command
