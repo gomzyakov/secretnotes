@@ -2,7 +2,7 @@
 
 [![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
 
-[SecretNotes](https://secretnotes.ru) ia an open source alternative to [privnote.com](https://privnote.com)
+[Secretic](https://secretic.app) ia an open source alternative to [privnote.com](https://privnote.com)
 
 
 ## Running the project locally
