@@ -5,7 +5,7 @@
             <div class="row py-2 py-md-4 justify-content-center">
                 <div class="col-md-4 d-none d-md-block">
                     <a class="link-dark text-decoration-none" href="{{ route('home') }}">
-                        SecretNotes
+                        Secretic
                     </a>
                     <div class="text-secondary">
                         <small>v{{ config('app.version') }}</small>

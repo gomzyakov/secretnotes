@@ -10,7 +10,7 @@ return [
     ],
     'create_btn' => 'Create note',
     'cases'      => [
-        'title'        => 'How can I use SecretNotes?',
+        'title'        => 'How can I use Secretic?',
         'card_1_title' => 'Share passwords securely at work',
         'card_2_title' => 'Give out one-time promo codes',
         'card_3_title' => 'Share secrets with friends',
