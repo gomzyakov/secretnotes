@@ -6,7 +6,7 @@
     <div class="container justify-content-center">
         <div class="col-lg-5">
             <a class="ml-0 navbar-brand" href="{{ route('home') }}">
-                <span class="fw-light">Secret</span><span class="fw-semibold">Notes</span>
+                Secretic
             </a>
             <span class="navbar-text d-none d-md-inline">{{ __('navbar.text') }}</span>
         </div>
