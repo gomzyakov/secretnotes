@@ -13,7 +13,7 @@ class CreateTest extends TestCase
 {
     public function test_create_with_min_params()
     {
-        $response           = $this->postJson(route(
+        $response = $this->postJson(route(
             'api.note.create',
             [
                 'text' => $text = $this->faker->text(),
