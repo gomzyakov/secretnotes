@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>@yield('title', trans('common.head_title')) &mdash; Secretic</title>
+    <meta name="description" content="Secretic - зашифрованные и самоуничтожающиеся заметки">
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}" sizes="180x180">
     <link rel="icon" href="{{ asset('favicon/favicon-32x32.png') }}" sizes="32x32" type="image/png">
@@ -21,8 +24,10 @@
           crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>@yield('title', trans('common.head_title')) &mdash; Secretic</title>
-    <meta name="description" content="Secretic - зашифрованные и самоуничтожающиеся заметки">
+    {{-- Font for logo --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
