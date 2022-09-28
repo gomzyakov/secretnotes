@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+use Closure;
 
 class CheckLanguage
 {
@@ -20,7 +21,7 @@ class CheckLanguage
      *
      * @return RedirectResponse|Response
      */
-    public function handle(Request $request, \Closure $next)
+    public function handle(Request $request, Closure $next)
     {
 //        if ($request->input('lang') !== 'my-secret-token') {
 //            return redirect('home');
