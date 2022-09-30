@@ -1,6 +1,6 @@
 # Secretic
 
-[![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
+[![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
 
 [Secretic](https://secretic.app) ia an open source alternative to [privnote.com](https://privnote.com)
 
