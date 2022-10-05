@@ -1,7 +1,7 @@
 <div class="container py-5 d-none d-md-block" id="custom-cards">
     <div class="row py-2 py-md-4 justify-content-center">
         <div class="col-8">
-            <h2>{{ __('home.cases.title') }}</h2>
+            <h2 class="lh-sm fw-semibold">{{ __('home.cases.title') }}</h2>
         </div>
     </div>
     <div class="row py-2 py-md-4 justify-content-center">
