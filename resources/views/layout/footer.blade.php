@@ -17,7 +17,7 @@
 {{--                        Alexander Gomzyakov--}}
 {{--                    </a>--}}
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <ul class="nav justify-content-md-end">
                         <li class="nav-item d-md-none">
                             <a href="{{ route('home') }}" class="nav-link ps-0 pe-2 px-md-2">

@@ -1,11 +1,11 @@
 <div class="container py-5 d-none d-md-block" id="custom-cards">
     <div class="row py-2 py-md-4 justify-content-center">
-        <div class="col-8">
-            <h2 class="lh-sm fw-semibold">{{ __('home.cases.title') }}</h2>
+        <div class="col-9">
+            <h2 class="h1 lh-sm fw-semibold">How can I use Secretic?</h2>
         </div>
     </div>
     <div class="row py-2 py-md-4 justify-content-center">
-        <div class="col-4">
+        <div class="col-3">
             <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                  style="background: url('{{ asset('assets/unsplash-photo-1.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-3">
             <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                  style="background: url('{{ asset('assets/unsplash-photo-2.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-3">
             <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                  style="background: url('{{ asset('assets/unsplash-photo-3.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
