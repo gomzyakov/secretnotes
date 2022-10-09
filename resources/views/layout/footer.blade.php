@@ -8,7 +8,7 @@
                         Secretic
                     </a>
                     <div class="text-secondary">
-                        <small>v{{ config('app.version') }}</small>
+                        <small>Secret notes</small>
                     </div>
 {{--                    <a class="text-decoration-none"--}}
 {{--                       href="https://github.com/gomzyakov"--}}
