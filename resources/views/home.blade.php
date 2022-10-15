@@ -9,7 +9,7 @@
         <form id="create_note_form">
             @csrf
 
-            <div class="row mt-4 mt-lg-5">
+            <div class="row mt-5">
                 <div class="col-md-6 mx-auto">
 
                     <div class="text-center">
@@ -48,6 +48,7 @@
     </div>
 
     @include('home.layout.cases')
+    @include('home.layout.why')
 
 @endsection
 
