@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Секретные заметки')
+@section('title', 'About Secretic')
 
 @section('content')
 

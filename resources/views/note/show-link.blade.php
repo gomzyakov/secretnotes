@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Открыть секретную заметку')
+@section('title', 'Show secret note and destroy')
 
 @section('content')
 
