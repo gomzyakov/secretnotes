@@ -4,7 +4,7 @@
 
 <nav class="navbar bg-light border-bottom">
     <div class="container justify-content-center">
-        <div class="col-lg-5">
+        <div class="col-lg-6">
             <a class="ml-0 navbar-brand" href="{{ route('home') }}">
                 Secretic
             </a>
