@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75366dc68666604ac98cb0759cd1fac6",
+    "content-hash": "28e3102ce54c7a8cd55bde01a2895601",
     "packages": [
         {
             "name": "brick/math",
@@ -907,62 +907,6 @@
                 }
             ],
             "time": "2022-02-20T15:07:15+00:00"
-        },
-        {
-            "name": "gomzyakov/git-version",
-            "version": "v0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gomzyakov/git-version.git",
-                "reference": "3f5f197a9341b080c83c7f3a7d7d2e511bc4cd46"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/git-version/zipball/3f5f197a9341b080c83c7f3a7d7d2e511bc4cd46",
-                "reference": "3f5f197a9341b080c83c7f3a7d7d2e511bc4cd46",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^9.34",
-                "php": "^8.1",
-                "symfony/process": "^6.1"
-            },
-            "require-dev": {
-                "gomzyakov/php-code-style": "^1.0",
-                "laravel/pint": "^1.2",
-                "mockery/mockery": "^1.5",
-                "phpstan/phpstan": "^1.8",
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "Gomzyakov\\GitVersion\\": "./src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Gomzyakov",
-                    "email": "alexander.gomzyakov@gmail.com"
-                }
-            ],
-            "description": "A helper to get the current GIT version of the application",
-            "homepage": "https://github.com/gomzyakov/git-version",
-            "keywords": [
-                "app-version",
-                "git",
-                "git-version",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/gomzyakov/git-version/issues",
-                "source": "https://github.com/gomzyakov/git-version/tree/v0.2.0"
-            },
-            "time": "2022-10-09T06:50:46+00:00"
         },
         {
             "name": "graham-campbell/result-type",
