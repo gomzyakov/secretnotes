@@ -43,11 +43,11 @@
     "scripts": {
         "phpunit": "@php ./vendor/bin/phpunit ./tests --no-coverage --color=always",
         "phpstan": "@php ./vendor/bin/phpstan analyze -c ./phpstan.neon.dist --no-progress --ansi --verbose",
-        "pint-check": "@php ./vendor/bin/pint --test --config vendor/gomzyakov/php-code-style/pint.json",
-        "pint-fix": "@php ./vendor/bin/pint --config vendor/gomzyakov/php-code-style/pint.json",
+        "cs-check": "@php ./vendor/bin/pint --test --config vendor/gomzyakov/php-code-style/pint.json",
+        "cs-fix": "@php ./vendor/bin/pint --config vendor/gomzyakov/php-code-style/pint.json",
         "rector-check": "@php ./vendor/bin/rector process --dry-run",
         "test": [
-            "@pint-check",
+            "@cs-check",
             "@phpstan",
             "@phpunit"
         ],

@@ -26,3 +26,4 @@ jobs:
             git pull origin main
             git show --summary
             composer -V
+            composer install

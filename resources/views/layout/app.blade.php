@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ App::currentLocale() }}">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', trans('common.head_title')) &mdash; Secretic</title>
-    <meta name="description" content="Secretic - зашифрованные и самоуничтожающиеся заметки">
+    <title>@yield('title', 'Create secret note') &mdash; Secretic</title>
+    <meta name="description" content="Share a confidential note via a web link that will self-destruct after it is read by your intended recipient.">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}" sizes="180x180">
