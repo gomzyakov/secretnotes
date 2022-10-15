@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Http\Requests;
 
@@ -8,9 +8,9 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class NoteCreateRequest extends FormRequest
 {
-    public const FIELD_TEXT            = 'text';
+    public const FIELD_TEXT = 'text';
 
-    public const FIELD_PASSWORD        = 'encrypt_password';
+    public const FIELD_PASSWORD = 'encrypt_password';
 
     public const FIELD_EXPIRATION_DATE = 'expiration_date';
 
@@ -51,6 +51,7 @@ class NoteCreateRequest extends FormRequest
      */
     public function getExpirationDate(): ?string
     {
+        // TODO Move `1_hour` to reference
         return in_array($this->get(self::FIELD_EXPIRATION_DATE), ['1_hour', '1_day', '1_week', '1_month'])
             ? $this->get(self::FIELD_EXPIRATION_DATE)
             : null;

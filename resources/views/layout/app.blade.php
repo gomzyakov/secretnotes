@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ App::currentLocale() }}">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@yield('title', 'Create secret note') &mdash; Secretic</title>
+    <meta name="description" content="Share a confidential note via a web link that will self-destruct after it is read by your intended recipient.">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}" sizes="180x180">
@@ -15,14 +18,17 @@
     {{-- TODO <meta name="theme-color" content="#7952b3">--}}
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
           rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <title>@yield('title', trans('common.head_title')) &mdash; SecretNotes</title>
-    <meta name="description" content="SecretNotes - зашифрованные и самоуничтожающиеся заметки">
+    {{-- Font for logo --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 

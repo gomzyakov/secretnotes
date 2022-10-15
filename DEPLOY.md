@@ -53,12 +53,13 @@ sudo mv composer.phar /usr/local/bin/composer
 
 >Next, we do everything from the user `web`, not `root`!!!
 
-Go to path `/var/www/web/sites` and clone current repository (or your own fork):
+Go to path `/var/www/web/sites` and clone current repository (or your own fork). For example, use `secretic.app` folder name:
 
 ```bash
-git clone git@github.com:gomzyakov/secretnotes.git secretnotes.ru
+git clone git@github.com:gomzyakov/secretic.git secretic.app
 ``````
-Then go to path `/var/www/web/sites/secretnotes.ru` and run some commands:
+
+Then go to path `/var/www/web/sites/secretic.app` and run some commands:
 
 ```bash
 php -r "file_exists('.env') || copy('.env.example', '.env');"

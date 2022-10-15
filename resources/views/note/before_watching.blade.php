@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Секретные заметки')
+@section('title', 'Read and destroy?')
 
 @php
     use App\Models\Note;
@@ -15,7 +15,7 @@
 
                 @if ($note === null)
                     <div class="alert alert-danger mt-5" role="alert">
-                        Заметка не существует, уже прочитана или срок ее действия истек
+                        Secret note does not exist, has already been read, or has expired
                     </div>
                 @else
                     <h3 class="mt-5">Read and destroy?</h3>

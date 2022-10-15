@@ -38,3 +38,9 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```bash
 sudo certbot --nginx
 ```
+
+If you wish to add another SSL-certificate, just run:
+
+```bash
+sudo certbot certonly --nginx --agree-tos --expand -d secretic.app
+```

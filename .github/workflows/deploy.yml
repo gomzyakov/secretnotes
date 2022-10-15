@@ -20,9 +20,10 @@ jobs:
           # TODO composer install --allow-root --no-interaction
           script: |
             whoami
-            cd /var/www/web/sites/secretnotes.ru
+            cd /var/www/web/sites/secretic.app
             git reset --hard HEAD
             git clean -f -d
             git pull origin main
             git show --summary
             composer -V
+            composer install

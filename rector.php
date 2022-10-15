@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\Php74\Rector\Property\TypedPropertyRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
-use Rector\Config\RectorConfig;
 
 /**
- * More info about Rector on https://github.com/rectorphp/rector
+ * More info about Rector on https://github.com/rectorphp/rector.
  *
  * TODO Currently not running on CI
  */
@@ -17,7 +17,7 @@ return static function (RectorConfig $rectorConfig): void {
     // paths to refactor; solid alternative to CLI arguments
     $rectorConfig->paths([
         __DIR__ . '/app',
-        __DIR__ . '/tests'
+        __DIR__ . '/tests',
     ]);
 
     // is your PHP version different from the one you refactor to? [default: your PHP version], uses PHP_VERSION_ID format
@@ -32,7 +32,7 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::PHP_80,
         SetList::EARLY_RETURN,
         SetList::DEAD_CODE,
-        LevelSetList::UP_TO_PHP_80
+        LevelSetList::UP_TO_PHP_80,
     ]);
 
     // register single rule

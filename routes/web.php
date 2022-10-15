@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -12,8 +11,6 @@ Route::get('/note/show-link/{slug}', [NoteController::class, 'showLink'])->name(
 Route::get('/note/{slug}', [NoteController::class, 'openLink'])->name('note.open_link');
 
 Route::get('/about', [PageController::class, 'showAboutPage'])->name('about');
-
-Route::get('/lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switch');
 
 // TODO To API
 Route::post('/note/{slug}', [NoteController::class, 'decrypt'])->name('note.decrypt');

@@ -1,8 +1,8 @@
-# SecretNotes
+# Secretic
 
-[![codecov](https://codecov.io/gh/gomzyakov/secretnotes/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretnotes)
+[![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
 
-[SecretNotes](https://secretnotes.ru) ia an open source alternative to [privnote.com](https://privnote.com)
+[Secretic](https://secretic.app) ia an open source alternative to [privnote.com](https://privnote.com)
 
 
 TODO 
@@ -46,7 +46,7 @@ sail up -d
 sail artisan migrate:fresh --seed
 ```
 
-And open http://127.0.0.1 in your favorite browser. Happy using SecretNotes! 
+And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
 
 
 ## Remove project

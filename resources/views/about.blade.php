@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Секретные заметки')
+@section('title', 'About Secretic')
 
 @section('content')
 
@@ -21,7 +21,7 @@
                     <h5 class="card-header">Можно ли узнать, была ли уже открыта заметка?</h5>
                     <div class="card-body">
                         <p class="card-text">
-                            Нет, SecretNotes не хранит никакой информации об открытии заметки.
+                            Нет, Secretic не хранит никакой информации об открытии заметки.
                         </p>
                         <p class="card-text">
                             Таким образом, <span class="font-extrabold font-outfit">невозможно узнать</span>,
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="card my-5">
-                    <h5 class="card-header">Может ли SecretNotes хранить только заметки?</h5>
+                    <h5 class="card-header">Может ли Secretic хранить только заметки?</h5>
                     <div class="card-body">
                         <p class="card-text">
                             Скоро будут обновления, позволяющие передавать изображения и другие типы файлов,

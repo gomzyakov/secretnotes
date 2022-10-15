@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', trans('common.head_title'))
+@section('title', 'Create notes that will self-destruct after being read')
 
 @section('content')
 
@@ -9,14 +9,26 @@
         <form id="create_note_form" method="POST">
             @csrf
 
-            @include('note.layout.row-textarea')
+            <div class="row mt-4 mt-lg-5">
+                <div class="col-md-8 mx-auto">
+
+                    <label for="text" class="lh-sm fw-semibold form-label h2 mb-4">New secret note</label>
+                    <textarea class="form-control"
+                              name="text"
+                              id="text"
+                              placeholder="Write your note here..."
+                              style="height: 160px"></textarea>
+
+                </div>
+            </div>
+
             @include('note.layout.row-params')
 
             <div class="row my-5 justify-content-center">
                 <div class="col-8">
                     <div class="d-grid">
                         <button id="create_note_form__submit_btn" type="submit" class="btn btn-lg btn-primary">
-                            {{ __('home.create_btn') }}
+                            Create note
                         </button>
                     </div>
                 </div>

@@ -1,83 +1,34 @@
-<div class="container py-5 d-none d-md-block" id="custom-cards">
-    <div class="row py-2 py-md-4 justify-content-center">
-        <div class="col-8">
-            <h2>{{ __('home.cases.title') }}</h2>
+<div class="container my-5">
+    <div class="row pt-5 justify-content-center">
+        <div class="col-9">
+            <h2 class="h1 lh-sm fw-semibold">How can I use secret notes?</h2>
         </div>
     </div>
-    <div class="row py-2 py-md-4 justify-content-center">
-        <div class="col-4">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                 style="background: url('{{ asset('assets/unsplash-photo-1.jpg') }}') center;">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_1_title') }}
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center ms-auto">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#geo-fill"/>
-                            </svg>
-                            <small>Business</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#calendar3"/>
-                            </svg>
-                            <small>42 likes</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div class="row my-4 py-2 pt-md-2 justify-content-center">
+        <div class="col-3">
+            <i class="bi bi-shield-check text-success" style="font-size: 32px; color: #ff0000;"></i>
+
+            <h3 class="mb-4 mt-2">Share passwords securely at work</h3>
+
+            <p>Sometimes you need to share passwords, tokens, or other sensitive data with colleagues at work?</p>
+            <p>The best way to do this is to <a href="{{ route('page.note.new') }}">create a secret note</a> and send it through the messenger.</p>
         </div>
 
-        <div class="col-4">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                 style="background: url('{{ asset('assets/unsplash-photo-2.jpg') }}') center;">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_2_title') }}
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center ms-auto">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#geo-fill"/>
-                            </svg>
-                            <small>Social</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#calendar3"/>
-                            </svg>
-                            <small>27 likes</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="col-3">
+            <i class="bi bi-piggy-bank text-danger" style="font-size: 32px; color: #ff0000;"></i>
+
+            <h3 class="mb-4 mt-2">Give out one-time promo codes</h3>
+
+            <p>If you need to send someone a promotional code and you want to be sure that only one recipient will see it, <a href="{{ route('page.note.new') }}">create a secret note</a> with a promotional code!</p>
         </div>
 
-        <div class="col-4">
-            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                 style="background: url('{{ asset('assets/unsplash-photo-3.jpg') }}') center;">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_3_title') }}
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                        <li class="d-flex align-items-center ms-auto">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#geo-fill"/>
-                            </svg>
-                            <small>Personal</small>
-                        </li>
-                        <li class="d-flex align-items-center">
-                            <svg class="bi me-2" width="1em" height="1em">
-                                <use xlink:href="#calendar3"/>
-                            </svg>
-                            <small>13 likes</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="col-3">
+            <i class="bi bi-megaphone text-primary" style="font-size: 32px; color: #ff0000;"></i>
+
+            <h3 class="mb-4 mt-2">Share secrets with friends</h3>
+
+            <p>Do you want to share something personal with friends, but do not trust the channels of information transfer?</p>
+            <p>Just create a <a href="{{ route('page.note.new') }}">secret note</a> on the <a href="{{ route('home') }}">Secretic</a> and send a short link to your friends.</p>
         </div>
     </div>
 </div>
