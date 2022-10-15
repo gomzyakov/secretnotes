@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', trans('common.head_title'))
+@section('title', 'Create notes that will self-destruct after being read')
 
 @section('content')
 
@@ -16,7 +16,7 @@
                 <div class="col-8">
                     <div class="d-grid">
                         <button id="create_note_form__submit_btn" type="submit" class="btn btn-lg btn-primary">
-                            {{ __('home.create_btn') }}
+                            Create note
                         </button>
                     </div>
                 </div>

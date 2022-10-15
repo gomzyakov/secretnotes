@@ -51,6 +51,7 @@ class NoteCreateRequest extends FormRequest
      */
     public function getExpirationDate(): ?string
     {
+        // TODO Move `1_hour` to reference
         return in_array($this->get(self::FIELD_EXPIRATION_DATE), ['1_hour', '1_day', '1_week', '1_month'])
             ? $this->get(self::FIELD_EXPIRATION_DATE)
             : null;

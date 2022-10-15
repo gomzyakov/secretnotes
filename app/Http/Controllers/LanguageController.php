@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
+/**
+ * @deprecated
+ */
 class LanguageController extends Controller
 {
     /**

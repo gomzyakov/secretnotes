@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Closure;
 
+/**
+ * @deprecated
+ */
 class CheckLanguage
 {
     public const LOCALE_SESSION_KEY = 'locale';

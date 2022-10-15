@@ -26,7 +26,7 @@
                         </li>
                         <li class="nav-item d-none d-md-block">
                             <a href="{{ route('home') }}" class="nav-link link-secondary ps-0 pe-2 px-md-2">
-                                {{ __('navbar.home') }}
+                                Home
                             </a>
                         </li>
                         <li class="nav-item">
@@ -35,30 +35,12 @@
                             </a>
                         </li>
 
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('about') }}" class="nav-link link-secondary px-2">--}}
-{{--                                {{ __('navbar.about') }}--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link link-secondary px-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                               role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ Config::get('languages')[App::currentLocale()] }}
+                        <li class="nav-item">
+                            <a href="{{ route('home').'#about' }}" class="nav-link link-secondary px-2">
+                                About
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @foreach (Config::get('languages') as $lang => $language)
-                                    @if ($lang != App::currentLocale())
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}">
-                                                {{ $language }}
-                                            </a>
-                                        </li>
-                                    @endif
-                                @endforeach
-                            </ul>
                         </li>
+
                     </ul>
                 </div>
             </div>

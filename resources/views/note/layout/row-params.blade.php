@@ -3,13 +3,13 @@
         <div class="form-floating">
             <select class="form-select" name="expiration_date" id="expiration_date"
                     aria-label="select example">
-                <option selected>{{ __('note_create.expiration.never') }}</option>
-                <option value="1_hour">{{ __('note_create.expiration.1_hour') }}</option>
-                <option value="1_day">{{ __('note_create.expiration.1_day') }}</option>
-                <option value="1_week">{{ __('note_create.expiration.1_week') }}</option>
-                <option value="1_month">{{ __('note_create.expiration.1_month') }}</option>
+                <option selected>Never</option>
+                <option value="1_hour">1 hour</option>
+                <option value="1_day">1 day</option>
+                <option value="1_week">1 week</option>
+                <option value="1_month">1 month</option>
             </select>
-            <label for="expiration_date">{{ __('note_create.expiration.title') }}</label>
+            <label for="expiration_date">Expiration date</label>
         </div>
     </div>
     <div class="col-4">
@@ -19,7 +19,7 @@
                    id="password_input"
                    type="password"
                    placeholder="Password">
-            <label for="password_input">{{ __('note_create.password_placeholder') }}</label>
+            <label for="password_input">Password (optional)</label>
 
             @error('encrypt_password')
             <div class="py-2 text-red-500">
