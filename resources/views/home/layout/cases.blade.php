@@ -1,7 +1,7 @@
 <div class="container py-5 d-none d-md-block" id="custom-cards">
     <div class="row py-2 py-md-4 justify-content-center">
         <div class="col-8">
-            <h2>{{ __('home.cases.title') }}</h2>
+            <h2>How can I use Secretic?</h2>
         </div>
     </div>
     <div class="row py-2 py-md-4 justify-content-center">
@@ -10,7 +10,7 @@
                  style="background: url('{{ asset('assets/unsplash-photo-1.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_1_title') }}
+                        Share passwords securely at work
                     </h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="d-flex align-items-center ms-auto">
@@ -35,7 +35,7 @@
                  style="background: url('{{ asset('assets/unsplash-photo-2.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_2_title') }}
+                        Give out one-time promo codes
                     </h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="d-flex align-items-center ms-auto">
@@ -60,7 +60,7 @@
                  style="background: url('{{ asset('assets/unsplash-photo-3.jpg') }}') center;">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                     <h3 class="pt-1 mt-3 mb-4 lh-1 fw-bold">
-                        {{ __('home.cases.card_3_title') }}
+                        Share secrets with friends
                     </h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="d-flex align-items-center ms-auto">

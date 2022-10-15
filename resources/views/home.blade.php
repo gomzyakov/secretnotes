@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', trans('common.head_title'))
+@section('title', 'Create notes that will self-destruct after being read')
 
 @section('content')
 
@@ -14,7 +14,7 @@
             <div class="row mt-2 mb-4">
                 <div class="col-md-8 mx-auto">
                     <div id="textareaHelp" class="form-text">
-                        {{ __('home.additional_settings.prefix') }} <a href="{{ route('page.note.new') }}">{{ __('home.additional_settings.link') }}</a>.
+                        You can create a secret note with <a href="{{ route('page.note.new') }}">additional settings</a>.
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="col-8">
                     <div class="d-grid">
                         <button id="create_note_form__submit_btn" type="submit" class="btn btn-lg btn-primary">
-                            {{ __('home.create_btn') }}
+                            Create note
                         </button>
                     </div>
                 </div>
