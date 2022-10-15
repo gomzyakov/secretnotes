@@ -15,9 +15,5 @@ Route::get('/about', [PageController::class, 'showAboutPage'])->name('about');
 
 Route::get('/lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switch');
 
-Route::get('/version', function () {
-    return \Gomzyakov\GitVersion\GitVersion::getVersion();
-});
-
 // TODO To API
 Route::post('/note/{slug}', [NoteController::class, 'decrypt'])->name('note.decrypt');
