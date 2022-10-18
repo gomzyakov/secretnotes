@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Create notes that will self-destruct after being read')
+@section('title', 'Create secret note that will self-destruct after being read')
 
 @section('content')
 
