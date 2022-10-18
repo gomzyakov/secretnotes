@@ -6,34 +6,28 @@
 
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-7 mx-auto">
+                <h1 class="mb-4">Secret note successfully created!</h1>
 
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Успешно! Вот ссылка на заметку:
-                        </p>
-
-                        <div class="input-group mb-3">
-                            <input type="text"
-                                   id="copy-input"
-                                   class="form-control"
-                                   value="{{ $note_url }}"
-                                   placeholder="Note URL"
-                                   aria-label="Note URL"
-                                   aria-describedby="copy-button"
-                                   disabled>
-                            <button class="btn btn-outline-secondary"
-                                    type="button"
-                                    id="copy-button"
-                                    title="Copy to Clipboard">
-                                Скопировать
-                            </button>
-                        </div>
-
-                    </div>
+                <div class="form-text mb-3">
+                    Here is a link to the note:
                 </div>
-
+                <div class="input-group mb-3">
+                    <input type="text"
+                           id="copy-input"
+                           class="form-control"
+                           value="{{ $note_url }}"
+                           placeholder="Note URL"
+                           aria-label="Note URL"
+                           aria-describedby="copy-button"
+                           disabled>
+                    <button class="btn btn-outline-secondary"
+                            type="button"
+                            id="copy-button"
+                            title="Copy to Clipboard">
+                        Copy note to clipboard
+                    </button>
+                </div>
 
             </div>
         </div>

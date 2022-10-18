@@ -2,13 +2,9 @@
 
 [![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
 
-[Secretic](https://secretic.app) ia an open source alternative to [privnote.com](https://privnote.com)
+Create secret notes that will self-destruct after being read. Project demo is on [secretic.app](https://secretic.app). Secretic an open source alternative to [privnote.com](https://privnote.com)
 
-
-TODO 
-- About
-- Screenshot
-- Quick init
+![Secret notes that will self-destruct after being read.](./screenshot.png)
 
 ## Running the project locally
 
@@ -25,6 +21,7 @@ docker run --rm \
 laravelsail/php81-composer:latest \
 composer install --ignore-platform-reqs
 ```
+
 Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias:
 
 ```bash
