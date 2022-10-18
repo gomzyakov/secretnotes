@@ -40,8 +40,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="https://github.com/gomzyakov/secretic" class="nav-link link-secondary px-2">
-                                <i class="bi bi-github"></i> We are on GitHub
+                            <a href="https://github.com/gomzyakov/secretic" class="nav-link link-secondary px-2" target="_blank">
+                                <i class="bi bi-github"></i> GitHub
                             </a>
                         </li>
 
