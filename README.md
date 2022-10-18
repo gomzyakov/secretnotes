@@ -2,9 +2,10 @@
 
 [![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
 
-Create secret notes that will self-destruct after being read. Project demo is on [secretic.app](https://secretic.app). Secretic an open source alternative to [privnote.com](https://privnote.com)
+Create secret notes that will self-destruct after being read. 
 
-![Secret notes that will self-destruct after being read.](./screenshot.png)
+- Project demo is on [secretic.app](https://secretic.app). 
+- [Secretic](https://secretic.app) is an open source alternative to [privnote.com](https://privnote.com)
 
 ## Running the project locally
 
