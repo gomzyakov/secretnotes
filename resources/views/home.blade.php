@@ -47,8 +47,9 @@
 
     </div>
 
-    @include('home.layout.cases')
-    @include('home.layout.why')
+    @include('home.cases')
+    @include('home.why')
+    @include('home.faq')
 
 @endsection
 
