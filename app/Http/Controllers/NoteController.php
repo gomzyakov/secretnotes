@@ -80,22 +80,23 @@ class NoteController extends Controller
 
     /**
      * @param $slug
+     * @param NotesRepository $notes_repository
      *
      * @return Application|RedirectResponse|View|ViewFactory
      */
-    public function decrypt($slug)
-    {
+    public function decrypt(
+        $slug,
+        NotesRepository $notes_repository
+    ) {
         // TODO to request
         request()->validate([
             'decrypt_password' => 'string|max:100',
         ]);
 
-        // TODO Use repository
-        $note = Note::where('slug', $slug)->firstOr(
-            function () {
-                return back()->withErrors(['404' => 'Заметка не существует, уже прочитана или срок ее действия истек']);
-            }
-        );
+        $note = $notes_repository->findBySlug($slug);
+        if (! $note instanceof Note) {
+            return back()->withErrors(['404' => 'The note does not exist, has already been read, or has expired']);
+        }
 
         // TODO Simplify this block
         if ($note->password !== null) {

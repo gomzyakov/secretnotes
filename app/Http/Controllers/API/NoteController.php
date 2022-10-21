@@ -4,10 +4,10 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\NoteCreateRequest;
 use App\Models\Note;
+use App\Services\NotesRepository;
 use Hashids\Hashids;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 
 class NoteController extends Controller
@@ -16,15 +16,20 @@ class NoteController extends Controller
      * Store a newly created note in storage.
      *
      * @param NoteCreateRequest $request
+     * @param NotesRepository   $notes_repository
+     *
+     * @return JsonResponse
      */
-    public function create(NoteCreateRequest $request): JsonResponse
-    {
+    public function create(
+        NoteCreateRequest $request,
+        NotesRepository $notes_repository
+    ): JsonResponse {
         $hashids = new Hashids('', 5);
 
         if ($request->getExpirationDate()) {
             // TODO to prif
             switch ($request->getExpirationDate()) {
-                case '1_hour':
+                case '1_hour': //
                     $expiration_date = date_format(now()->addHours(1), 'Y-m-d H:i:s');
 
                     break;
@@ -43,18 +48,11 @@ class NoteController extends Controller
             }
         }
 
-        $password = $request->getPassword() ? Hash::make($request->getPassword()) : null;
-
-        // TODO new Note
-        $note = Note::create([
-            'text'            => Crypt::encryptString($request->getText()),
-            'expiration_date' => $expiration_date ?? null,
-            'password'        => $password,
-            'slug'            => '',
-        ]);
-
-        $note->slug = $hashids->encode($note->id);
-        $note->save();
+        $note = $notes_repository->create(
+            $request->getText(),
+            $request->getPassword() ? Hash::make($request->getPassword()) : null,
+            $expiration_date ?? null
+        );
 
         return new JsonResponse([
             'url_show_note_link' => route('page.note.show_link', $note->slug),
