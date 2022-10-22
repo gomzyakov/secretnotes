@@ -24,7 +24,7 @@ class CreateTest extends TestCase
 
         $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
 
-        /** @var Note|null $note */
+        /** @var Note $note */
         $note = Note::where('slug', $response->json('slug'))->first();
 
         $this->assertInstanceOf(Note::class, $note);
@@ -46,7 +46,7 @@ class CreateTest extends TestCase
 
         $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
 
-        /** @var Note|null $note */
+        /** @var Note $note */
         $note = Note::where('slug', $response->json('slug'))->first();
 
         $this->assertInstanceOf(Note::class, $note);

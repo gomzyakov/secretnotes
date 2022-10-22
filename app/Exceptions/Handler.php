@@ -41,8 +41,8 @@ class Handler extends ExceptionHandler
 
     public function report(Throwable $exception)
     {
-        if (app()->bound('sentry') && $this->shouldReport($exception)) {
-            app('sentry')->captureException($exception);
+        if (app()->bound('sentry') && $this->shouldReport($exception)) { // @phpstan-ignore-line
+            app('sentry')->captureException($exception); // @phpstan-ignore-line
         }
 
         parent::report($exception);
