@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
  */
 class NotesRepositoryTest extends TestCase
 {
-    public function test_foo()
+    public function test_foo(): void
     {
         // TODO Fake test
         $this->assertTrue(true);
