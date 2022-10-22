@@ -5,11 +5,11 @@ namespace Tests\Feature;
 use Tests\TestCase;
 
 /**
- * @covers \App\Http\Controllers\PageController::showAboutPage
+ * @covers \App\Http\Controllers\NoteController::showLink
  */
 class ShowLinkTest extends TestCase
 {
-    public function test_get_about_page()
+    public function test_show_link_page()
     {
         $response = $this->get(route('page.note.show_link', $slug = $this->faker->word));
 
