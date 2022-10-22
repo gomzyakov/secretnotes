@@ -89,6 +89,7 @@ class NoteController extends Controller
         NotesRepository $notes_repository
     ): ViewFactory|View|Application|RedirectResponse {
         // TODO to request
+        /** @phpstan-ignore-next-line  */
         request()->validate([
             'decrypt_password' => 'string|max:100',
         ]);
@@ -100,6 +101,7 @@ class NoteController extends Controller
 
         // TODO Simplify this block
         if ($note->password !== null) {
+            /** @phpstan-ignore-next-line  */
             if (! Hash::check(request()->decrypt_password, $note->password)) {
                 return back()->withErrors(['bad_password' => 'Password incorrect']);
             }

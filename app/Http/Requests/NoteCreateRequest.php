@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use LogicException;
 
 class NoteCreateRequest extends FormRequest
 {
@@ -33,6 +34,10 @@ class NoteCreateRequest extends FormRequest
      */
     public function getText(): string
     {
+        if (! is_string($this->get(self::FIELD_TEXT))) {
+            throw new LogicException('Field `text` not string');
+        }
+
         return $this->get(self::FIELD_TEXT);
     }
 
@@ -41,9 +46,15 @@ class NoteCreateRequest extends FormRequest
      */
     public function getPassword(): ?string
     {
-        return $this->get(self::FIELD_PASSWORD) && strlen($this->get(self::FIELD_PASSWORD))
-            ? $this->get(self::FIELD_PASSWORD)
-            : null;
+        if ($this->get(self::FIELD_PASSWORD) === null) {
+            return null;
+        }
+
+        if (! is_string($this->get(self::FIELD_PASSWORD))) {
+            throw new LogicException('Field `password` not string');
+        }
+
+        return $this->get(self::FIELD_PASSWORD);
     }
 
     /**
@@ -51,6 +62,14 @@ class NoteCreateRequest extends FormRequest
      */
     public function getExpirationDate(): ?string
     {
+        if ($this->get(self::FIELD_EXPIRATION_DATE) === null) {
+            return null;
+        }
+
+        if (! is_string($this->get(self::FIELD_EXPIRATION_DATE))) {
+            throw new LogicException('Field `expiration_date` not string');
+        }
+
         // TODO Move `1_hour` to reference
         return in_array($this->get(self::FIELD_EXPIRATION_DATE), ['1_hour', '1_day', '1_week', '1_month'])
             ? $this->get(self::FIELD_EXPIRATION_DATE)
