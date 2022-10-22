@@ -2,8 +2,6 @@
 
 namespace Tests\Feature\API\Notes;
 
-use App\Models\Note;
-use Illuminate\Support\Facades\Crypt;
 use Tests\TestCase;
 
 /**
@@ -22,12 +20,10 @@ class CreateTest extends TestCase
 
         $response->assertStatus(200);
 
-        $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
-
-        $note = Note::where('slug', $response->json('slug'))->first();
-
-        $this->assertInstanceOf(Note::class, $note);
-        $this->assertSame($text, Crypt::decryptString($note->text));
+        $this->assertDatabaseHas('notes', [
+            'slug' => $response->json('slug'),
+            'text' => $text,
+        ]);
     }
 
     public function test_create_with_full_params(): void
@@ -43,12 +39,10 @@ class CreateTest extends TestCase
 
         $response->assertStatus(200);
 
-        $this->assertDatabaseHas('notes', ['slug' => $response->json('slug')]);
-
-        $note = Note::where('slug', $response->json('slug'))->first();
-
-        $this->assertInstanceOf(Note::class, $note);
-        $this->assertSame($text, Crypt::decryptString($note->text));
+        $this->assertDatabaseHas('notes', [
+            'slug' => $response->json('slug'),
+            'text' => $text,
+        ]);
     }
 
     public function test_empty_note(): void
