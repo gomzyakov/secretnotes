@@ -79,15 +79,15 @@ class NoteController extends Controller
     }
 
     /**
-     * @param $slug
+     * @param string          $slug
      * @param NotesRepository $notes_repository
      *
      * @return Application|RedirectResponse|View|ViewFactory
      */
     public function decrypt(
-        $slug,
+        string $slug,
         NotesRepository $notes_repository
-    ) {
+    ): ViewFactory|View|Application|RedirectResponse {
         // TODO to request
         request()->validate([
             'decrypt_password' => 'string|max:100',
@@ -103,11 +103,9 @@ class NoteController extends Controller
             if (! Hash::check(request()->decrypt_password, $note->password)) {
                 return back()->withErrors(['bad_password' => 'Password incorrect']);
             }
-
-            $note_text = Crypt::decryptString($note->text);
-        } else {
-            $note_text = Crypt::decryptString($note->text);
         }
+
+        $note_text = Crypt::decryptString($note->text);
 
         $note->delete();
 

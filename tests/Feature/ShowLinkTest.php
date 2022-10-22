@@ -9,7 +9,7 @@ use Tests\TestCase;
  */
 class ShowLinkTest extends TestCase
 {
-    public function test_show_link_page()
+    public function test_show_link_page(): void
     {
         $response = $this->get(route('page.note.show_link', $slug = $this->faker->word));
 

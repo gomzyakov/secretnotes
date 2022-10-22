@@ -11,7 +11,7 @@ use Tests\TestCase;
  */
 class CreateTest extends TestCase
 {
-    public function test_create_with_min_params()
+    public function test_create_with_min_params(): void
     {
         $response = $this->postJson(route(
             'api.note.create',
@@ -30,7 +30,7 @@ class CreateTest extends TestCase
         $this->assertSame($text, Crypt::decryptString($note->text));
     }
 
-    public function test_create_with_full_params()
+    public function test_create_with_full_params(): void
     {
         $response = $this->postJson(route(
             'api.note.create',
@@ -51,7 +51,7 @@ class CreateTest extends TestCase
         $this->assertSame($text, Crypt::decryptString($note->text));
     }
 
-    public function test_empty_note()
+    public function test_empty_note(): void
     {
         $response = $this->postJson(route('api.note.create'));
 
