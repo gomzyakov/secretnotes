@@ -5,7 +5,7 @@
 <nav class="navbar bg-light border-bottom">
     <div class="container justify-content-center">
         <div class="col-lg-6">
-            <a class="ml-0 navbar-brand" href="{{ route('home') }}">
+            <a class="ml-0 navbar-brand text-primary" href="{{ route('home') }}">
                 Secretic
             </a>
             <span class="navbar-text d-none d-md-inline">Secret notes that will self-destruct after being read.</span>
