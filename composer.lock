@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d9adceee3092482c3e61cf8d75041dc",
+    "content-hash": "9d4ad0dc52b7597396032cabeaad8713",
     "packages": [
         {
             "name": "brick/math",
@@ -7243,17 +7243,17 @@
             "time": "2022-01-07T12:00:00+00:00"
         },
         {
-            "name": "gomzyakov/php-code-style",
-            "version": "v1.0.1",
+            "name": "gomzyakov/php-style",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gomzyakov/php-code-style.git",
-                "reference": "8a15c8845752ce36e7cfa4ccae968ce2dc478f33"
+                "url": "https://github.com/gomzyakov/php-style.git",
+                "reference": "b4b9b0410da9a8026b314a83de5e4df89528af66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-code-style/zipball/8a15c8845752ce36e7cfa4ccae968ce2dc478f33",
-                "reference": "8a15c8845752ce36e7cfa4ccae968ce2dc478f33",
+                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/b4b9b0410da9a8026b314a83de5e4df89528af66",
+                "reference": "b4b9b0410da9a8026b314a83de5e4df89528af66",
                 "shasum": ""
             },
             "require": {
@@ -7261,9 +7261,9 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.8",
+                "friendsofphp/php-cs-fixer": "^3.12",
                 "mockery/mockery": "^1.5",
-                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan": "^1.8",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "package",
@@ -7283,17 +7283,17 @@
                 }
             ],
             "description": "Code style configuration for `php-cs-fixer` based on PSR-12.",
-            "homepage": "https://github.com/gomzyakov/php-code-style",
+            "homepage": "https://github.com/gomzyakov/php-style",
             "keywords": [
                 "code-style",
                 "php",
                 "php-cs-fixer"
             ],
             "support": {
-                "issues": "https://github.com/gomzyakov/php-code-style/issues",
-                "source": "https://github.com/gomzyakov/php-code-style/tree/v1.0.1"
+                "issues": "https://github.com/gomzyakov/php-style/issues",
+                "source": "https://github.com/gomzyakov/php-style/tree/v1.1.0"
             },
-            "time": "2022-09-27T13:15:34+00:00"
+            "time": "2022-10-25T12:36:04+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
