@@ -1,4 +1,4 @@
-name: code-style
+name: php-cs-fixer
 
 on:
   push:

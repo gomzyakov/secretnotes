@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  phpstan:
+  deptrac:
     runs-on: ubuntu-latest
 
     steps:
