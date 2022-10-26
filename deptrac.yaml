@@ -12,20 +12,32 @@ deptrac:
           type: className
           value: .*Controller.*
     -
-      name: Repository
-      collectors:
-        -
-          type: className
-          value: .*Repository.*
-    -
       name: Service
       collectors:
         -
-          type: className
-          value: .*Service.*
+          type: directory
+          value: /app/Services/.*
+    -
+      name: ServiceProvider
+      collectors:
+        -
+          type: directory
+          value: /app/Providers/.*
+    -
+      name: Model
+      collectors:
+        -
+          type: directory
+          value: /app/Models/.*
   ruleset:
     Controller:
       - Service
+      - Repository
+      - Model # TODO Temporary controllers must depend on Models
     Service:
       - Repository
-    Repository: ~
+      - Model
+    ServiceProvider:
+      - Service
+    # Models should not depend on other layers
+    Model: ~
