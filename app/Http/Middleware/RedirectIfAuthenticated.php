@@ -3,13 +3,13 @@
 namespace App\Http\Middleware;
 
 use App\Providers\RouteServiceProvider;
+use Closure;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
-use Closure;
 
 class RedirectIfAuthenticated
 {
