@@ -11,16 +11,32 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "01:00"
+    # Add assignees
+    assignees:
+      - "gomzyakov"
+    # Specify labels for npm pull requests
+    labels:
+      - "dependencies"
+    # Increase the version requirements for Composer
+    # only when required
+    versioning-strategy: increase
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "daily"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
