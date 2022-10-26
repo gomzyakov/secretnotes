@@ -24,6 +24,7 @@
         "nunomaduro/collision": "^6.1",
         "phpstan/phpstan": "^1.8",
         "phpunit/phpunit": "^9.5.10",
+        "qossmic/deptrac-shim": "^0.24.0",
         "rector/rector": "^0.14.2",
         "spatie/laravel-ignition": "^1.0"
     },
