@@ -1,4 +1,4 @@
-name: test
+name: phpunit
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  phpunit:
     runs-on: ubuntu-latest
 
     services:
@@ -68,11 +68,3 @@ jobs:
           name: codecov-umbrella
           verbose: true
           env_vars: PHP
-
-  # TODO PHPStan
-  phpstan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: TODO
-        run: php -v
