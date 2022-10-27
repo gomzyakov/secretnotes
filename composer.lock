@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa9c0fc09374c726bb52033f5e559ef6",
+    "content-hash": "b5693427efea19e73fc726517e11fe1f",
     "packages": [
         {
             "name": "brick/math",
@@ -7624,16 +7624,16 @@
         },
         {
             "name": "gomzyakov/php-style",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-style.git",
-                "reference": "b4b9b0410da9a8026b314a83de5e4df89528af66"
+                "reference": "01003cf7086e4b30846522f7ae9ce32d867f7abe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/b4b9b0410da9a8026b314a83de5e4df89528af66",
-                "reference": "b4b9b0410da9a8026b314a83de5e4df89528af66",
+                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/01003cf7086e4b30846522f7ae9ce32d867f7abe",
+                "reference": "01003cf7086e4b30846522f7ae9ce32d867f7abe",
                 "shasum": ""
             },
             "require": {
@@ -7671,9 +7671,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-style/issues",
-                "source": "https://github.com/gomzyakov/php-style/tree/v1.1.0"
+                "source": "https://github.com/gomzyakov/php-style/tree/v1.2.0"
             },
-            "time": "2022-10-25T12:36:04+00:00"
+            "time": "2022-10-26T12:03:18+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
