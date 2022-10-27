@@ -13,6 +13,7 @@
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^3.0.1",
         "laravel/tinker": "^2.7",
+        "opcodesio/log-viewer": "^1.6",
         "sentry/sentry-laravel": "^3.0"
     },
     "require-dev": {
