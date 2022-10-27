@@ -49,7 +49,7 @@ class NotesRepository
         $note->text            = Crypt::encryptString($text);
         $note->expiration_date = $expiration_date;
         $note->password        = $password;
-        $note->slug            = '';
+        $note->slug            = time() . '-' . mt_rand(); // TODO Bad! Rewrite!
         $note->save();
 
         $note->refresh();
