@@ -2,33 +2,28 @@
 
 For simplicity, we will deploy the project to VDS. The deployment process consists of several steps:
 
-1. Create a VDS on your preferred hosting
-2. Manually prepare VDS
-3. Build frontend
-4. Set secrets in the repository on GitHub 
-5. Optional: Set up HTTPS
+## 1. Create a VDS on your preferred hosting
 
-## 1. Create a VDS
+Create a VDS virtual machine for Docker, for example, at [NetAngels](https://panel.netangels.ru).
 
-We create a VDS virtual machine, for example, in [NetAngels](https://panel.netangels.ru).
+For [secretic.app](https://secretic.app) we used distribution `Docker` (Debian 11):
 
+![Docker VDS](vds-docker.png)
 
-Docker-дистрибутив
-
-IMG
+We will launch the project on [Laravel Sail](https://laravel.com/docs/9.x/sail) - yes, this is not ideal, but for non-production purposes it will do.
 
 
+## Generate RSA-key (for access to GitHub)
 
-Laravel Sail -- да, не отпимально
-
-Создаём Docker виртуалку
-Заходим по SSH как root
-
-Генерируем ключ cd ~/.ssh && ssh-keygen (с дефолтными настройками)
+First, generate SSH-keys with `ssh-keygen`:
 
 ```bash
-$ cd ~/.ssh && ssh-keygen
+cd ~/.ssh && ssh-keygen
+```
 
+With default settings, you will see something like:
+
+```bash
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): 
 Enter passphrase (empty for no passphrase): 
@@ -51,17 +46,41 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Копируем ключ в буфер обмена cat ~/.ssh/id_rsa.pub
 
-Добавляем ключ в настройки в [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys)
+## 4. Add RSA-key to GitHub
 
-В папке, например, `usr`:
+In the GitHub-repository, in the [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys) section, set the value of the public key from the virtual machine.
 
+You can get it via:
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+This will allow deployment via `git pull` from VDS.
+
+## 4. Set secrets in the repository on GitHub
+
+After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
+
+- `SSH_HOST`: This is the IP address of the server.
+- `SSH_USERNAME`: This is the server username.
+- `SSH_PASSWORD`: This is the user password.
+
+
+## Clone repository from GitHub
+
+Login to VDS via SSH as `root` user.
+
+Go to path `/usr` and clone current repository (or your own fork). By default, Git clone to `secretic` folder:
+
+```bash
 git clone git@github.com:gomzyakov/secretic.git && cd secretic
+``````
 
+## 2. Init & run Laravel Sail on VDS
 
-
-Пулим образа
+Run the command for the first time:
 
 ```bash
 docker run --rm \
@@ -72,123 +91,46 @@ laravelsail/php81-composer:latest \
 composer install --ignore-platform-reqs
 ```
 
->Sail not production!
-
-Поднимаем контейнера
-
-sail up -d
-
-
-
-
-
-
-
-## 2. Prepare VDS
-
-Login via SSH and check PHP version (`php -v). 
-
-If necessary, [upgrade to PHP 8](https://php.watch/articles/php-8.0-installation-update-guide-debian-ubuntu):
+Copy the environment settings:
 
 ```bash
-sudo apt update
-sudo apt install software-properties-common
-sudo apt update
-sudo add-apt-repository ppa:ondrej/php
-sudo apt update
-sudo apt install php8.0-common php8.0-cli php8.0-mysql php8.0-mbstring -y
+cp .env.example .env
 ```
 
-If necessary, install PHP extensions on the virtual machine:
+And replace `DB_HOST` to `mysql` in `.env` (for local development).
+
+Set permissions for some directories:
 
 ```bash
-sudo apt install php8.0-xml
-sudo apt install php8.0-curl
+chmod -R 777 bootstrap/cache
+chmod -R 777 ./storage/logs
+chmod -R 777 ./storage/framework
 ```
 
-Manually [install](https://getcomposer.org/download/) Composer:
+Start containers with Sail:
 
 ```bash
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-````
+./vendor/bin/sail up -d
+```
 
-And make it available for calling through `composer`:
+After that go to shell:
 
 ```bash
-sudo mv composer.phar /usr/local/bin/composer
+./vendor/bin/sail shell
 ```
 
->Next, we do everything from the user `web`, not `root`!!!
-
-Go to path `/var/www/web/sites` and clone current repository (or your own fork). For example, use `secretic.app` folder name:
+And run final commands:
 
 ```bash
-git clone git@github.com:gomzyakov/secretic.git secretic.app
-``````
-
-Then go to path `/var/www/web/sites/secretic.app` and run some commands:
-
-```bash
-php -r "file_exists('.env') || copy('.env.example', '.env');"
-composer install
-chmod -R 777 storage bootstrap/cache
-php artisan key:generate
+./artisan key:generate
+./artisan migrate:fresh --seed
 ```
 
-- Write the correct database requisites in the `.env` file
-- `php artisan migrate:fresh --seed`
-
-
-
-## 3. Build frontend
-
-На виртуалке:
-
-```
-cd ~
-curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
-sudo bash /tmp/nodesource_setup.sh
-sudo apt install nodejs
-```
-
-При вводе `node -v` видим:
-
-```
-v16.6.1
-```
-
-```bash
-sudo apt install npm
-```
-
-После этого билдим непосредственно фронтовые зависимости:
-
-```
-npm install
-npm run production
-```
-
-
-
-## 4. Set secrets in the repository on GitHub
-
-First, generate SSH-keys with `ssh-keygen`.
-
-After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
-
-- `SSH_HOST`. This is the IP address of the server.
-- `SSH_USERNAME`. This is the server username, in my case it’s root . If you don’t know your username you can use the
-  whoami command on your server to check.
-- `SSH_PASSWORD`
-
-In the repository, in the `Deploy keys` section, set the value of the public key from the virtual machine (you can get
-via `cat ~/.ssh/id_rsa.pub`). This will allow deployment via `git pull` from VDS.
-
+Open VDS IP-address in your favorite browser. Happy using Secretic!
 
 
 ## 5. Optional: Set up HTTPS
 
-О подключении HTTPS подробнее написано в [HTTPS.md](HTTPS.md)
+>No need if you are using mode `Flexible` on Cloudflare
+
+Read more about HTTPS connection in [HTTPS.md](HTTPS.md)
