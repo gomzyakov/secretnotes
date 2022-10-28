@@ -13,7 +13,7 @@ For [secretic.app](https://secretic.app) we used distribution `Docker` (Debian 1
 We will launch the project on [Laravel Sail](https://laravel.com/docs/9.x/sail) - yes, this is not ideal, but for non-production purposes it will do.
 
 
-## Generate RSA-key (for access to GitHub)
+## 2. Generate RSA-key (for access to GitHub)
 
 First, generate SSH-keys with `ssh-keygen`:
 
@@ -47,7 +47,7 @@ The key's randomart image is:
 ```
 
 
-## 4. Add RSA-key to GitHub
+## 3. Add RSA-key to GitHub
 
 In the GitHub-repository, in the [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys) section, set the value of the public key from the virtual machine.
 
@@ -68,7 +68,7 @@ After that, in the GitHub repository, in the `Settings > Secrets > Actions` sect
 - `SSH_PASSWORD`: This is the user password.
 
 
-## Clone repository from GitHub
+## 5. Clone repository from GitHub
 
 Login to VDS via SSH as `root` user.
 
@@ -78,7 +78,7 @@ Go to path `/usr` and clone current repository (or your own fork). By default, G
 git clone git@github.com:gomzyakov/secretic.git && cd secretic
 ``````
 
-## 2. Init & run Laravel Sail on VDS
+## 6. Init & run Laravel Sail on VDS
 
 Run the command for the first time:
 
@@ -129,7 +129,7 @@ And run final commands:
 Open VDS IP-address in your favorite browser. Happy using Secretic!
 
 
-## 5. Optional: Set up HTTPS
+## 7. Optional: Set up HTTPS
 
 >No need if you are using mode `Flexible` on Cloudflare
 
