@@ -7,6 +7,77 @@ Create secret notes that will self-destruct after being read.
 - Project demo is on [secretic.app](https://secretic.app). 
 - [Secretic](https://secretic.app) is an open source alternative to [privnote.com](https://privnote.com)
 
+Laravel Sail -- да, не отпимально
+
+Создаём Docker виртуалку
+Заходим по SSH как root
+
+Генерируем ключ cd ~/.ssh && ssh-keygen (с дефолтными настройками)
+
+```bash
+$ cd ~/.ssh && ssh-keygen
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:e+Wuo7OK0Vd+oJ3LM75ZAhJq9xZOSZ0schYgsmdFdSg root@vm-80ae16e5
+The key's randomart image is:
++---[RSA 3072]----+
+|  . ..+oo..      |
+|   o oE .= .     |
+|  . o o.= +      |
+|   o . * o       |
+|    o o S o .    |
+|   . o = O =     |
+|    . . B * +    |
+|     o o.o+B     |
+|    . ..o=B*.    |
++----[SHA256]-----+
+```
+
+Копируем ключ в буфер обмена cat ~/.ssh/id_rsa.pub
+
+Добавляем ключ в настройки в [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys)
+
+В папке, например, `usr`:
+
+git clone git@github.com:gomzyakov/secretic.git && cd secretic
+
+
+
+Пулим образа
+
+```bash
+docker run --rm \
+-u "$(id -u):$(id -g)" \
+-v $(pwd):/opt \
+-w /opt \
+laravelsail/php81-composer:latest \
+composer install --ignore-platform-reqs
+```
+
+>Sail not production!
+
+Поднимаем контейнера
+
+sail up -d
+
+
+Мы находимся из под root-пользователя, поэтому надо задать пермиссии __:
+
+chmod -R 777 ./storage/logs
+chmod -R 777 ./storage/framework
+
+> TODO CHANGE 777 RULE!!!
+
+
+
+
+
 ## Running the project locally
 
 When you pull this project to another computer that has no PHP or Composer installed, you cant run `sail` command
@@ -24,6 +95,10 @@ composer install --ignore-platform-reqs
 ```
 
 Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias:
+
+
+shell script
+make init
 
 ```bash
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'

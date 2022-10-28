@@ -110,11 +110,10 @@ First, generate SSH-keys with `ssh-keygen`.
 
 After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
 
-- `SSH_PRIVATE_KEY`. If you don’t have this you can run ssh-keygen in your server terminal to generate a new key, then
-  run the command cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys to allow connection to the private key.
 - `SSH_HOST`. This is the IP address of the server.
 - `SSH_USERNAME`. This is the server username, in my case it’s root . If you don’t know your username you can use the
   whoami command on your server to check.
+- `SSH_PASSWORD`
 
 In the repository, in the `Deploy keys` section, set the value of the public key from the virtual machine (you can get
 via `cat ~/.ssh/id_rsa.pub`). This will allow deployment via `git pull` from VDS.
