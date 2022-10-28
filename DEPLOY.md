@@ -73,7 +73,6 @@ php artisan key:generate
 ```
 
 - Write the correct database requisites in the `.env` file
-- Create a `secretnotes` database via phpMyAdmin
 - `php artisan migrate:fresh --seed`
 
 

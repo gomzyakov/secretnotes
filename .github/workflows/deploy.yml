@@ -29,5 +29,4 @@ jobs:
             git clean -f -d
             git pull origin main
             git show --summary
-#            composer -V
-#            composer install
+            sail composer install
