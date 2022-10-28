@@ -13,6 +13,10 @@ For simplicity, we will deploy the project to VDS. The deployment process consis
 We create a VDS virtual machine, for example, in [NetAngels](https://panel.netangels.ru).
 
 
+Docker-дистрибутив
+
+IMG
+
 
 ## 2. Prepare VDS
 
