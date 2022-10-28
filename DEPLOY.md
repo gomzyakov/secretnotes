@@ -18,6 +18,72 @@ Docker-дистрибутив
 IMG
 
 
+
+Laravel Sail -- да, не отпимально
+
+Создаём Docker виртуалку
+Заходим по SSH как root
+
+Генерируем ключ cd ~/.ssh && ssh-keygen (с дефолтными настройками)
+
+```bash
+$ cd ~/.ssh && ssh-keygen
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:e+Wuo7OK0Vd+oJ3LM75ZAhJq9xZOSZ0schYgsmdFdSg root@vm-80ae16e5
+The key's randomart image is:
++---[RSA 3072]----+
+|  . ..+oo..      |
+|   o oE .= .     |
+|  . o o.= +      |
+|   o . * o       |
+|    o o S o .    |
+|   . o = O =     |
+|    . . B * +    |
+|     o o.o+B     |
+|    . ..o=B*.    |
++----[SHA256]-----+
+```
+
+Копируем ключ в буфер обмена cat ~/.ssh/id_rsa.pub
+
+Добавляем ключ в настройки в [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys)
+
+В папке, например, `usr`:
+
+git clone git@github.com:gomzyakov/secretic.git && cd secretic
+
+
+
+Пулим образа
+
+```bash
+docker run --rm \
+-u "$(id -u):$(id -g)" \
+-v $(pwd):/opt \
+-w /opt \
+laravelsail/php81-composer:latest \
+composer install --ignore-platform-reqs
+```
+
+>Sail not production!
+
+Поднимаем контейнера
+
+sail up -d
+
+
+
+
+
+
+
 ## 2. Prepare VDS
 
 Login via SSH and check PHP version (`php -v). 
