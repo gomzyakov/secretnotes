@@ -1,14 +1,9 @@
 name: deploy
 
-#on:
-#  push:
-#    tags:
-#      - 'v*'
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    tags:
+      - 'v*'
 
 jobs:
   deploy:
@@ -29,5 +24,5 @@ jobs:
             git clean -f -d
             git pull origin main
             git show --summary
-            alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-            sail composer install
+
+# TODO ./vendor/bin/sail composer install
