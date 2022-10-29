@@ -37,6 +37,19 @@ class NoteController extends Controller
     }
 
     /**
+     * TODO Temporary method.
+     *
+     * @return JsonResponse
+     */
+    public function fakeCreate(): JsonResponse
+    {
+        return new JsonResponse([
+            'url_show_note_link' => route('home'),
+            'slug'               => 'hello',
+        ], 200);
+    }
+
+    /**
      * TODO Get date in UTC, not key "1_month".
      *
      * @param string|null $expiration_date_value

@@ -1,6 +1,8 @@
 User-agent: *
 Disallow: /note/
 Disallow: /note/*
+Disallow: /api/*
+Disallow: /log-viewer*
 
 Sitemap: https://secretic.app/sitemap.xml
 Host: https://secretic.app
