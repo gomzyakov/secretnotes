@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\NoteCreateRequest;
-use App\Models\Note;
 use App\Services\NotesRepository;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;

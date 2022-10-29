@@ -33,6 +33,7 @@ deptrac:
     Controller:
       - Service
       - Repository
+      - Model
     Service:
       - Repository
       - Model
