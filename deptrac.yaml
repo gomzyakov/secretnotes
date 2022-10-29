@@ -33,7 +33,7 @@ deptrac:
     Controller:
       - Service
       - Repository
-      - Model # TODO Temporary controllers must depend on Models
+      - Model
     Service:
       - Repository
       - Model
