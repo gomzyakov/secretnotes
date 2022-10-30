@@ -13,10 +13,10 @@ deptrac-build: ## Execute PHPUnit tests
 	docker build -f docker/deptrac/Dockerfile --tag gomzyakov/deptrac . --no-cache
 
 deptrac-analyse: ## Execute PHPUnit tests
-	docker run -v "$(shell pwd)/:/src" --rm gomzyakov/deptrac php deptrac.phar analyse
+	docker run --rm -v ${PWD}:/rootfs:ro gomzyakov/deptrac php deptrac.phar analyse --config-file=rootfs/deptrac.yaml
 
 deptrac-report-uncovered: ## Execute PHPUnit tests
-	docker run -v "$(shell pwd)/:/src" --rm gomzyakov/deptrac php deptrac.phar --report-uncovered
+	docker run --rm -v ${PWD}:/rootfs:ro gomzyakov/deptrac php deptrac.phar analyse --config-file=rootfs/deptrac.yaml --report-uncovered
 
 deptrac-shell: ## Execute PHPUnit tests
-	docker run --rm -it gomzyakov/deptrac sh
+	docker run --rm -v ${PWD}:/rootfs:ro -it gomzyakov/deptrac sh
