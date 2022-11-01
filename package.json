@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.12",
+        "autoprefixer": "^10.4.13",
         "axios": "^1.1",
         "lodash": "^4.17.19",
         "postcss": "^8.4.18",
