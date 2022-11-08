@@ -23,7 +23,7 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
-        "phpstan/phpstan": "^1.8",
+        "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.5.26",
         "qossmic/deptrac-shim": "^0.24.0",
         "rector/rector": "^0.14.2",
