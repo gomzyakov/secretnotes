@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbef7e7bc7eb89889466e5f5b3c69a94",
+    "content-hash": "e0a50f4499769f856ca7481668574271",
     "packages": [
         {
             "name": "brick/math",
@@ -7784,16 +7784,16 @@
         },
         {
             "name": "gomzyakov/php-style",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-style.git",
-                "reference": "01003cf7086e4b30846522f7ae9ce32d867f7abe"
+                "reference": "4ee135bda22d3d5c3c5276359b237dc336f7f0ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/01003cf7086e4b30846522f7ae9ce32d867f7abe",
-                "reference": "01003cf7086e4b30846522f7ae9ce32d867f7abe",
+                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/4ee135bda22d3d5c3c5276359b237dc336f7f0ca",
+                "reference": "4ee135bda22d3d5c3c5276359b237dc336f7f0ca",
                 "shasum": ""
             },
             "require": {
@@ -7801,7 +7801,7 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.12",
+                "friendsofphp/php-cs-fixer": "^3.13",
                 "mockery/mockery": "^1.5",
                 "phpstan/phpstan": "^1.8",
                 "phpunit/phpunit": "^9.5"
@@ -7831,9 +7831,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-style/issues",
-                "source": "https://github.com/gomzyakov/php-style/tree/v1.2.0"
+                "source": "https://github.com/gomzyakov/php-style/tree/v1.3.0"
             },
-            "time": "2022-10-26T12:03:18+00:00"
+            "time": "2022-11-01T05:55:40+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
