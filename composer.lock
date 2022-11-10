@@ -7784,16 +7784,16 @@
         },
         {
             "name": "gomzyakov/php-style",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-style.git",
-                "reference": "4ee135bda22d3d5c3c5276359b237dc336f7f0ca"
+                "reference": "ae2da28404e31d330a91db6322c113a41742f89c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/4ee135bda22d3d5c3c5276359b237dc336f7f0ca",
-                "reference": "4ee135bda22d3d5c3c5276359b237dc336f7f0ca",
+                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/ae2da28404e31d330a91db6322c113a41742f89c",
+                "reference": "ae2da28404e31d330a91db6322c113a41742f89c",
                 "shasum": ""
             },
             "require": {
@@ -7803,7 +7803,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.13",
                 "mockery/mockery": "^1.5",
-                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan": "^1.9",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "package",
@@ -7831,9 +7831,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-style/issues",
-                "source": "https://github.com/gomzyakov/php-style/tree/v1.3.0"
+                "source": "https://github.com/gomzyakov/php-style/tree/v1.3.1"
             },
-            "time": "2022-11-01T05:55:40+00:00"
+            "time": "2022-11-09T04:02:12+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
