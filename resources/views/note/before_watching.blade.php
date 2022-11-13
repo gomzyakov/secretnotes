@@ -20,7 +20,7 @@
                 @else
                     <h3 class="mt-5">Read and destroy?</h3>
                     <p>You're about to read and destroy the note with id <strong>{{ $note->slug }}</strong>.</p>
-                    <form action=" {{ route('note.decrypt', $note->slug ?? '') }}" method="POST">
+                    <form action="{{ route('note.decrypt', $note->slug) }}" method="POST">
                         @csrf
                         @if ($note->password)
 
