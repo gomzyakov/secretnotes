@@ -2,8 +2,7 @@
 
 return [
 
-    //'dsn' => env('SENTRY_LARAVEL_DSN', 'https://d89f62c9dea64990b72d21676767aa3c@o1233384.ingest.sentry.io/6382169'),
-    'dsn' => env('SENTRY_LARAVEL_DSN', null),
+    'dsn' => env('SENTRY_LARAVEL_DSN', 'https://d89f62c9dea64990b72d21676767aa3c@o1233384.ingest.sentry.io/6382169'),
 
     // capture release as git sha
     // 'release' => trim(exec('git --git-dir ' . base_path('.git') . ' log --pretty="%h" -n1 HEAD')),
