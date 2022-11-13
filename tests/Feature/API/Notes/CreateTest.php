@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Crypt;
 use Tests\TestCase;
 
 /**
- * @covers \App\Http\Controllers\API\NoteController::create
+ * @covers \App\Http\Controllers\API\APIController::create
  */
 class CreateTest extends TestCase
 {

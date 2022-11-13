@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NoteCreateRequest;
 use App\Models\Note;
 use App\Services\NotesRepository;
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
@@ -14,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 class NoteController extends Controller
 {
     /**
+     * TODO
      * Display a listing of the resource.
      *
      * @return View|ViewFactory
@@ -34,21 +38,6 @@ class NoteController extends Controller
     {
         return view('note.new', [
             'hide_footer' => true,
-        ]);
-    }
-
-    /**
-     * Страница показывающая ссылку на.
-     *
-     * @param string $slug
-     *
-     * @return View|ViewFactory
-     */
-    public function showLink(string $slug): View|ViewFactory
-    {
-        return view('note.show-link', [
-            'hide_footer' => true,
-            'note_url'    => route('note.open_link', ['slug' => $slug]),
         ]);
     }
 
@@ -75,6 +64,30 @@ class NoteController extends Controller
         return view('note.before_watching', [
             'hide_footer' => true,
             'note'        => $note,
+        ]);
+    }
+
+    /**
+     * Store a newly created note in storage.
+     *
+     * @param NoteCreateRequest $request
+     * @param NotesRepository   $notes_repository
+     *
+     * @return Application|View|ViewFactory
+     */
+    public function createNote(
+        NoteCreateRequest $request,
+        NotesRepository $notes_repository
+    ): Application|View|ViewFactory {
+        $note = $notes_repository->create(
+            $request->getText(),
+            $request->getPassword() ? Hash::make($request->getPassword()) : null,
+            $this->getExpirationDate($request->getExpirationDate())
+        );
+
+        return view('note.show-link', [
+            'hide_footer' => true,
+            'note_url'    => route('note.open_link', ['slug' => $note->slug]),
         ]);
     }
 
@@ -115,5 +128,27 @@ class NoteController extends Controller
             'hide_footer' => true,
             'note_text'   => $note_text,
         ]);
+    }
+
+    /**
+     * TODO Get date in UTC, not key "1_month".
+     *
+     * @param string|null $expiration_date_value
+     *
+     * @return Carbon|null
+     */
+    private function getExpirationDate(?string $expiration_date_value): ?Carbon
+    {
+        if (! $expiration_date_value) {
+            return null;
+        }
+
+        return match ($expiration_date_value) {
+            '1_hour'  => Carbon::now()->addHour(),
+            '1_day'   => Carbon::now()->addDay(),
+            '1_month' => Carbon::now()->addMonth(),
+            '1_week'  => Carbon::now()->addWeek(),
+            default   => null,
+        };
     }
 }

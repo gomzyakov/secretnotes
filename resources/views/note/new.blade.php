@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <form id="create_note_form" method="POST">
+        <form action="{{ route('note.create', $note->slug ?? '') }}" method="POST" id="create_note_form">
             @csrf
 
             <div class="row mt-4 mt-lg-5">
