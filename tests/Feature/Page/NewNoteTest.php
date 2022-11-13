@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Page;
 
 use Tests\TestCase;
 
@@ -15,7 +15,8 @@ class NewNoteTest extends TestCase
 
         $response->assertStatus(200);
 
-        // TODO Можно вынести (проверять на каждой странице)
+        $response->assertSee('Write your note here...');
+        $response->assertSee('Create note');
         $response->assertSee('Yandex.Metrika counter');
     }
 }

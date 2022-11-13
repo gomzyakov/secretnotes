@@ -9,7 +9,6 @@ use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
@@ -42,8 +41,7 @@ class NoteController extends Controller
     }
 
     /**
-     * Показываем предупреждение перед расшифровкой заметки (или сообщение,
-     * что заметка не существует).
+     * Show a warning before decrypting the note (or a message that the note does not exist).
      *
      * @param string          $slug
      * @param NotesRepository $notes_repository
