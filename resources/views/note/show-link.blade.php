@@ -13,9 +13,10 @@
                     Here is a link to the note:
                 </div>
                 <div class="input-group mb-3">
+                    <input type="hidden" id="secret-note-url" value="{{ $note_url }}">
                     <input type="text"
-                           id="copy-input"
                            class="form-control"
+                           id="copy-input"
                            value="{{ $note_url }}"
                            placeholder="Note URL"
                            aria-label="Note URL"
