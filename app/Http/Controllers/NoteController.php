@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Hash;
 class NoteController extends Controller
 {
     /**
-     * TODO
      * Display a listing of the resource.
      *
      * @return View|ViewFactory
@@ -24,7 +23,7 @@ class NoteController extends Controller
     public function index(): View|ViewFactory
     {
         return view('home', [
-            'foo' => 'bar', // TODO Temp
+            'notes_count' => 123, // TODO Write notes counter
         ]);
     }
 

@@ -8,4 +8,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/notes', [APIController::class, 'helloWorld'])->name('api.hello_world');
+Route::post('/hello-world', [APIController::class, 'helloWorld'])->name('api.hello_world');
