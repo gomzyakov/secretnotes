@@ -4,6 +4,7 @@ namespace Tests\Feature\Note;
 
 use App\Models\Note;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Testing\TestResponse;
 use Tests\TestCase;
 
 /**
@@ -67,11 +68,11 @@ class CreateNoteTest extends TestCase
     }
 
     /**
-     * @param $response
+     * @param TestResponse $response
      *
      * @return string
      */
-    private function getNoteSlugFromHTMLPage($response): string
+    private function getNoteSlugFromHTMLPage(TestResponse $response): string
     {
         // Get note URL from HTML page
         preg_match('/<input type="hidden" id="secret-note-url" value="(.+)">/iu', $response->content(), $matches);
