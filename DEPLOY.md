@@ -2,18 +2,48 @@
 
 For simplicity, we will deploy the project to VDS. The deployment process consists of several steps:
 
-## 1. Create a VDS on your preferred hosting
+## Create a VDS on your preferred hosting
 
-Create a VDS virtual machine for Docker, for example, at [NetAngels](https://panel.netangels.ru).
+Create a VDS virtual machine for example at [NetAngels](https://panel.netangels.ru).
 
-For [secretic.app](https://secretic.app) we used distribution `Docker` (Debian 11):
+For [secretic.app](https://secretic.app) we used distribution `Ubuntu 20.04`.
 
-![Docker VDS](vds-docker.png)
+## Set up VDS
 
-We will launch the project on [Laravel Sail](https://laravel.com/docs/9.x/sail) - yes, this is not ideal, but for non-production purposes it will do.
+Login via SSH (as `root` user) and check PHP version (`php -v`).
+
+If necessary, [upgrade to PHP 8](https://php.watch/articles/php-8.0-installation-update-guide-debian-ubuntu):
+
+```bash
+sudo apt update
+sudo apt install software-properties-common
+sudo apt update
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.0-common php8.0-cli php8.0-mysql php8.0-xml php8.0-curl php8.0-mbstring -y
+ ```
+
+Manually [install](https://getcomposer.org/download/) Composer:
+
+```bash
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+
+And make it available for calling through `composer`:
+
+```bash
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+## Change user!
+
+Next, we do everything from the user `web`, not `root`!!!
 
 
-## 2. Generate RSA-key (for access to GitHub)
+## Generate RSA-key (for access to GitHub)
 
 First, generate SSH-keys with `ssh-keygen`:
 
@@ -46,8 +76,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-
-## 3. Add RSA-key to GitHub
+## Add RSA-key to GitHub
 
 In the GitHub-repository, in the [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys) section, set the value of the public key from the virtual machine.
 
@@ -59,7 +88,7 @@ cat ~/.ssh/id_rsa.pub
 
 This will allow deployment via `git pull` from VDS.
 
-## 4. Set secrets in the repository on GitHub
+## Set secrets in the repository on GitHub
 
 After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
 
@@ -68,68 +97,34 @@ After that, in the GitHub repository, in the `Settings > Secrets > Actions` sect
 - `SSH_PASSWORD`: This is the user password.
 
 
-## 5. Clone repository from GitHub
+## Clone repository from GitHub
 
-Login to VDS via SSH as `root` user.
+Go to path `/var/www/web/sites` and clone current repository (or your own fork). For example, use `secretic.app` folder name:
 
-Go to path `/usr` and clone current repository (or your own fork). By default, Git clone to `secretic` folder:
+ ```bash
+ git clone git@github.com:gomzyakov/secretic.git secretic.app
+ cd secretic
+ ```
+
+## Set up Laravel
+
+Then go to path `/var/www/web/sites/secretic.app` and run some commands:
 
 ```bash
-git clone git@github.com:gomzyakov/secretic.git && cd secretic
-``````
-
-## 6. Init & run Laravel Sail on VDS
-
-Run the command for the first time:
-
-```bash
-docker run --rm \
--u "$(id -u):$(id -g)" \
--v $(pwd):/opt \
--w /opt \
-laravelsail/php81-composer:latest \
-composer install --ignore-platform-reqs
+php -r "file_exists('.env') || copy('.env.example', '.env');"
+composer install
+chmod -R 777 storage bootstrap/cache
+php artisan key:generate
 ```
 
-Copy the environment settings:
-
-```bash
-cp .env.example .env
-```
-
-And replace `DB_HOST` to `mysql` in `.env` (for local development).
-
-Set permissions for some directories:
-
-```bash
-chmod -R 777 bootstrap/cache
-chmod -R 777 ./storage/logs
-chmod -R 777 ./storage/framework
-```
-
-Start containers with Sail:
-
-```bash
-./vendor/bin/sail up -d
-```
-
-After that go to shell:
-
-```bash
-./vendor/bin/sail shell
-```
-
-And run final commands:
-
-```bash
-./artisan key:generate
-./artisan migrate:fresh --seed
-```
+- Write the correct database requisites in the `.env` file
+- Create a `secretnotes` database via phpMyAdmin
+- Run migrations `php artisan migrate:fresh --seed`
 
 Open VDS IP-address in your favorite browser. Happy using Secretic!
 
 
-## 7. Optional: Set up HTTPS
+## Optional: Set up HTTPS
 
 >No need if you are using mode `Flexible` on Cloudflare
 
