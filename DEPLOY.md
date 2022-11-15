@@ -20,14 +20,13 @@ sudo apt install software-properties-common
 sudo apt update
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install php8.0-common php8.0-cli php8.0-mysql php8.0-xml php8.0-curl php8.0-mbstring -y
+sudo apt install php8.1-common php8.1-cli php8.1-mysql php8.1-xml php8.1-curl php8.1-bcmath php8.1-mbstring -y
  ```
 
 Manually [install](https://getcomposer.org/download/) Composer:
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
@@ -38,7 +37,7 @@ And make it available for calling through `composer`:
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-## Change user!
+## CHANGE USER!
 
 Next, we do everything from the user `web`, not `root`!!!
 
@@ -78,7 +77,7 @@ The key's randomart image is:
 
 ## Add RSA-key to GitHub
 
-In the GitHub-repository, in the [Deploy Keys](https://github.com/gomzyakov/secretic/settings/keys) section, set the value of the public key from the virtual machine.
+In the GitHub-repository, in the `Settings > Deploy Keys` section ([link](https://github.com/gomzyakov/secretic/settings/keys)), set the value of the public key from the virtual machine.
 
 You can get it via:
 
@@ -88,12 +87,13 @@ cat ~/.ssh/id_rsa.pub
 
 This will allow deployment via `git pull` from VDS.
 
-## Set secrets in the repository on GitHub
 
-After that, in the GitHub repository, in the `Settings > Secrets > Actions` section, set the values:
+## Set secrets on GitHub
+
+After that, in the GitHub repository, in the `Settings > Secrets > Actions` section ([link](https://github.com/gomzyakov/secretic/settings/secrets/actions)), set the values:
 
 - `SSH_HOST`: This is the IP address of the server.
-- `SSH_USERNAME`: This is the server username.
+- `SSH_USERNAME`: This is the `web` username.
 - `SSH_PASSWORD`: This is the user password.
 
 
@@ -102,6 +102,7 @@ After that, in the GitHub repository, in the `Settings > Secrets > Actions` sect
 Go to path `/var/www/web/sites` and clone current repository (or your own fork). For example, use `secretic.app` folder name:
 
  ```bash
+ cd /var/www/web/sites
  git clone git@github.com:gomzyakov/secretic.git secretic.app
  cd secretic
  ```
@@ -121,8 +122,17 @@ php artisan key:generate
 - Create a `secretnotes` database via phpMyAdmin
 - Run migrations `php artisan migrate:fresh --seed`
 
-Open VDS IP-address in your favorite browser. Happy using Secretic!
+Open assigned to VDS URL (like `dd`) in your favorite browser. Happy using Secretic!
 
+
+## Optional: Make domain aliases (if needed)
+
+```bash
+cd /var/www/web/sites 
+ln -s secretic.app www.secretic.app
+ln -s secretic.app secretic.ru
+ln -s secretic.app secretnotes.ru
+```
 
 ## Optional: Set up HTTPS
 
