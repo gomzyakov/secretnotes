@@ -19,10 +19,10 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             whoami
-            cd /usr/secretic
+            cd /var/www/web/sites/secretic.app
             git reset --hard HEAD
             git clean -f -d
             git pull origin main
             git show --summary
-
-# TODO ./vendor/bin/sail composer install
+            composer -V
+            composer install

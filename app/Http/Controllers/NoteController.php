@@ -76,18 +76,16 @@ class NoteController extends Controller
         NoteCreateRequest $request,
         NotesRepository $notes_repository
     ): Application|View|ViewFactory {
-        abort(500);
+        $note = $notes_repository->create(
+            $request->getText(),
+            $request->getPassword() ? Hash::make($request->getPassword()) : null,
+            $this->getExpirationDate($request->getExpirationDate())
+        );
 
-//        $note = $notes_repository->create(
-//            $request->getText(),
-//            $request->getPassword() ? Hash::make($request->getPassword()) : null,
-//            $this->getExpirationDate($request->getExpirationDate())
-//        );
-//
-//        return view('note.show-link', [
-//            'hide_footer' => true,
-//            'note_url'    => route('note.open_link', ['slug' => $note->slug]),
-//        ]);
+        return view('note.show-link', [
+            'hide_footer' => true,
+            'note_url'    => route('note.open_link', ['slug' => $note->slug]),
+        ]);
     }
 
     /**
