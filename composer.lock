@@ -4252,16 +4252,16 @@
         },
         {
             "name": "sentry/sentry-laravel",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-laravel.git",
-                "reference": "a15d63013028e39f61f5c7ec764becac4b391b39"
+                "reference": "dd55f62a5b7bed0edabc5afcd04e5435713f57ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-laravel/zipball/a15d63013028e39f61f5c7ec764becac4b391b39",
-                "reference": "a15d63013028e39f61f5c7ec764becac4b391b39",
+                "url": "https://api.github.com/repos/getsentry/sentry-laravel/zipball/dd55f62a5b7bed0edabc5afcd04e5435713f57ae",
+                "reference": "dd55f62a5b7bed0edabc5afcd04e5435713f57ae",
                 "shasum": ""
             },
             "require": {
@@ -4329,7 +4329,7 @@
             ],
             "support": {
                 "issues": "https://github.com/getsentry/sentry-laravel/issues",
-                "source": "https://github.com/getsentry/sentry-laravel/tree/3.1.0"
+                "source": "https://github.com/getsentry/sentry-laravel/tree/3.1.1"
             },
             "funding": [
                 {
@@ -4341,7 +4341,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-11-10T12:55:15+00:00"
+            "time": "2022-11-14T11:55:52+00:00"
         },
         {
             "name": "symfony/console",
