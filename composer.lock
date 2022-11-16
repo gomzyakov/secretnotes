@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6812193184b8e9d4f7c5ffcd84003ce5",
+    "content-hash": "08dca6537c5e10ee96cd4a30002bebe3",
     "packages": [
         {
             "name": "brick/math",
@@ -2848,16 +2848,16 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v1.6.5",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "6f1afe7db63744aef39813168d690d4a0ef79f52"
+                "reference": "7df92965787bc56ccfaa49f14b1c51e44cea86b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/6f1afe7db63744aef39813168d690d4a0ef79f52",
-                "reference": "6f1afe7db63744aef39813168d690d4a0ef79f52",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/7df92965787bc56ccfaa49f14b1c51e44cea86b6",
+                "reference": "7df92965787bc56ccfaa49f14b1c51e44cea86b6",
                 "shasum": ""
             },
             "require": {
@@ -2917,9 +2917,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v1.6.5"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v1.7.0"
             },
-            "time": "2022-11-12T08:28:36+00:00"
+            "time": "2022-11-16T06:24:13+00:00"
         },
         {
             "name": "php-http/client-common",
