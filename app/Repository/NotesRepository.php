@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Repository;
 
 use App\Models\Note;
 use Carbon\Carbon;

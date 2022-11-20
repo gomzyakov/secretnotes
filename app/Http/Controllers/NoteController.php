@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\NoteCreateRequest;
 use App\Models\Note;
-use App\Services\NotesRepository;
+use App\Repository\NotesRepository;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory as ViewFactory;
