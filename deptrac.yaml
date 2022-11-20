@@ -7,8 +7,8 @@ deptrac:
   layers:
     - name: Controller
       collectors:
-        - type: className
-          value: .*Controller.*
+        - type: directory
+          value: /app/Http/Controller/.*
     - name: Request
       collectors:
         - type: directory
@@ -42,6 +42,10 @@ deptrac:
       collectors:
         - type: classLike
           value: Carbon\\Carbon
+    - name: Laravel Sanctum
+      collectors:
+        - type: classLike
+          value: Laravel\\Sanctum\\.*
   ruleset:
     Controller:
       - Request
@@ -66,4 +70,7 @@ deptrac:
       - Hashids
     Model:
       - Illuminate
+      - Laravel Sanctum
       - Carbon
+    Request:
+      - Illuminate
