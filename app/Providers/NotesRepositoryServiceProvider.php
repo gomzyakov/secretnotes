@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Services\NotesRepository;
+use App\Repository\NotesRepository;
 use Hashids\Hashids;
 use Illuminate\Support\ServiceProvider;
 

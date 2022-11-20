@@ -45,8 +45,8 @@
     "scripts": {
         "phpunit": "@php ./vendor/bin/phpunit ./tests --no-coverage --color=always",
         "phpstan": "@php ./vendor/bin/phpstan analyze -c ./phpstan.neon.dist --no-progress --ansi --verbose",
-        "deptrac": "@php ./vendor/bin/deptrac analyse --config-file=deptrac.yaml",
-        "deptrac-uncovered": "@php ./vendor/bin/deptrac analyse --config-file=deptrac.yaml --report-uncovered",
+        "deptrac": "@php ./vendor/bin/deptrac analyse --config-file=deptrac.yaml --no-cache",
+        "deptrac-uncovered": "@php ./vendor/bin/deptrac analyse --config-file=deptrac.yaml --no-cache --report-uncovered",
         "cs-check": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff",
         "cs-fix": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php",
         "rector-check": "@php ./vendor/bin/rector process --dry-run",

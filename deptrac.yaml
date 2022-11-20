@@ -3,41 +3,67 @@ deptrac:
   paths:
     - ./app
   exclude_files:
-    - '#.*test.*#'
+    - .*test.*
   layers:
-    -
-      name: Controller
+    - name: Controller
       collectors:
-        -
-          type: className
+        - type: className
           value: .*Controller.*
-    -
-      name: Service
+    - name: Request
       collectors:
-        -
-          type: directory
+        - type: directory
+          value: /app/Http/Requests/.*
+    - name: Repository
+      collectors:
+        - type: directory
+          value: /app/Repository/.*
+    - name: Service
+      collectors:
+        - type: directory
           value: /app/Services/.*
-    -
-      name: ServiceProvider
+    - name: ServiceProvider
       collectors:
-        -
-          type: directory
+        - type: directory
           value: /app/Providers/.*
-    -
-      name: Model
+    - name: Model
       collectors:
-        -
-          type: directory
+        - type: directory
           value: /app/Models/.*
+    # TODO Too general union -- divide by IlluminateDatabase, IlluminateSupport and ...
+    - name: Illuminate
+      collectors:
+        - type: classLike
+          value: Illuminate\\.*
+    - name: Hashids
+      collectors:
+        - type: classLike
+          value: Hashids\\Hashids
+    - name: Carbon
+      collectors:
+        - type: classLike
+          value: Carbon\\Carbon
   ruleset:
     Controller:
+      - Request
+      - Illuminate
       - Service
       - Repository
       - Model
+      - Carbon
+    Repository:
+      - Service
+      - Model
+      - Hashids
+      - Illuminate
+      - Carbon
     Service:
       - Repository
       - Model
     ServiceProvider:
       - Service
-    # Models should not depend on other layers
-    Model: ~
+      - Repository
+      - Illuminate
+      - Hashids
+    Model:
+      - Illuminate
+      - Carbon
