@@ -13,7 +13,7 @@ return [
      | the framework needs to place the application's version in a notification
      | or any other location as required by the application or its packages.
      */
-    'version' => '1.22.0',
+    'version' => '1.23.0',
 
     /*
     |--------------------------------------------------------------------------
