@@ -67,6 +67,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "clear": [
+            "@php artisan config:clear",
+            "@php artisan cache:clear file",
+            "@php artisan route:clear",
+            "@php artisan view:clear",
+            "@php artisan clear-compiled",
+            "@php -r \"is_file(\\$f = getcwd().'/storage/logs/laravel.log') && file_put_contents(\\$f, null);\"",
+            "@composer dump-autoload"
         ]
     },
     "extra": {
