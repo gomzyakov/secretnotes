@@ -4,6 +4,10 @@
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gomzyakov/secretic/blob/development/LICENSE)
 [![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
 
+## Features
+
+- Multi-language support
+
 Create secret notes that will self-destruct after being read. 
 
 - Project demo is on [secretic.app](https://secretic.app). 
