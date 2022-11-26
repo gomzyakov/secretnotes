@@ -11,6 +11,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    # Force commit message preferences
+    # Docs https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#commit-message
+    commit-message:
+      prefix: "build"
+      include: "scope"
     # Add assignees
     assignees:
       - "gomzyakov"
@@ -28,15 +33,24 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "build"
+      include: "scope"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "build"
+      include: "scope"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "build"
+      include: "scope"
