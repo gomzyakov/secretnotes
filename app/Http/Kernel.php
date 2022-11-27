@@ -63,5 +63,11 @@ class Kernel extends HttpKernel
         'signed'           => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle'         => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified'         => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        // Localization
+        'localize'                => \App\Services\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'    => \App\Services\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect'   => \App\Services\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeCookieRedirect'    => \App\Services\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        'localeViewPath'          => \App\Services\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
     ];
 }
