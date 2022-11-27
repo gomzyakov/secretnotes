@@ -24,6 +24,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: ddd
+        run: |
+          echo ${{ github.ref_name }}
+          echo "<?php return ['version'=>'${{github.ref_name}}'];" > ./config/app-version.php
+          cat ./config/app-version.php
+
       - name: Install PHP extensions
         run: sudo apt-get install -y php-phpdbg
 
@@ -68,12 +74,3 @@ jobs:
           name: codecov-umbrella
           verbose: true
           env_vars: PHP
-
-      - name: ddd
-        run: |
-          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-          echo $RELEASE_VERSION
-          echo ${{ env.RELEASE_VERSION }}
-          echo "<?php return ['version'=>'{{$RELEASE_VERSION}}'];" > ./config/app-version.php
-          cat ./config/app-version.php
-
