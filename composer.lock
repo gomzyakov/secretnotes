@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59aec8e40c8b3228e3098fa0e0e112da",
+    "content-hash": "bee47a7ac4972b634e5fc1cfd68fa445",
     "packages": [
         {
             "name": "brick/math",
@@ -7783,17 +7783,17 @@
             "time": "2022-10-31T19:28:50+00:00"
         },
         {
-            "name": "gomzyakov/php-style",
-            "version": "v1.3.1",
+            "name": "gomzyakov/php-cs-fixer-config",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gomzyakov/php-style.git",
-                "reference": "ae2da28404e31d330a91db6322c113a41742f89c"
+                "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
+                "reference": "0d34313095a1f03ba1883031eeeaa301e7b2ddef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-style/zipball/ae2da28404e31d330a91db6322c113a41742f89c",
-                "reference": "ae2da28404e31d330a91db6322c113a41742f89c",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/0d34313095a1f03ba1883031eeeaa301e7b2ddef",
+                "reference": "0d34313095a1f03ba1883031eeeaa301e7b2ddef",
                 "shasum": ""
             },
             "require": {
@@ -7823,17 +7823,17 @@
                 }
             ],
             "description": "Code style configuration for `php-cs-fixer` based on PSR-12.",
-            "homepage": "https://github.com/gomzyakov/php-style",
+            "homepage": "https://github.com/gomzyakov/php-cs-fixer-config",
             "keywords": [
                 "code-style",
                 "php",
                 "php-cs-fixer"
             ],
             "support": {
-                "issues": "https://github.com/gomzyakov/php-style/issues",
-                "source": "https://github.com/gomzyakov/php-style/tree/v1.3.1"
+                "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.4.0"
             },
-            "time": "2022-11-09T04:02:12+00:00"
+            "time": "2022-11-27T15:15:10+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
