@@ -7,7 +7,7 @@
                     <a class="link-dark text-decoration-none footer-logo" href="{{ route('home') }}">
                         Secretic
                     </a>
-                    <small class="text-secondary">v{{ config('app.version') }}</small>
+                    <small class="text-secondary">v{{ config('app-version.version') }}</small>
                     <div class="text-secondary mb-4">
                         <small>Secret notes that will self-destruct after being read.</small>
                     </div>
