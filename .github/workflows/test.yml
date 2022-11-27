@@ -71,6 +71,6 @@ jobs:
 
       - name: ddd
         run: |
-          echo "<?php return ['version'=>'0.0.0'];" > ./config/app-version.php
+          echo "<?php return ['version'=>'{{$RELEASE_VERSION}}'];" > ./config/app-version.php
           cat ./config/app-version.php
 
