@@ -68,3 +68,9 @@ jobs:
           name: codecov-umbrella
           verbose: true
           env_vars: PHP
+
+      - name: ddd
+        run: |
+          echo "<?php return ['version'=>'0.0.0'];" > ./config/app-version.php
+          cat ./config/app-version.php
+
