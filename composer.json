@@ -10,7 +10,7 @@
         "doctrine/dbal": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
         "hashids/hashids": "^4.1",
-        "laravel/framework": "^9.40",
+        "laravel/framework": "^9.42",
         "laravel/sanctum": "^3.0.1",
         "laravel/tinker": "^2.7",
         "opcodesio/log-viewer": "^1.7",
