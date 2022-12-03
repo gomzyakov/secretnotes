@@ -57,6 +57,9 @@ class NoteResource extends Resource
             ]);
     }
 
+    /**
+     * @return array<mixed>
+     */
     public static function getRelations(): array
     {
         return [
@@ -64,6 +67,9 @@ class NoteResource extends Resource
         ];
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public static function getPages(): array
     {
         return [
