@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\NoteResource\Pages;
-use App\Filament\Resources\NoteResource\RelationManagers;
 use App\Models\Note;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class NoteResource extends Resource
 {
@@ -70,10 +67,10 @@ class NoteResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNotes::route('/'),
-            'view' => Pages\ViewNote::route('/{record}'),
+            'index'  => Pages\ListNotes::route('/'),
+            'view'   => Pages\ViewNote::route('/{record}'),
             'create' => Pages\CreateNote::route('/create'),
-            'edit' => Pages\EditNote::route('/{record}/edit'),
+            'edit'   => Pages\EditNote::route('/{record}/edit'),
         ];
     }
 }
