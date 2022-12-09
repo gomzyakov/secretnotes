@@ -38,14 +38,14 @@ class NoteResource extends Resource
         return $table
             ->columns([
                 //Tables\Columns\TextColumn::make('text'),
-                Tables\Columns\TextColumn::make('expiration_date')
-                    ->dateTime(),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('expiration_date')->dateTime(),
+                //Tables\Columns\TextColumn::make('updated_at')->dateTime(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
