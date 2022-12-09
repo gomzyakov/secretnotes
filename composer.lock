@@ -1163,16 +1163,16 @@
         },
         {
             "name": "filament/filament",
-            "version": "v2.16.54",
+            "version": "v2.16.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/admin.git",
-                "reference": "86de17fd9a91a434960b86f14c06196e356ff76f"
+                "reference": "9fce9d63df31633bbdfcaacac2b27d38b23487dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/admin/zipball/86de17fd9a91a434960b86f14c06196e356ff76f",
-                "reference": "86de17fd9a91a434960b86f14c06196e356ff76f",
+                "url": "https://api.github.com/repos/filamentphp/admin/zipball/9fce9d63df31633bbdfcaacac2b27d38b23487dd",
+                "reference": "9fce9d63df31633bbdfcaacac2b27d38b23487dd",
                 "shasum": ""
             },
             "require": {
@@ -1222,11 +1222,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-06T11:38:06+00:00"
+            "time": "2022-12-07T12:06:35+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v2.16.54",
+            "version": "v2.16.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
@@ -1284,16 +1284,16 @@
         },
         {
             "name": "filament/notifications",
-            "version": "v2.16.54",
+            "version": "v2.16.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
-                "reference": "ad4cc6e1140649c3c2d193b6b8d7fdd7d2a6d02e"
+                "reference": "91fc0d87202da378b422200ed9eb4cb0e7933453"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/ad4cc6e1140649c3c2d193b6b8d7fdd7d2a6d02e",
-                "reference": "ad4cc6e1140649c3c2d193b6b8d7fdd7d2a6d02e",
+                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/91fc0d87202da378b422200ed9eb4cb0e7933453",
+                "reference": "91fc0d87202da378b422200ed9eb4cb0e7933453",
                 "shasum": ""
             },
             "require": {
@@ -1333,11 +1333,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-11-22T10:28:58+00:00"
+            "time": "2022-12-07T12:06:28+00:00"
         },
         {
             "name": "filament/support",
-            "version": "v2.16.54",
+            "version": "v2.16.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
@@ -1387,16 +1387,16 @@
         },
         {
             "name": "filament/tables",
-            "version": "v2.16.54",
+            "version": "v2.16.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "8f384c680d4188793c4bf23b86b18102454b4ff3"
+                "reference": "38febbeed2580fd3155ad719b133d4ff642bd013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/8f384c680d4188793c4bf23b86b18102454b4ff3",
-                "reference": "8f384c680d4188793c4bf23b86b18102454b4ff3",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/38febbeed2580fd3155ad719b133d4ff642bd013",
+                "reference": "38febbeed2580fd3155ad719b133d4ff642bd013",
                 "shasum": ""
             },
             "require": {
@@ -1439,7 +1439,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-06T11:38:05+00:00"
+            "time": "2022-12-07T12:06:29+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -5451,16 +5451,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.1.1",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918"
+                "reference": "1ee04c65529dea5d8744774d474e7cbd2f1206d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918",
-                "reference": "07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/1ee04c65529dea5d8744774d474e7cbd2f1206d3",
+                "reference": "1ee04c65529dea5d8744774d474e7cbd2f1206d3",
                 "shasum": ""
             },
             "require": {
@@ -5469,7 +5469,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.1-dev"
+                    "dev-main": "3.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -5498,7 +5498,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.1.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.0"
             },
             "funding": [
                 {
@@ -5514,7 +5514,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-25T11:15:52+00:00"
+            "time": "2022-11-25T10:21:52+00:00"
         },
         {
             "name": "symfony/error-handler",
@@ -5672,16 +5672,16 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.1.1",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "02ff5eea2f453731cfbc6bc215e456b781480448"
+                "reference": "0782b0b52a737a05b4383d0df35a474303cabdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/02ff5eea2f453731cfbc6bc215e456b781480448",
-                "reference": "02ff5eea2f453731cfbc6bc215e456b781480448",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/0782b0b52a737a05b4383d0df35a474303cabdae",
+                "reference": "0782b0b52a737a05b4383d0df35a474303cabdae",
                 "shasum": ""
             },
             "require": {
@@ -5694,7 +5694,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.1-dev"
+                    "dev-main": "3.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -5731,7 +5731,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.1.1"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.2.0"
             },
             "funding": [
                 {
@@ -5747,7 +5747,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-25T11:15:52+00:00"
+            "time": "2022-11-25T10:21:52+00:00"
         },
         {
             "name": "symfony/finder",
@@ -7641,16 +7641,16 @@
         },
         {
             "name": "symfony/translation-contracts",
-            "version": "v3.1.1",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "606be0f48e05116baef052f7f3abdb345c8e02cc"
+                "reference": "68cce71402305a015f8c1589bfada1280dc64fe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/606be0f48e05116baef052f7f3abdb345c8e02cc",
-                "reference": "606be0f48e05116baef052f7f3abdb345c8e02cc",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/68cce71402305a015f8c1589bfada1280dc64fe7",
+                "reference": "68cce71402305a015f8c1589bfada1280dc64fe7",
                 "shasum": ""
             },
             "require": {
@@ -7662,7 +7662,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.1-dev"
+                    "dev-main": "3.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -7702,7 +7702,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v3.1.1"
+                "source": "https://github.com/symfony/translation-contracts/tree/v3.2.0"
             },
             "funding": [
                 {
@@ -7718,7 +7718,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-27T17:24:16+00:00"
+            "time": "2022-11-25T10:21:52+00:00"
         },
         {
             "name": "symfony/uid",
