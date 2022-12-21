@@ -1162,16 +1162,16 @@
         },
         {
             "name": "filament/filament",
-            "version": "v2.16.57",
+            "version": "v2.16.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/admin.git",
-                "reference": "9f3a0bd4d22cf5aeb01b0b4d95a310f32980fb34"
+                "reference": "db1f718d3adae2670ada0ce62f613141f6507bd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/admin/zipball/9f3a0bd4d22cf5aeb01b0b4d95a310f32980fb34",
-                "reference": "9f3a0bd4d22cf5aeb01b0b4d95a310f32980fb34",
+                "url": "https://api.github.com/repos/filamentphp/admin/zipball/db1f718d3adae2670ada0ce62f613141f6507bd9",
+                "reference": "db1f718d3adae2670ada0ce62f613141f6507bd9",
                 "shasum": ""
             },
             "require": {
@@ -1221,20 +1221,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-15T13:28:10+00:00"
+            "time": "2022-12-18T21:46:16+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v2.16.57",
+            "version": "v2.16.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "76f56fbbaf5881b92884d04a80d588c52cac60f1"
+                "reference": "b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/76f56fbbaf5881b92884d04a80d588c52cac60f1",
-                "reference": "76f56fbbaf5881b92884d04a80d588c52cac60f1",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b",
+                "reference": "b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b",
                 "shasum": ""
             },
             "require": {
@@ -1279,11 +1279,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-15T13:28:05+00:00"
+            "time": "2022-12-18T21:46:07+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "v2.16.57",
+            "version": "v2.16.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
@@ -1336,7 +1336,7 @@
         },
         {
             "name": "filament/support",
-            "version": "v2.16.57",
+            "version": "v2.16.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
@@ -1386,7 +1386,7 @@
         },
         {
             "name": "filament/tables",
-            "version": "v2.16.57",
+            "version": "v2.16.58",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
@@ -2872,6 +2872,7 @@
                 "issues": "https://github.com/thephpleague/uri-parser/issues",
                 "source": "https://github.com/thephpleague/uri-parser/tree/master"
             },
+            "abandoned": true,
             "time": "2018-11-22T07:55:51+00:00"
         },
         {
@@ -5229,16 +5230,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.13.7",
+            "version": "1.13.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "4af8e608184471b5568af6265ebb0ca0025c131a"
+                "reference": "781a2f637237e69c277eb401063acf15e2b4156b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/4af8e608184471b5568af6265ebb0ca0025c131a",
-                "reference": "4af8e608184471b5568af6265ebb0ca0025c131a",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/781a2f637237e69c277eb401063acf15e2b4156b",
+                "reference": "781a2f637237e69c277eb401063acf15e2b4156b",
                 "shasum": ""
             },
             "require": {
@@ -5277,7 +5278,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.13.7"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.13.8"
             },
             "funding": [
                 {
@@ -5285,7 +5286,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-15T09:10:09+00:00"
+            "time": "2022-12-20T14:09:05+00:00"
         },
         {
             "name": "symfony/console",
