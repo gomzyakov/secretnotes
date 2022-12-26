@@ -28,6 +28,7 @@
         "phpunit/phpunit": "^9.5.27",
         "qossmic/deptrac-shim": "^1.0.2",
         "rector/rector": "^0.15.1",
+        "roave/security-advisories": "dev-latest",
         "spatie/laravel-ignition": "^1.6"
     },
     "autoload": {
