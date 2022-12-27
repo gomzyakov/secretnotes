@@ -34,7 +34,4 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::DEAD_CODE,
         LevelSetList::UP_TO_PHP_80,
     ]);
-
-    // register single rule
-    $rectorConfig->rule(TypedPropertyRector::class);
 };

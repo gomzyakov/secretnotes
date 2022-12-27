@@ -27,7 +27,7 @@
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.5.27",
         "qossmic/deptrac-shim": "^1.0.2",
-        "rector/rector": "^0.15.1",
+        "rector/rector": "^0.15.2",
         "spatie/laravel-ignition": "^1.6"
     },
     "autoload": {
@@ -51,6 +51,7 @@
         "cs-check": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff",
         "cs-fix": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php",
         "rector-check": "@php ./vendor/bin/rector process --dry-run",
+        "rector-fix": "@php ./vendor/bin/rector process --dry-run",
         "test": [
             "@cs-check",
             "@phpstan",
