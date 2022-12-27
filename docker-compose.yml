@@ -71,6 +71,7 @@ services:
             timeout: 5s
     mailhog:
         image: 'mailhog/mailhog:latest'
+        platform: linux/amd64
         ports:
             - '${FORWARD_MAILHOG_PORT:-1025}:1025'
             - '${FORWARD_MAILHOG_DASHBOARD_PORT:-8025}:8025'
@@ -78,6 +79,7 @@ services:
             - sail
     selenium:
         image: 'selenium/standalone-chrome'
+        platform: linux/amd64
         volumes:
             - '/dev/shm:/dev/shm'
         networks:
