@@ -29,9 +29,6 @@ class NoteCreateRequest extends FormRequest
         ];
     }
 
-    /**
-     * @return string
-     */
     public function getText(): string
     {
         if (! is_string($this->get(self::FIELD_TEXT))) {
@@ -41,9 +38,6 @@ class NoteCreateRequest extends FormRequest
         return $this->get(self::FIELD_TEXT);
     }
 
-    /**
-     * @return string|null
-     */
     public function getPassword(): ?string
     {
         if ($this->get(self::FIELD_PASSWORD) === null) {
@@ -57,9 +51,6 @@ class NoteCreateRequest extends FormRequest
         return $this->get(self::FIELD_PASSWORD);
     }
 
-    /**
-     * @return string|null
-     */
     public function getExpirationDate(): ?string
     {
         if ($this->get(self::FIELD_EXPIRATION_DATE) === null) {

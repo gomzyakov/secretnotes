@@ -66,11 +66,6 @@ class CreateNoteTest extends TestCase
         $response->assertStatus(302);
     }
 
-    /**
-     * @param TestResponse $response
-     *
-     * @return string
-     */
     private function getNoteSlugFromHTMLPage(TestResponse $response): string
     {
         // Get note URL from HTML page

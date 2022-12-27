@@ -16,10 +16,8 @@ class RedirectIfAuthenticated
     /**
      * Handle an incoming request.
      *
-     * @param Request $request
      * @param \Closure(Request): (Response|RedirectResponse) $next
      * @param string|null ...$guards
-     *
      * @return Application|mixed|Redirector|RedirectResponse|Response
      */
     public function handle(Request $request, Closure $next, ...$guards): mixed
