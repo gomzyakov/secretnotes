@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66bb9b793816d24d5a42b345a29bc7a2",
+    "content-hash": "e92a0fddda011bf82edbce42588064fd",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -8796,16 +8796,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.6.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "7da6649685a1226bcf8a77a38ec1586aeb13eccf"
+                "reference": "53ce002258faaa01b72f3c2f15708c8344c0b3ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/7da6649685a1226bcf8a77a38ec1586aeb13eccf",
-                "reference": "7da6649685a1226bcf8a77a38ec1586aeb13eccf",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/53ce002258faaa01b72f3c2f15708c8344c0b3ed",
+                "reference": "53ce002258faaa01b72f3c2f15708c8344c0b3ed",
                 "shasum": ""
             },
             "require": {
@@ -8843,9 +8843,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.6.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.8.0"
             },
-            "time": "2022-12-12T04:30:51+00:00"
+            "time": "2022-12-27T17:28:41+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
