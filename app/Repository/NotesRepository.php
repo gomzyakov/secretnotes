@@ -22,8 +22,6 @@ class NotesRepository
 
     /**
      * Create the note.
-     *
-     *
      */
     public function create(string $text, ?string $password, ?Carbon $expiration_date): Note
     {

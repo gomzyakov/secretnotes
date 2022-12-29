@@ -37,8 +37,6 @@ class NoteController extends Controller
 
     /**
      * Show a warning before decrypting the note (or a message that the note does not exist).
-     *
-     *
      */
     public function openLink(
         string $slug,
@@ -59,8 +57,6 @@ class NoteController extends Controller
 
     /**
      * Store a newly created note in storage.
-     *
-     *
      */
     public function createNote(
         NoteCreateRequest $request,
@@ -111,8 +107,6 @@ class NoteController extends Controller
 
     /**
      * TODO Get date in UTC, not key "1_month".
-     *
-     *
      */
     private function getExpirationDate(?string $expiration_date_value): ?Carbon
     {
