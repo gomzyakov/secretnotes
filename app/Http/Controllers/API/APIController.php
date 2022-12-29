@@ -7,9 +7,6 @@ use Illuminate\Routing\Controller;
 
 class APIController extends Controller
 {
-    /**
-     * @return JsonResponse
-     */
     public function helloWorld(): JsonResponse
     {
         return new JsonResponse([

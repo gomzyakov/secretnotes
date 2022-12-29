@@ -17,8 +17,6 @@ class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return View|ViewFactory
      */
     public function index(): View|ViewFactory
     {
@@ -29,8 +27,6 @@ class NoteController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return View|ViewFactory
      */
     public function showCreatePage(): View|ViewFactory
     {
@@ -41,11 +37,6 @@ class NoteController extends Controller
 
     /**
      * Show a warning before decrypting the note (or a message that the note does not exist).
-     *
-     * @param string          $slug
-     * @param NotesRepository $notes_repository
-     *
-     * @return View|ViewFactory
      */
     public function openLink(
         string $slug,
@@ -66,11 +57,6 @@ class NoteController extends Controller
 
     /**
      * Store a newly created note in storage.
-     *
-     * @param NoteCreateRequest $request
-     * @param NotesRepository   $notes_repository
-     *
-     * @return Application|View|ViewFactory
      */
     public function createNote(
         NoteCreateRequest $request,
@@ -88,12 +74,6 @@ class NoteController extends Controller
         ]);
     }
 
-    /**
-     * @param string          $slug
-     * @param NotesRepository $notes_repository
-     *
-     * @return Application|RedirectResponse|View|ViewFactory
-     */
     public function decrypt(
         string $slug,
         NotesRepository $notes_repository
@@ -110,11 +90,9 @@ class NoteController extends Controller
         }
 
         // TODO Simplify this block
-        if ($note->password !== null) {
-            /** @phpstan-ignore-next-line  */
-            if (! Hash::check(request()->decrypt_password, $note->password)) {
-                return back()->withErrors(['bad_password' => 'Password incorrect']);
-            }
+        /** @phpstan-ignore-next-line  */
+        if ($note->password !== null && ! Hash::check(request()->decrypt_password, $note->password)) {
+            return back()->withErrors(['bad_password' => 'Password incorrect']);
         }
 
         $note_text = Crypt::decryptString($note->text);
@@ -129,10 +107,6 @@ class NoteController extends Controller
 
     /**
      * TODO Get date in UTC, not key "1_month".
-     *
-     * @param string|null $expiration_date_value
-     *
-     * @return Carbon|null
      */
     private function getExpirationDate(?string $expiration_date_value): ?Carbon
     {

@@ -1,4 +1,4 @@
-name: PHPStan
+name: Rector
 
 on:
   push:
@@ -14,8 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Composer dependencies
-        run: composer update --no-interaction --prefer-dist
+      - name: Install dependencies via Composer
+        run: composer install --no-interaction --prefer-dist
 
-      - name: Run tests via PHPStan
+      - name: Run checks via Rector
         run: composer phpstan
