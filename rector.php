@@ -10,8 +10,6 @@ use Rector\Set\ValueObject\SetList;
 
 /**
  * More info about Rector on https://github.com/rectorphp/rector.
- *
- * TODO Currently not running on CI
  */
 return static function (RectorConfig $rectorConfig): void {
     // paths to refactor; solid alternative to CLI arguments
