@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Crypt;
 
 class NotesRepository
 {
-    public function __construct(private Hashids $hashids)
+    public function __construct(private readonly Hashids $hashids)
     {
     }
 

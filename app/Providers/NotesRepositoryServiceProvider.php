@@ -11,12 +11,12 @@ class NotesRepositoryServiceProvider extends ServiceProvider
     /**
      * Salt for hashing slug.
      */
-    public const HASHIDS_SALT = ''; // TODO Move to secret envs
+    final public const HASHIDS_SALT = ''; // TODO Move to secret envs
 
     /**
      * Minima; lenght of slug.
      */
-    public const HASHIDS_MIN_LENGTH = 5;
+    final public const HASHIDS_MIN_LENGTH = 5;
 
     /**
      * Register services.

@@ -9,11 +9,11 @@ use LogicException;
 
 class NoteCreateRequest extends FormRequest
 {
-    public const FIELD_TEXT = 'text';
+    final public const FIELD_TEXT = 'text';
 
-    public const FIELD_PASSWORD = 'encrypt_password';
+    final public const FIELD_PASSWORD = 'encrypt_password';
 
-    public const FIELD_EXPIRATION_DATE = 'expiration_date';
+    final public const FIELD_EXPIRATION_DATE = 'expiration_date';
 
     /**
      * Get the validation rules that apply to the request.
