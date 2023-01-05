@@ -1163,16 +1163,16 @@
         },
         {
             "name": "filament/filament",
-            "version": "v2.16.58",
+            "version": "v2.16.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/admin.git",
-                "reference": "db1f718d3adae2670ada0ce62f613141f6507bd9"
+                "reference": "3b3e6cff81aa34900b78f1fd1ee7b9f52f146c6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/admin/zipball/db1f718d3adae2670ada0ce62f613141f6507bd9",
-                "reference": "db1f718d3adae2670ada0ce62f613141f6507bd9",
+                "url": "https://api.github.com/repos/filamentphp/admin/zipball/3b3e6cff81aa34900b78f1fd1ee7b9f52f146c6d",
+                "reference": "3b3e6cff81aa34900b78f1fd1ee7b9f52f146c6d",
                 "shasum": ""
             },
             "require": {
@@ -1222,20 +1222,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-18T21:46:16+00:00"
+            "time": "2022-12-31T11:48:02+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v2.16.58",
+            "version": "v2.16.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b"
+                "reference": "5b419b4377547a670c046d0414c29764beb6f433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b",
-                "reference": "b4a26bb83ca087cc5d6a8b9811c9f2583c910b2b",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/5b419b4377547a670c046d0414c29764beb6f433",
+                "reference": "5b419b4377547a670c046d0414c29764beb6f433",
                 "shasum": ""
             },
             "require": {
@@ -1280,11 +1280,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-18T21:46:07+00:00"
+            "time": "2022-12-31T11:47:56+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "v2.16.58",
+            "version": "v2.16.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
@@ -1337,7 +1337,7 @@
         },
         {
             "name": "filament/support",
-            "version": "v2.16.58",
+            "version": "v2.16.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
@@ -1387,16 +1387,16 @@
         },
         {
             "name": "filament/tables",
-            "version": "v2.16.58",
+            "version": "v2.16.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "38217b00c677d2d5f7841d1ce847e9e2f6e6649d"
+                "reference": "2f381dff811c9be55ef1bee2434e542121b58c41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/38217b00c677d2d5f7841d1ce847e9e2f6e6649d",
-                "reference": "38217b00c677d2d5f7841d1ce847e9e2f6e6649d",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/2f381dff811c9be55ef1bee2434e542121b58c41",
+                "reference": "2f381dff811c9be55ef1bee2434e542121b58c41",
                 "shasum": ""
             },
             "require": {
@@ -1439,7 +1439,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2022-12-15T13:28:07+00:00"
+            "time": "2022-12-31T11:47:55+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -2878,16 +2878,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.10.7",
+            "version": "v2.10.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "fa0441bf82f1674beecb3a8ad8a4ae428736ed18"
+                "reference": "4cc5dedaab1e9512efb4d528fde67df98e9b465a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/fa0441bf82f1674beecb3a8ad8a4ae428736ed18",
-                "reference": "fa0441bf82f1674beecb3a8ad8a4ae428736ed18",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/4cc5dedaab1e9512efb4d528fde67df98e9b465a",
+                "reference": "4cc5dedaab1e9512efb4d528fde67df98e9b465a",
                 "shasum": ""
             },
             "require": {
@@ -2939,7 +2939,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.10.7"
+                "source": "https://github.com/livewire/livewire/tree/v2.10.8"
             },
             "funding": [
                 {
@@ -2947,7 +2947,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-08T13:52:53+00:00"
+            "time": "2022-12-21T22:28:25+00:00"
         },
         {
             "name": "masterminds/html5",
