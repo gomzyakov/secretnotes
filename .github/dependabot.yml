@@ -10,7 +10,7 @@ updates:
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     # Force commit message preferences
     # Docs https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#commit-message
     commit-message:
@@ -32,7 +32,7 @@ updates:
     directory: "/"
     # Check for updates once a week
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "build"
       include: "scope"
