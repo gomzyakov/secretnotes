@@ -14,7 +14,7 @@
         "laravel/framework": "^9.47",
         "laravel/sanctum": "^3.1.0",
         "laravel/tinker": "^2.7",
-        "opcodesio/log-viewer": "^1.8",
+        "opcodesio/log-viewer": "^1.9",
         "sentry/sentry-laravel": "^3.1"
     },
     "require-dev": {
