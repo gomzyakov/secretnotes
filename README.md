@@ -2,7 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/release/gomzyakov/secretic.svg)](https://github.com/gomzyakov/secretic/releases/latest)
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gomzyakov/secretic/blob/development/LICENSE)
-[![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
+[![codecov](https://codecov.io/gh/secretica/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/secretica/secretic)
 
 Create secret notes that will self-destruct after being read. 
 
