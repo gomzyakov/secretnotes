@@ -11,7 +11,7 @@
         "filament/filament": "^2.16",
         "guzzlehttp/guzzle": "^7.2",
         "hashids/hashids": "^4.1",
-        "laravel/framework": "^9.47",
+        "laravel/framework": "^9.48",
         "laravel/sanctum": "^3.1.0",
         "laravel/tinker": "^2.7",
         "opcodesio/log-viewer": "^1.9",
