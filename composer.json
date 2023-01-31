@@ -13,7 +13,7 @@
         "hashids/hashids": "^4.1",
         "laravel/framework": "^9.48",
         "laravel/sanctum": "^3.2.1",
-        "laravel/tinker": "^2.7",
+        "laravel/tinker": "^2.8",
         "opcodesio/log-viewer": "^1.9",
         "sentry/sentry-laravel": "^3.1"
     },
