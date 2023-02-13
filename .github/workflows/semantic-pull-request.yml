@@ -14,6 +14,6 @@ jobs:
     steps:
       - name: semantic-pull-request
         # This action can only be invoked in `pull_request_target` or `pull_request` events.
-        uses: amannn/action-semantic-pull-request@v5.0.2
+        uses: amannn/action-semantic-pull-request@v5.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
