@@ -21,7 +21,7 @@
         "fakerphp/faker": "^1.21.0",
         "friendsofphp/php-cs-fixer": "^3.14",
         "gomzyakov/php-cs-fixer-config": "^1.9",
-        "laravel/sail": "^1.19.0",
+        "laravel/sail": "^1.20.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.4",
         "phpstan/phpstan": "^1.9",
