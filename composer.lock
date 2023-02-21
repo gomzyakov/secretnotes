@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "074d7f92d77b6b5e74f01032a491e56d",
+    "content-hash": "9df1e8b3b9fb302c8a4715db08301446",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -8829,16 +8829,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.9.1",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "cdd09d443f995741b38d3adebe44d3d3fff364b3"
+                "reference": "499273d70adb1ce0843df4d121832ea71a01d5d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/cdd09d443f995741b38d3adebe44d3d3fff364b3",
-                "reference": "cdd09d443f995741b38d3adebe44d3d3fff364b3",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/499273d70adb1ce0843df4d121832ea71a01d5d5",
+                "reference": "499273d70adb1ce0843df4d121832ea71a01d5d5",
                 "shasum": ""
             },
             "require": {
@@ -8846,10 +8846,10 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.13",
+                "friendsofphp/php-cs-fixer": "^3.14",
                 "mockery/mockery": "^1.5",
                 "phpstan/phpstan": "^1.9",
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^9.6"
             },
             "type": "package",
             "autoload": {
@@ -8876,9 +8876,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.9.1"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.13.0"
             },
-            "time": "2023-01-08T13:26:32+00:00"
+            "time": "2023-02-14T06:10:50+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
