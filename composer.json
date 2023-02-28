@@ -10,7 +10,7 @@
         "doctrine/dbal": "^3.6",
         "filament/filament": "^2.17",
         "guzzlehttp/guzzle": "^7.2",
-        "hashids/hashids": "^4.1",
+        "hashids/hashids": "^5.0",
         "laravel/framework": "^9.51",
         "laravel/sanctum": "^3.2.1",
         "laravel/tinker": "^2.8",
