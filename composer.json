@@ -23,7 +23,7 @@
         "gomzyakov/php-cs-fixer-config": "^1.13",
         "laravel/sail": "^1.21.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.4",
+        "nunomaduro/collision": "^7.1",
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.6.3",
         "qossmic/deptrac-shim": "^1.0.2",
