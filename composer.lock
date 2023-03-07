@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbf04383626b210178526ce1b460c179",
+    "content-hash": "aada4d661072ea901b9c72d4e238646f",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -8828,16 +8828,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.13.0",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "499273d70adb1ce0843df4d121832ea71a01d5d5"
+                "reference": "8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/499273d70adb1ce0843df4d121832ea71a01d5d5",
-                "reference": "499273d70adb1ce0843df4d121832ea71a01d5d5",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912",
+                "reference": "8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912",
                 "shasum": ""
             },
             "require": {
@@ -8847,7 +8847,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.14",
                 "mockery/mockery": "^1.5",
-                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.6"
             },
             "type": "package",
@@ -8875,9 +8875,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.13.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.14.0"
             },
-            "time": "2023-02-14T06:10:50+00:00"
+            "time": "2023-02-28T04:50:52+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
