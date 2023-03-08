@@ -1,4 +1,4 @@
-# Deployment
+# Deployment to VDS
 
 For simplicity, we will deploy the project to VDS. The deployment process consists of several steps:
 
