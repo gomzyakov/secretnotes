@@ -1,73 +1,59 @@
 # Secretic
 
-[![GitHub release](https://img.shields.io/github/release/gomzyakov/secretic.svg)](https://github.com/gomzyakov/secretic/releases/latest)
-[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gomzyakov/secretic/blob/development/LICENSE)
-[![codecov](https://codecov.io/gh/secretica/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/secretica/secretic)
-
-Create secret notes that will self-destruct after being read. 
-
-- Project demo is on [secretic.app](https://secretic.app). 
-- [Secretic](https://secretic.app) is an open source alternative to [privnote.com](https://privnote.com)
+Secretic is a secure and user-friendly pastebin application that prioritizes privacy and simplicity. On [secretic.app](https://secretic.app) you can create secret notes that will self-destruct after being read. 
 
 
-![](screenshot_2023-03-08.png)
+## Features
 
-## Running the project locally
+- Burn after reading (the note is destroyed after the first reading)
+- Password protection
+- Copy note to clipboard in a click
+- Expiration times, including a "forever" and "burn after reading" option
+- Admin panel built on [Filament](https://filamentphp.com)
 
-When you pull this project to another computer that has no PHP or Composer installed, you cant run `sail` command
-because there is no vendor folder.
 
-Solution is https://laravel.com/docs/9.x/sail#installing-composer-dependencies-for-existing-projects
+## Radmap
 
-```bash
-docker run --rm \
--u "$(id -u):$(id -g)" \
--v $(pwd):/opt \
--w /opt \
-laravelsail/php81-composer:latest \
-composer install --ignore-platform-reqs
-```
+The following features will be implemented soon:
 
-Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias:
+- Delete after view or X amount of time
+- End-to-end encryption https://github.com/secretica/secretic/issues/572
+- File upload support (image, media and PDF preview)
+- Language selection https://github.com/secretica/secretic/issues/432
+- QR code for paste URLs, to easily transfer them over to mobile devices https://github.com/secretica/secretic/issues/489
+- API for integration with third parties https://github.com/secretica/secretic/issues/405
 
-```bash
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-```
+## Requesting features
 
-Copy the environment settings:
+Open a [new issue](https://github.com/secretica/secretic/issues/new) to request a feature (or if you find a bug).
 
-```bash
-cp .env.example .env
-```
 
-And replace `DB_HOST` to `mysql` in `.env` (for local development).
+## Run the app with Docker
+
+Before running the Secretic locally:
+
+- Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
+- Copy the environment settings ```cp .env.example .env```
+- And replace `DB_HOST` to `mysql` in `.env` (for local development).
 
 After that just run the command:
 
-```bash
-sail up -d
-sail artisan migrate:fresh --seed
-```
+- ```sail up -d``` to run the Secretic ([What if I don't have 11 on my computer?](https://github.com/secretica/secretic/issues/570))
+- ```sail artisan migrate:fresh --seed``` to migrate DB & seed fake data
 
 And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
 
 
-## Remove project
+### Can I trust a instance of Secretic not hosted by me?
 
-To remove all images and volumes, just run:
+No. Anyone could modify the functionality of Secretic to expose your secret key to the server. We recommend using a instance you host or trust.
 
-```bash
-sail down --rmi all -v
-```
-
-## Deployment to VDS
-
-The deployment process is described in the file [DEPLOY.md](DEPLOY.md)
-
-## Support
-
-If you find any package errors, please, [make an issue](https://github.com/gomzyakov/php-code-style/issues) in current repository.
 
 ## License
 
 This is open-sourced software licensed under the [MIT License](https://github.com/gomzyakov/php-code-style/blob/main/LICENSE).
+
+
+[![GitHub release](https://img.shields.io/github/release/gomzyakov/secretic.svg)](https://github.com/gomzyakov/secretic/releases/latest)
+[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gomzyakov/secretic/blob/development/LICENSE)
+[![codecov](https://codecov.io/gh/secretica/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/secretica/secretic)
