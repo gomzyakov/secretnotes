@@ -9,6 +9,9 @@ Create secret notes that will self-destruct after being read.
 - Project demo is on [secretic.app](https://secretic.app). 
 - [Secretic](https://secretic.app) is an open source alternative to [privnote.com](https://privnote.com)
 
+
+![](screenshot_2023-03-08.png)
+
 ## Running the project locally
 
 When you pull this project to another computer that has no PHP or Composer installed, you cant run `sail` command
