@@ -44,7 +44,7 @@ After that just run the command:
 And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
 
 
-### Can I trust a instance of Secretic not hosted by me?
+## Can I trust a instance of Secretic not hosted by me?
 
 No. Anyone could modify the functionality of Secretic to expose your secret key to the server. We recommend using a instance you host or trust.
 
