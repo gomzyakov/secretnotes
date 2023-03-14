@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8220f9dedb5d6debb33b9496e8a2e50a",
+    "content-hash": "a28180e58d665a0f07020159a43f2cff",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -3687,27 +3687,27 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v1.9.0",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "d82d09c4db3cbf2c589aeb87aae16fbea642b56f"
+                "reference": "8b996c75e532a46fe76bcd8bf32f517c4477a3ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/d82d09c4db3cbf2c589aeb87aae16fbea642b56f",
-                "reference": "d82d09c4db3cbf2c589aeb87aae16fbea642b56f",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/8b996c75e532a46fe76bcd8bf32f517c4477a3ea",
+                "reference": "8b996c75e532a46fe76bcd8bf32f517c4477a3ea",
                 "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^8.0|^9.0|^10.0",
-                "livewire/livewire": "^2.10",
                 "php": "^8.0"
             },
             "conflict": {
                 "arcanedev/log-viewer": "^8.0"
             },
             "require-dev": {
+                "guzzlehttp/guzzle": "^7.2",
                 "itsgoingd/clockwork": "^5.1",
                 "laravel/pint": "^1.0",
                 "nunomaduro/collision": "^6.0",
@@ -3716,6 +3716,9 @@
                 "pestphp/pest-plugin-laravel": "^1.1",
                 "phpunit/phpunit": "^9.5",
                 "spatie/test-time": "^1.3"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Required for multi-host support. ^7.2"
             },
             "type": "library",
             "extra": {
@@ -3756,9 +3759,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v1.9.0"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v2.3.1"
             },
-            "time": "2023-01-12T17:13:13+00:00"
+            "time": "2023-03-07T06:45:54+00:00"
         },
         {
             "name": "php-http/client-common",
