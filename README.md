@@ -38,7 +38,7 @@ Before running the Secretic locally:
 
 After that just run the command:
 
-- ```sail up -d``` to run the Secretic ([What if I don't have 11 on my computer?](https://github.com/secretica/secretic/issues/570))
+- ```sail up -d``` to run the Secretic ([What if I don't have PHP and Composer on my computer?](https://github.com/secretica/secretic/issues/570))
 - ```sail artisan migrate:fresh --seed``` to migrate DB & seed fake data
 
 And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
