@@ -5,11 +5,11 @@ Secretic is a secure and user-friendly pastebin application that prioritizes pri
 
 ## Features
 
-- Burn after reading (the note is destroyed after the first reading)
-- Password protection
-- Copy note to clipboard in a click
-- Expiration times, including a "forever" and "burn after reading" option
-- Admin panel built on [Filament](https://filamentphp.com)
+- :fire:Burn after reading (the note is destroyed after the first reading)
+- :lock: Password protection
+- :clipboard: Copy note to clipboard in a click
+- :stopwatch: Expiration times, including a "forever" and "burn after reading" option
+- :hatched_chick: Admin panel built on [Filament](https://filamentphp.com)
 
 
 ## Radmap
