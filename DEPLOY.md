@@ -112,7 +112,7 @@ Go to path `/var/www/web/sites` and clone current repository (or your own fork).
 Then go to path `/var/www/web/sites/secretic.app` and run some commands:
 
 ```bash
-php -r "file_exists('.env') || copy('.env.example', '.env');"
+php -r "file_exists('.env') || copy('.env.ci', '.env');"
 composer install
 chmod -R 777 storage bootstrap/cache
 php artisan key:generate
