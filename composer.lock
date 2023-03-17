@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "278f51b13d50143a76f806441af7111f",
+    "content-hash": "ed19c1a163dae8c35ba561a0f3882b33",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -8836,16 +8836,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912"
+                "reference": "aeac696104030a823e3ecf2dc9d51adfdfac35aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912",
-                "reference": "8c7abe6a91bf106f4ae8a1f698bb6bf5134ec912",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/aeac696104030a823e3ecf2dc9d51adfdfac35aa",
+                "reference": "aeac696104030a823e3ecf2dc9d51adfdfac35aa",
                 "shasum": ""
             },
             "require": {
@@ -8853,7 +8853,7 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.14",
+                "friendsofphp/php-cs-fixer": "^3.15",
                 "mockery/mockery": "^1.5",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.6"
@@ -8883,9 +8883,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.14.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.15.0"
             },
-            "time": "2023-02-28T04:50:52+00:00"
+            "time": "2023-03-14T07:19:22+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
