@@ -30,8 +30,18 @@ Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request 
 
 ## Run the app with Docker
 
+Убедитесь, что установлен докер и докер-композ (ссылки)
+
 docker compose build --no-cache
 docker compose up -d
+
+
+docker compose exec app composer install
+docker compose exec app php artisan key:generate
+docker compose exec app ./artisan migrate:fresh --seed
+
+http://127.0.0.1:8000
+
 
 make up
 
