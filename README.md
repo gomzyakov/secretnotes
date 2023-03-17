@@ -33,8 +33,7 @@ Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request 
 Before running the Secretic locally:
 
 - Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
-- Copy the environment settings ```cp .env.example .env```
-- And replace `DB_HOST` to `mysql` in `.env` (for local development).
+- Copy the environment settings ```cp .env.local .env```
 
 After that just run the command:
 
