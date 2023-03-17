@@ -40,7 +40,8 @@ docker compose exec app composer install
 docker compose exec app php artisan key:generate
 docker compose exec app ./artisan migrate:fresh --seed
 
-http://127.0.0.1:8000
+use http://localhost:8000 to access the application from your browser.
+
 
 
 make up
