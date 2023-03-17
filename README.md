@@ -30,6 +30,11 @@ Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request 
 
 ## Run the app with Docker
 
+docker compose build --no-cache
+docker compose up -d
+
+make up
+
 Before running the Secretic locally:
 
 - Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
