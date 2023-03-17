@@ -12,7 +12,7 @@ Secretic is a secure and user-friendly pastebin application that prioritizes pri
 - :hatched_chick: Admin panel built on [Filament](https://filamentphp.com)
 
 
-## Radmap
+## Roadmap
 
 The following features will be implemented soon:
 
