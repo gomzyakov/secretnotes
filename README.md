@@ -23,40 +23,50 @@ The following features will be implemented soon:
 - QR code for paste URLs, to easily transfer them over to mobile devices https://github.com/gomzyakov/secretic/issues/489
 - API for integration with third parties https://github.com/gomzyakov/secretic/issues/405
 
+
 ## Requesting features
 
 Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request a feature (or if you find a bug).
 
 
-## Run the app with Docker
+## How to run Secretic locally?
 
-Убедитесь, что установлен докер и докер-композ (ссылки)
+I believe you already have Docker installed. If not, just do it on [Mac](https://docs.docker.com/desktop/install/mac-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/) or [Linux](https://docs.docker.com/desktop/install/linux-install/).
 
+
+Build the `app` image with the following command:
+
+```shell
 docker compose build --no-cache
+```
+
+>This command might take a few minutes to complete.
+
+When the build is finished, you can run the environment in background mode with:
+
+```shell
 docker compose up -d
+```
 
+We’ll now run `composer install` to install the application dependencies:
 
+```shell
 docker compose exec app composer install
-docker compose exec app php artisan key:generate
+```
+
+Copy the environment settings:
+
+```shell
+docker compose exec app cp .env.local .env
+```
+
+Migrate DB & seed fake data with the `artisan` Laravel command-line tool:
+
+```shell
 docker compose exec app ./artisan migrate:fresh --seed
+```
 
-use http://localhost:8000 to access the application from your browser.
-
-
-
-make up
-
-Before running the Secretic locally:
-
-- Instead of repeatedly typing `vendor/bin/sail` to execute Sail commands, you may wish to configure a Bash alias ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
-- Copy the environment settings ```cp .env.local .env```
-
-After that just run the command:
-
-- ```sail up -d``` to run the Secretic ([What if I don't have PHP and Composer on my computer?](https://github.com/gomzyakov/secretic/issues/570))
-- ```sail artisan migrate:fresh --seed``` to migrate DB & seed fake data
-
-And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
+And open http://127.0.0.1:8000 in your favorite browser. Happy using Secretic! 
 
 
 ## Can I trust a instance of Secretic not hosted by me?
