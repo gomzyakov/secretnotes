@@ -17,15 +17,15 @@ Secretic is a secure and user-friendly pastebin application that prioritizes pri
 The following features will be implemented soon:
 
 - Delete after view or X amount of time
-- End-to-end encryption https://github.com/secretica/secretic/issues/572
+- End-to-end encryption https://github.com/gomzyakov/secretic/issues/572
 - File upload support (image, media and PDF preview)
-- Language selection https://github.com/secretica/secretic/issues/432
-- QR code for paste URLs, to easily transfer them over to mobile devices https://github.com/secretica/secretic/issues/489
-- API for integration with third parties https://github.com/secretica/secretic/issues/405
+- Language selection https://github.com/gomzyakov/secretic/issues/432
+- QR code for paste URLs, to easily transfer them over to mobile devices https://github.com/gomzyakov/secretic/issues/489
+- API for integration with third parties https://github.com/gomzyakov/secretic/issues/405
 
 ## Requesting features
 
-Open a [new issue](https://github.com/secretica/secretic/issues/new) to request a feature (or if you find a bug).
+Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request a feature (or if you find a bug).
 
 
 ## Run the app with Docker
@@ -38,7 +38,7 @@ Before running the Secretic locally:
 
 After that just run the command:
 
-- ```sail up -d``` to run the Secretic ([What if I don't have PHP and Composer on my computer?](https://github.com/secretica/secretic/issues/570))
+- ```sail up -d``` to run the Secretic ([What if I don't have PHP and Composer on my computer?](https://github.com/gomzyakov/secretic/issues/570))
 - ```sail artisan migrate:fresh --seed``` to migrate DB & seed fake data
 
 And open http://127.0.0.1 in your favorite browser. Happy using Secretic! 
@@ -56,4 +56,4 @@ This is open-sourced software licensed under the [MIT License](https://github.co
 
 [![GitHub release](https://img.shields.io/github/release/gomzyakov/secretic.svg)](https://github.com/gomzyakov/secretic/releases/latest)
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gomzyakov/secretic/blob/development/LICENSE)
-[![codecov](https://codecov.io/gh/secretica/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/secretica/secretic)
+[![codecov](https://codecov.io/gh/gomzyakov/secretic/branch/main/graph/badge.svg?token=4CYTVMVUYV)](https://codecov.io/gh/gomzyakov/secretic)
