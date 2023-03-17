@@ -1,7 +1,10 @@
 # Secretic
 
-Secretic is a secure and user-friendly pastebin application that prioritizes privacy and simplicity. On [secretic.app](https://secretic.app) you can create secret notes that will self-destruct after being read. 
+Secretic is a secure and user-friendly pastebin application that prioritizes privacy and simplicity. 
 
+The goal of this repository is to showcase good [Laravel](https://laravel.com) development practices with a simple application.
+
+<br>
 
 ## Features
 
@@ -11,6 +14,7 @@ Secretic is a secure and user-friendly pastebin application that prioritizes pri
 - :stopwatch: Expiration times, including a "forever" and "burn after reading" option
 - :hatched_chick: Admin panel built on [Filament](https://filamentphp.com)
 
+<br>
 
 ## Roadmap
 
