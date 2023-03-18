@@ -4,7 +4,6 @@ Secretic is a secure and user-friendly pastebin application that prioritizes pri
 
 The goal of this repository is to showcase good [Laravel](https://laravel.com) development practices with a simple application.
 
-<br>
 
 ## Features
 
@@ -14,7 +13,6 @@ The goal of this repository is to showcase good [Laravel](https://laravel.com) d
 - :stopwatch: Expiration times, including a "forever" and "burn after reading" option
 - :hatched_chick: Admin panel built on [Filament](https://filamentphp.com)
 
-<br>
 
 ## Roadmap
 
@@ -27,13 +25,11 @@ The following features will be implemented soon:
 - QR code for paste URLs, to easily transfer them over to mobile devices https://github.com/gomzyakov/secretic/issues/489
 - API for integration with third parties https://github.com/gomzyakov/secretic/issues/405
 
-<br>
 
 ## Requesting features
 
 Open a [new issue](https://github.com/gomzyakov/secretic/issues/new) to request a feature (or if you find a bug).
 
-<br>
 
 ## How to run Secretic locally?
 
@@ -74,13 +70,11 @@ docker compose exec app ./artisan migrate:fresh --seed
 
 And open http://127.0.0.1:8000 in your favorite browser. Happy using Secretic! 
 
-<br>
 
 ## Can I trust a instance of Secretic not hosted by me?
 
 No. Anyone could modify the functionality of Secretic to expose your secret key to the server. We recommend using a instance you host or trust.
 
-<br>
 
 ## License
 
