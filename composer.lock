@@ -8836,16 +8836,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.18.0",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "fc9855444359d791dc29f1818b2398624bdc2da4"
+                "reference": "3eba900523729209160655200f51d74f15eb456f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/fc9855444359d791dc29f1818b2398624bdc2da4",
-                "reference": "fc9855444359d791dc29f1818b2398624bdc2da4",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/3eba900523729209160655200f51d74f15eb456f",
+                "reference": "3eba900523729209160655200f51d74f15eb456f",
                 "shasum": ""
             },
             "require": {
@@ -8883,9 +8883,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.18.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.19.0"
             },
-            "time": "2023-03-19T14:47:05+00:00"
+            "time": "2023-03-23T06:09:34+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
