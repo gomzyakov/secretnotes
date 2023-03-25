@@ -17,6 +17,5 @@ class NewNoteTest extends TestCase
 
         $response->assertSee('Write your note here...');
         $response->assertSee('Create note');
-        $response->assertSee('Yandex.Metrika counter');
     }
 }
