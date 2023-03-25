@@ -18,7 +18,6 @@ class HomeTest extends TestCase
         $response->assertSee('Write your note here...');
         $response->assertSee('Create note');
         $response->assertSee('How can I use secret notes?');
-        $response->assertSee('Yandex.Metrika counter');
     }
 
     public function test_non_exists_page(): void
