@@ -3686,16 +3686,16 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v2.3.2",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "938c3142339562d09293469f57053b31c54e92db"
+                "reference": "eed37452d580e8929045e34dc7016420d9bd9bcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/938c3142339562d09293469f57053b31c54e92db",
-                "reference": "938c3142339562d09293469f57053b31c54e92db",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/eed37452d580e8929045e34dc7016420d9bd9bcd",
+                "reference": "eed37452d580e8929045e34dc7016420d9bd9bcd",
                 "shasum": ""
             },
             "require": {
@@ -3758,9 +3758,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v2.3.2"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v2.4.0"
             },
-            "time": "2023-03-19T11:03:34+00:00"
+            "time": "2023-03-31T07:50:32+00:00"
         },
         {
             "name": "php-http/client-common",
