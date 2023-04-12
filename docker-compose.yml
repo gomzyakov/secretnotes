@@ -34,7 +34,7 @@ services:
             - secretic
 
     nginx:
-        image: nginx:1.23-alpine
+        image: nginx:1.24-alpine
         container_name: secretic-nginx
         restart: unless-stopped
         ports:
