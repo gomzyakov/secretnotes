@@ -9,7 +9,7 @@
         "ext-bcmath": "*",
         "doctrine/dbal": "^3.6",
         "filament/filament": "^2.17",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.5",
         "hashids/hashids": "^5.0",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2.1",
