@@ -3,5 +3,8 @@
     "extends": [
         "config:base",
         ":disableDependencyDashboard"
+    ],
+    "schedule": [
+        "every weekend"
     ]
 }
