@@ -70,6 +70,12 @@ docker compose exec app ./artisan migrate:fresh --seed
 
 And open http://127.0.0.1:8000 in your favorite browser. Happy using Secretic! 
 
+To run `bash` just tupe:
+
+```shell
+docker compose exec -it app bash
+```
+
 
 ## Can I trust a instance of Secretic not hosted by me?
 

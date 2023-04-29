@@ -21,6 +21,7 @@
         "fakerphp/faker": "^1.21.0",
         "friendsofphp/php-cs-fixer": "^3.15",
         "gomzyakov/php-cs-fixer-config": "^1.22",
+        "infection/infection": "^0.26.21",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.1",
         "phpstan/phpstan": "^1.10",
@@ -91,7 +92,8 @@
         "sort-packages": true,
         "platform-check": false,
         "allow-plugins": {
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "infection/extension-installer": true
         }
     },
     "minimum-stability": "stable",
