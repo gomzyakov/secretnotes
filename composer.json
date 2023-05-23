@@ -91,7 +91,8 @@
         "sort-packages": true,
         "platform-check": false,
         "allow-plugins": {
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "infection/extension-installer": true
         }
     },
     "minimum-stability": "stable",
