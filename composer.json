@@ -21,7 +21,7 @@
         "fakerphp/faker": "^1.21.0",
         "friendsofphp/php-cs-fixer": "^3.17",
         "gomzyakov/php-cs-fixer-config": "^1.22",
-        "mockery/mockery": "^1.4.4",
+        "mockery/mockery": "^1.6.1",
         "nunomaduro/collision": "^7.1",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.2",
