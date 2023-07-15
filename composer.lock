@@ -8873,16 +8873,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.27.0",
+            "version": "v1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "50a6a4e7e6dfdce2ddef837dc8f0d7191f3894c9"
+                "reference": "b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/50a6a4e7e6dfdce2ddef837dc8f0d7191f3894c9",
-                "reference": "50a6a4e7e6dfdce2ddef837dc8f0d7191f3894c9",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d",
+                "reference": "b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d",
                 "shasum": ""
             },
             "require": {
@@ -8890,7 +8890,7 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.19",
+                "friendsofphp/php-cs-fixer": "^3.21",
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^10.2"
@@ -8920,9 +8920,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.27.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.28.0"
             },
-            "time": "2023-06-27T07:45:02+00:00"
+            "time": "2023-07-14T11:09:48+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
