@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43590fcf24d37d0ed12f8629f8777758",
+    "content-hash": "b3177a51fb73079895d9c5e8521e6781",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -9322,16 +9322,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.25",
+            "version": "1.10.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "578f4e70d117f9a90699324c555922800ac38d8c"
+                "reference": "e730e5facb75ffe09dfb229795e8c01a459f26c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/578f4e70d117f9a90699324c555922800ac38d8c",
-                "reference": "578f4e70d117f9a90699324c555922800ac38d8c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e730e5facb75ffe09dfb229795e8c01a459f26c3",
+                "reference": "e730e5facb75ffe09dfb229795e8c01a459f26c3",
                 "shasum": ""
             },
             "require": {
@@ -9380,7 +9380,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-06T12:11:37+00:00"
+            "time": "2023-09-19T15:27:56+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9860,21 +9860,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.17.6",
+            "version": "0.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "ec40080b9bdaf39eb0c0a9276cd7b4a778c03f21"
+                "reference": "ba7988e3e028e68e07191d75b0d5473ac320c5e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ec40080b9bdaf39eb0c0a9276cd7b4a778c03f21",
-                "reference": "ec40080b9bdaf39eb0c0a9276cd7b4a778c03f21",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ba7988e3e028e68e07191d75b0d5473ac320c5e7",
+                "reference": "ba7988e3e028e68e07191d75b0d5473ac320c5e7",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.10.20"
+                "phpstan/phpstan": "^1.10.31"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -9886,11 +9886,6 @@
                 "bin/rector"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.15-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -9909,7 +9904,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.17.6"
+                "source": "https://github.com/rectorphp/rector/tree/0.18.3"
             },
             "funding": [
                 {
@@ -9917,7 +9912,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-14T09:54:15+00:00"
+            "time": "2023-09-12T20:18:14+00:00"
         },
         {
             "name": "sebastian/cli-parser",
