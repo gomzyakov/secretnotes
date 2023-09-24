@@ -75,6 +75,13 @@ And open http://127.0.0.1:8000 in your favorite browser. Happy using Secretic!
 
 No. Anyone could modify the functionality of Secretic to expose your secret key to the server. We recommend using a instance you host or trust.
 
+## How to run terminal inside container?
+
+Just run:
+
+```bash
+docker exec -ti secretic-app bash
+```
 
 ## License
 
