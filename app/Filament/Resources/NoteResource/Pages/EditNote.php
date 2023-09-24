@@ -16,7 +16,7 @@ class EditNote extends EditRecord
      *
      * @return array<mixed>
      */
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
