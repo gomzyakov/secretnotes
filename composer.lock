@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acb542e17c5aefa2341b39aeebc617a5",
+    "content-hash": "256f65f57178e07acb7951da6b5f81c1",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -9185,46 +9185,6 @@
                 "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
             },
             "time": "2023-06-12T08:44:38+00:00"
-        },
-        {
-            "name": "filament/upgrade",
-            "version": "v3.0.60",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/filamentphp/upgrade.git",
-                "reference": "2b34a5b6b0eea4267a19ed58ea9f46c9b0fa3204"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/upgrade/zipball/2b34a5b6b0eea4267a19ed58ea9f46c9b0fa3204",
-                "reference": "2b34a5b6b0eea4267a19ed58ea9f46c9b0fa3204",
-                "shasum": ""
-            },
-            "require": {
-                "nunomaduro/termwind": "^1.0",
-                "php": "^8.1",
-                "rector/rector": "^0.17"
-            },
-            "bin": [
-                "bin/filament-v3"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Filament\\Upgrade\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Upgrade Filament v2 code to Filament v3.",
-            "homepage": "https://github.com/filamentphp/filament",
-            "support": {
-                "issues": "https://github.com/filamentphp/filament/issues",
-                "source": "https://github.com/filamentphp/filament"
-            },
-            "time": "2023-08-21T09:36:59+00:00"
         },
         {
             "name": "filp/whoops",
