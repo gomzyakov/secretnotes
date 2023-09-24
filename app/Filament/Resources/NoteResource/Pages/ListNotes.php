@@ -16,7 +16,7 @@ class ListNotes extends ListRecords
      *
      * @return array<mixed>
      */
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),
