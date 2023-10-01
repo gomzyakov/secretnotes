@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "256f65f57178e07acb7951da6b5f81c1",
+    "content-hash": "9cf0df52d1b41ce7ef8a3012a3ff9ddd",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -9356,16 +9356,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.28.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d"
+                "reference": "f29bde8a5de8af2c6b523e5db7838e549fd89f43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d",
-                "reference": "b3e978c5509dab1b8dc15eb0e0e54ddc8d9eaf6d",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/f29bde8a5de8af2c6b523e5db7838e549fd89f43",
+                "reference": "f29bde8a5de8af2c6b523e5db7838e549fd89f43",
                 "shasum": ""
             },
             "require": {
@@ -9373,10 +9373,10 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.21",
+                "friendsofphp/php-cs-fixer": "^3.28",
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^10.2"
+                "phpunit/phpunit": "^10.3"
             },
             "type": "package",
             "autoload": {
@@ -9403,9 +9403,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.28.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.33.0"
             },
-            "time": "2023-07-14T11:09:48+00:00"
+            "time": "2023-09-27T02:23:08+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -11885,5 +11885,5 @@
         "ext-bcmath": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
