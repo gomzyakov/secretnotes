@@ -8,7 +8,7 @@
         "php": "^8.2",
         "ext-bcmath": "*",
         "doctrine/dbal": "^3.6",
-        "filament/filament": "^3.0",
+        "filament/filament": "^3.2",
         "guzzlehttp/guzzle": "^7.8",
         "hashids/hashids": "^5.0",
         "laravel/framework": "^10.13",
