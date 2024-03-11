@@ -5,7 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "ext-bcmath": "*",
         "doctrine/dbal": "^3.6",
         "filament/filament": "^3.2",
