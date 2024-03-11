@@ -44,7 +44,7 @@ class NoteController extends Controller
     ): View|ViewFactory {
         $note = $notes_repository->findBySlug($slug);
 
-        if ($note instanceof Note && $note->expiration_date instanceof \Carbon\Carbon && $note->expiration_date < now()) {
+        if ($note instanceof Note && $note->expiration_date instanceof Carbon && $note->expiration_date < now()) {
             $note->delete();
             $note = null;
         }
