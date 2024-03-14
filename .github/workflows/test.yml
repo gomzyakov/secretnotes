@@ -63,10 +63,11 @@ jobs:
       - name: Show coverage.xml
         run: cat ./coverage.xml
 
-      - name: Upload coverage.xml to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: flamenotes/flamenotes
           files: ./coverage.xml
           fail_ci_if_error: true
           flags: unittests
