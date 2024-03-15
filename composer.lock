@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "885fd253324de1e2e746f5025be6f7ad",
+    "content-hash": "584727be1cdd5a8de4c66eb09952b273",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -9693,7 +9693,7 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.6.7",
+            "version": "1.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
