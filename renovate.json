@@ -7,5 +7,6 @@
     "timezone": "Asia/Yekaterinburg",
     "schedule": [
         "before 7am on Friday"
-    ]
+    ],
+    "labels": ["dependencies"]
 }
