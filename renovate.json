@@ -8,5 +8,6 @@
     "schedule": [
         "before 7am on Friday"
     ],
+    "addLabels": ["dependencies"],
     "labels": ["dependencies"]
 }
