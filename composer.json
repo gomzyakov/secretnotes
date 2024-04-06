@@ -12,7 +12,7 @@
         "guzzlehttp/guzzle": "^7.8",
         "hashids/hashids": "^5.0",
         "laravel/framework": "^10.48",
-        "laravel/sanctum": "^3.2.5",
+        "laravel/sanctum": "^4.0.1",
         "laravel/tinker": "^2.8",
         "opcodesio/log-viewer": "^3.6",
         "sentry/sentry-laravel": "^4.4"
